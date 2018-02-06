@@ -13,5 +13,5 @@ git add * (ou le fichier modifié)
 ## Message de modification
 git commit -m "message"
 
-##Mettre à jour sur le cloud
+## Mettre à jour sur le cloud
 git push origin master
