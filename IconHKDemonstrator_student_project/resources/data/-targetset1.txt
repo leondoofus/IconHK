@@ -1,0 +1,16 @@
+color pick
+connect
+finger
+group
+navigation
+new window
+sort
+pencil
+polygon
+snap
+split
+square
+transfer
+rotate
+video
+zoom
