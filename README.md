@@ -3,7 +3,7 @@
 ## 1ère fois pour récupérer le projet en entier:
 git clone https://github.com/leondoofus/IconHK.git
 
-# Metre en ligne des modifications
+# Mettre en ligne des modifications
 ## Récupérer la version la plus à jour
 git pull origin master
 
