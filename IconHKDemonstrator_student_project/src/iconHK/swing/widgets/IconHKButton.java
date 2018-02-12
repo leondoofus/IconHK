@@ -556,6 +556,19 @@ public class IconHKButton extends JButton implements MouseListener{
 		return this.currentFrame;
 	}
 
-	
-	
+	public boolean isUseMeta() {
+		return useMeta;
+	}
+
+	public boolean isUseCtrl() {
+		return useCtrl;
+	}
+
+	public boolean isUseAlt() {
+		return useAlt;
+	}
+
+	public boolean isUseSft() {
+		return useSft;
+	}
 }

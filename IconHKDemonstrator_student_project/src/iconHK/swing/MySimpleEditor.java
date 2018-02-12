@@ -460,6 +460,7 @@ public class MySimpleEditor extends JFrame implements ActionListener, KeyEventDi
 
 	@Override
 	public boolean dispatchKeyEvent(KeyEvent e) {
+		//Need to rewrite because icons redesigned for every touch (modifierPressed() uses 'or' for all touches)
 		boolean anyModifPress= modifierPressed();
 		if (e.getID() == KeyEvent.KEY_PRESSED) {
 		      switch(e.getKeyCode()){
@@ -497,14 +498,36 @@ public class MySimpleEditor extends JFrame implements ActionListener, KeyEventDi
 			
 			if(!anyModifPress){	
 				
-				//a modifier is pressed for the first time
+				// a modifier is pressed for the first time
 				// until HK shown
 				animations.removeAllElements();
 				for(Component c : toolbar.getComponents()){
 					if(c.getClass()==IconHKButton.class){
 						IconHKButton but = (IconHKButton)c;
+                        /*System.out.println(but.getName());
+                        System.out.println("Alt"+but.isUseAlt());
+                        System.out.println("Ctrl"+but.isUseCtrl());
+                        System.out.println("Sft"+but.isUseSft());*/
 						int[] sequence = {IconAnimation.HOTKEY_STEP};
-						animations.add(new IconAnimation(but,sequence));
+   						//animations.add(new IconAnimation(but,sequence));
+                        switch (e.getKeyCode()){
+                            case KeyEvent.VK_META:
+                                if (but.isUseMeta())
+                                    animations.add(new IconAnimation(but,sequence));
+                                break;
+                            case KeyEvent.VK_CONTROL:
+                                if (but.isUseCtrl())
+                                    animations.add(new IconAnimation(but,sequence));
+                                break;
+                            case KeyEvent.VK_ALT:
+                                if (but.isUseAlt())
+                                    animations.add(new IconAnimation(but,sequence));
+                                break;
+                            case KeyEvent.VK_SHIFT:
+                                if (but.isUseSft())
+                                    animations.add(new IconAnimation(but,sequence));
+                                break;
+                        }
 					}
 					
 				}
@@ -520,6 +543,25 @@ public class MySimpleEditor extends JFrame implements ActionListener, KeyEventDi
 						IconHKButton but = (IconHKButton)c;
 						int[] sequence = {IconAnimation.DEFAULT_STEP};
 						animations.add(new IconAnimation(but,sequence));
+						//This one is not needed
+                        /*switch (e.getKeyCode()){
+                            case KeyEvent.VK_META:
+                                if (but.isUseMeta())
+                                    animations.add(new IconAnimation(but,sequence));
+                                break;
+                            case KeyEvent.VK_CONTROL:
+                                if (but.isUseCtrl())
+                                    animations.add(new IconAnimation(but,sequence));
+                                break;
+                            case KeyEvent.VK_ALT:
+                                if (but.isUseAlt())
+                                    animations.add(new IconAnimation(but,sequence));
+                                break;
+                            case KeyEvent.VK_SHIFT:
+                                if (but.isUseSft())
+                                    animations.add(new IconAnimation(but,sequence));
+                                break;
+                        }*/
 					}
 				}
 			}
