@@ -15,3 +15,6 @@ git commit -m "message"
 
 ## Mettre à jour sur le cloud
 git push origin master
+
+## Suppimer un fichier
+git rm --cached fichier
