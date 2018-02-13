@@ -19,7 +19,7 @@ git push origin master
 ## Suppimer un fichier
 git rm --cached fichier
 
-##Deadline
+## Deadline
 20 fév - cahier des charges
 fin fev - API complet
 10 mars - test complet
