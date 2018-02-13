@@ -20,8 +20,8 @@ git push origin master
 git rm --cached fichier
 
 ## Deadline
-20 fév - cahier des charges
-fin fev - API complet
-10 mars - test complet
-mi avril - intégration apps
+20 fév - cahier des charges<br/>
+fin fev - API complet<br/>
+10 mars - test complet<br/>
+mi avril - intégration apps<br/>
 fin avril - fin rapport
