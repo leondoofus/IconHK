@@ -18,3 +18,10 @@ git push origin master
 
 ## Suppimer un fichier
 git rm --cached fichier
+
+##Deadline
+20 fév - cahier des charges
+fin fev - API complet
+10 mars - test complet
+mi avril - intégration apps
+fin avril - fin rapport

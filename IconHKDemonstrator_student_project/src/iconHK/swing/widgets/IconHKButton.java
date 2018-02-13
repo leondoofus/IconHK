@@ -143,7 +143,8 @@ public class IconHKButton extends JButton implements MouseListener{
 		this.setOpaque(true);
 		fixCurrentFrame();
 
-		this.useCtrl=true;
+		//Use Ctrl par default : not necessary every button has a shortcut
+		//this.useCtrl=true;
 		this.currentFrame=defaultFrame;
 		
 		
