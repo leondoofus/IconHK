@@ -3,13 +3,10 @@ package Test;
 import IconHK.*;
 
 import javax.swing.*;
-import javax.swing.text.JTextComponent;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
-import java.util.Iterator;
 import java.util.Vector;
 
 public class SimpleEditor extends JFrame implements ActionListener, KeyEventDispatcher {
@@ -19,7 +16,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     public static boolean ctrlPressed = false;
     public static boolean shftPressed = false;
 
-    private static final Dimension dim = new Dimension(32,32);
+    private static final Dimension dim = new Dimension(50,50);
     private static final int persistence = 20;
 
     // Text Editor
@@ -44,16 +41,19 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         iconHKButtons = new Vector<HKButton>();
         timer = new Timer(50, this);
         timer.start();
+
         textComp = new JTextArea();
         textComp.setLineWrap(true);
         createActions();
-        toolbar = new JToolBar();
+
+        // Start adding buttons to toolbar
+        this.toolbar = new JToolBar();
         addButtonToToolBar(new HKButton(newAction,dim));
         //addButtonToToolBar(new HKButton(saveAction,dim));
 
         Container content = getContentPane();
         content.add(textComp, BorderLayout.CENTER);
-        content.add(toolbar, BorderLayout.NORTH);
+        content.add(this.toolbar, BorderLayout.NORTH);
         //this.setJMenuBar(new JMenuBar());
         //this.setJMenuBar(createMenuBar());
         this.setSize(400, 300);
@@ -181,7 +181,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == timer) {
+        /*if (e.getSource() == timer) {
             //animateToolbar();
             repaint();
         } else {
@@ -211,13 +211,13 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                 }
             }
 
-            /*if(e.getModifiers() == InputEvent.CTRL_MASK(e)){
+            if(e.getModifiers() == InputEvent.CTRL_MASK(e)){
                 modality = CommandSelection.HOTKEY;
             }
             if((text!=null)&&(modality!=0)){
                 history.addCommandSelection(new CommandSelection(text,modality));
                 updateWidgetForCommand(text,modality);
-            }*/
-        }
+            }
+        }*/
     }
 }

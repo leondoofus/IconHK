@@ -10,7 +10,7 @@ public class HKAction extends AbstractAction {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println(this.getValue(Action.NAME));
+        //System.out.println(this.getValue(Action.NAME));
     }
 
 }

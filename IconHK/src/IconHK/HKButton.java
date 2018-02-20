@@ -45,6 +45,13 @@ public class HKButton extends JButton implements MouseListener {
     // TODO setter
     private float modifierRadiusRatio=0.35f;
 
+    public HKButton(Action a){
+        super(a);
+        KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
+        updateModifiersForKeystroke(ks);
+        initForName((String) a.getValue(Action.NAME));
+    }
+
     public HKButton(Action a, Dimension d){
         super(a);
         this.dimension = d;
@@ -89,20 +96,17 @@ public class HKButton extends JButton implements MouseListener {
 
         for (File f : iconFiles) {
             try {
-                //TODO resize all the icon in order to fit the dimension
-                iconsVector.add(ImageIO.read(f));
+                BufferedImage img = ImageIO.read(f);
+                BufferedImage scaledInstance = resize(img,(int)(dimension.getWidth() * 0.9), (int)(dimension.getHeight() * 0.9));
+                iconsVector.add(scaledInstance);
             } catch (IOException e) {
                 e.printStackTrace();
                 System.err.println("image IOException for file " + f.getAbsolutePath());
             }
         }
 
-
-        //TODO Don't need this line bcas icon size fixed
-        /*
-        if (iconsVector.size() != 0)
-            dimension.setSize(iconsVector.firstElement().getWidth()+10 , iconsVector.firstElement().getHeight() +10);
-        */
+        /*if (iconsVector.size() != 0)
+            dimension.setSize(iconsVector.firstElement().getWidth()+10 , iconsVector.firstElement().getHeight() +10);*/
 
         //TODO à voir des lignes suivantes
         //this.modifierSquareLength = (int) ((float) dimension.getHeight() * 0.2f);
@@ -133,13 +137,8 @@ public class HKButton extends JButton implements MouseListener {
         Graphics2D g2 = (Graphics2D) g.create();
         if (this.iconsVector != null) {
             BufferedImage icon = iconsVector.get(currentFrame);
-            System.out.println(getWidth());
-            System.out.println(getHeight());
-            System.out.println(icon.getWidth());
-            System.out.println(icon.getHeight());
             int x = (getWidth() - icon.getWidth()) / 2;
             int y = (getHeight() - icon.getHeight()) / 2;
-            //TODO bug here
             g2.drawImage(icon, x, y, this);
         }
         //drawModifs
@@ -205,10 +204,6 @@ public class HKButton extends JButton implements MouseListener {
     @Override
     public String getName() {
         return name;
-    }
-
-    public Dimension getDimension() {
-        return dimension;
     }
 
     public boolean isUseMeta() {
@@ -310,6 +305,32 @@ public class HKButton extends JButton implements MouseListener {
             currentFrame = vmax;
         }
     }*/
+
+    // Resize image
+    private static BufferedImage resize(BufferedImage img, int width, int height) {
+        Image tmp = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+        BufferedImage resized = new BufferedImage(width, height, Image.SCALE_SMOOTH);
+        Graphics2D g2d = resized.createGraphics();
+        g2d.drawImage(tmp, 0, 0, Color.WHITE, null);
+        g2d.dispose();
+        return resized;
+    }
+
+    // Redimensioned button
+    @Override
+    public Dimension getPreferredSize() {
+        return dimension;
+    }
+
+    @Override
+    public Dimension getMinimumSize() {
+        return dimension;
+    }
+
+    @Override
+    public Dimension getMaximumSize() {
+        return dimension;
+    }
 
     public void mouseClicked(MouseEvent e) {
 
