@@ -77,7 +77,6 @@ public class MySimpleEditor extends JFrame implements ActionListener, KeyEventDi
 	
 	
 	private Action cutAction, pasteAction, copyAction, saveAction, newAction, expandAction, rgbAction;
-	
 	private Action findAction, moveAction, pencilAction, increaseAction;
 	
 	
@@ -91,8 +90,8 @@ public class MySimpleEditor extends JFrame implements ActionListener, KeyEventDi
 		this.addEvents();
 		
 
-		this.buildSettingsWindow();
-		this.animateall();
+		//this.buildSettingsWindow();
+		//this.animateall();
 		
 	}
 
@@ -132,9 +131,6 @@ public class MySimpleEditor extends JFrame implements ActionListener, KeyEventDi
 		textComp = this.createTextComponent();
 		this.createActions();
 		
-		
-		
-		
 		Container content = getContentPane();
 		content.add(textComp, BorderLayout.CENTER);
 		content.add(this.toolbar = createToolBar(), BorderLayout.NORTH);
@@ -144,15 +140,15 @@ public class MySimpleEditor extends JFrame implements ActionListener, KeyEventDi
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-	
-	
-	//add events except for timer
+
+
 	private void addEvents(){
 		KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
 		kfm.addKeyEventDispatcher(this);
 		this.addMouseEvents();
 	}
-	
+	//add events except for timer
+
 	
 	private void addMouseEvents(){
 		// On définit un "masque d’événements" qui nous intéresse

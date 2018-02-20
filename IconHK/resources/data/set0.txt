@@ -1,0 +1,22 @@
+color pick,B,0
+connect,E,2
+finger,Z,0
+group,H,2
+navigation,A,3
+new window,R,1
+pacman,C,2
+pencil,W,1
+polygon,K,0
+snap,D,3
+split,Y,3
+square,J,1
+transfer,S,2
+transform,F,0
+video,M,1
+zoom,Q,3
+
+if needed more
+help,O,3
+
+
+

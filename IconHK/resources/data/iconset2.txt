@@ -1,0 +1,15 @@
+color fill
+color pick
+comment,V,1
+connect edges,Z,3
+draw bezier
+eraser
+help,O,3
+like,B,2
+move,C,0
+pacman,C,2
+refresh,P,1
+select mouse, U,2
+split,Y,3
+transform
+video,M,1
