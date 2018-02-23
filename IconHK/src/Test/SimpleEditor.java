@@ -49,7 +49,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         // Start adding buttons to toolbar
         this.toolbar = new JToolBar();
         addButtonToToolBar(new HKButton(newAction,dim));
-        //addButtonToToolBar(new HKButton(saveAction,dim));
+        addButtonToToolBar(new HKButton(saveAction,dim));
 
         Container content = getContentPane();
         content.add(textComp, BorderLayout.CENTER);
@@ -60,6 +60,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        animateall();
     }
 
     private void addButtonToToolBar(JButton button) {
@@ -72,7 +73,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         }
     }
 
-    /*private void animateall(){
+    private void animateall(){
         for (Component c : toolbar.getComponents()) {
             if (c.getClass() == HKButton.class) {
                 HKButton but = (HKButton) c;
@@ -80,7 +81,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                 animations.add(new IconAnimation(but, sequence, 40));
             }
         }
-    }*/
+    }
 
     protected void createActions() {
         cutAction = new HKAction("Cut");

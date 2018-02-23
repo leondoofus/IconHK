@@ -336,27 +336,7 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     public void mouseClicked(MouseEvent e) {
-        if (currentFrame != vmax) {
-            while (currentFrame != vmax) {
-                increaseCurrentFrame();
-                paintComponent(getGraphics());
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e1) {
-                    e1.printStackTrace();
-                }
-            }
-        } else {
-            while (currentFrame != 0){
-                decreaseCurrentFrame();
-                paintComponent(getGraphics());
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e1) {
-                    e1.printStackTrace();
-                }
-            }
-        }
+        (new Redesign()).run();
     }
 
     public void mousePressed(MouseEvent e) {
@@ -373,5 +353,34 @@ public class HKButton extends JButton implements MouseListener {
 
     public void mouseExited(MouseEvent e) {
 
+    }
+
+    //TODO Ask prof if we can implement a thread like this
+    //TODO Should we perform this ?
+    private class Redesign implements Runnable {
+        @Override
+        public void run() {
+            if (currentFrame != vmax) {
+                while (currentFrame != vmax) {
+                    increaseCurrentFrame();
+                    paintComponent(getGraphics());
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            } else {
+                while (currentFrame != 0){
+                    decreaseCurrentFrame();
+                    paintComponent(getGraphics());
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }
+        }
     }
 }
