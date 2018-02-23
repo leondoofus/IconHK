@@ -11,6 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Vector;
 
 public class HKButton extends JButton implements MouseListener {
@@ -34,10 +35,11 @@ public class HKButton extends JButton implements MouseListener {
 
     // The image shown by default (if not in mouse nor keyboard mode)
     private int defaultFrame=0;
+    // Size of folder
+    private int vmax = 20;
 
     // The current frame drawn
     private int currentFrame;
-    private int vmax= 20;
 
     // int value referring the length of one side of the square
     // used for modifiers. 0 by default, must be initialized in the constructer
@@ -93,10 +95,12 @@ public class HKButton extends JButton implements MouseListener {
                 return filename.endsWith(".png");
             }
         });
-
+        // Files aren't in alphabetical order
+        Arrays.sort(iconFiles);
         for (File f : iconFiles) {
             try {
                 BufferedImage img = ImageIO.read(f);
+                // Resize all images in order to fit dimension
                 BufferedImage scaledInstance = resize(img,(int)(dimension.getWidth() * 0.9), (int)(dimension.getHeight() * 0.9));
                 iconsVector.add(scaledInstance);
             } catch (IOException e) {
@@ -104,9 +108,7 @@ public class HKButton extends JButton implements MouseListener {
                 System.err.println("image IOException for file " + f.getAbsolutePath());
             }
         }
-
-        /*if (iconsVector.size() != 0)
-            dimension.setSize(iconsVector.firstElement().getWidth()+10 , iconsVector.firstElement().getHeight() +10);*/
+        vmax = iconsVector.size() - 1;
 
         //TODO à voir des lignes suivantes
         //this.modifierSquareLength = (int) ((float) dimension.getHeight() * 0.2f);
@@ -141,8 +143,9 @@ public class HKButton extends JButton implements MouseListener {
             int y = (getHeight() - icon.getHeight()) / 2;
             g2.drawImage(icon, x, y, this);
         }
-        //drawModifs
-        //drawModifiers(g2);
+
+        drawModifiers(g2);
+
         /*TODO this thing depends on Editor*/
         int opacityValue = getOpacityDependingOfModifiersPressed();
         //opacityValue=0;
@@ -180,25 +183,25 @@ public class HKButton extends JButton implements MouseListener {
         float radius=  (diameter/2.0f);
 
         //Fill arcs
+        g2.setColor(useCtrl? Color.DARK_GRAY : Color.WHITE);
         g2.fillArc(-(int)radius, (int) (height-radius),(int)diameter, (int)diameter, 0, 90);
+        g2.setColor(useSft? Color.DARK_GRAY : Color.WHITE);
         g2.fillArc(-(int)radius, -(int) (radius),(int)diameter, (int)diameter, 270, 90);
+        g2.setColor(useAlt? Color.DARK_GRAY : Color.WHITE);
         g2.fillArc((int)(width-radius), (int) (height-radius),(int)diameter, (int)diameter, 90, 90);
-
-        //commented cuz not considering meta shortcuts
-        //g2.fillArc((int)(width-radius), (int) (-radius),(int)diameter, (int)diameter, 180, 90);
+        g2.setColor(useMeta? Color.DARK_GRAY : Color.WHITE);
+        g2.fillArc((int)(width-radius), (int) (-radius),(int)diameter, (int)diameter, 180, 90);
 
         g2.setColor(Color.DARK_GRAY);
         // draw contours
-
-        g2.drawArc(-(int) radius, (int) (height - radius), (int) diameter, (int) diameter, 0, 90);
-
-        g2.drawArc(-(int) radius, -(int) (radius), (int) diameter, (int) diameter, 270, 90);
-
-        g2.drawArc((int) (width - radius), (int) (height - radius), (int) diameter, (int) diameter, 90, 90);
-
-        if (useMeta) {
+        if (useCtrl)
+            g2.drawArc(-(int) radius, (int) (height - radius), (int) diameter, (int) diameter, 0, 90);
+        if (useSft)
+            g2.drawArc(-(int) radius, -(int) (radius), (int) diameter, (int) diameter, 270, 90);
+        if (useAlt)
+            g2.drawArc((int) (width - radius), (int) (height - radius), (int) diameter, (int) diameter, 90, 90);
+        if (useMeta)
             g2.drawArc((int) (width - radius), (int) (-radius), (int) diameter, (int) diameter, 180, 90);
-        }
     }
 
     @Override
@@ -286,25 +289,25 @@ public class HKButton extends JButton implements MouseListener {
      * decrease currentframe
      * and fix if out of bounds
      */
-    /*
+
     private void decreaseCurrentFrame(){
         this.currentFrame--;
         if (this.currentFrame<0){
             this.currentFrame =0;
         }
-    }*/
+    }
 
     /**
      * increase currentframe
      * and fix if out of bounds
      */
-    /*
+
     private void increaseCurrentFrame(){
         this.currentFrame++;
         if(currentFrame>=vmax){
             currentFrame = vmax;
         }
-    }*/
+    }
 
     // Resize image
     private static BufferedImage resize(BufferedImage img, int width, int height) {
@@ -333,7 +336,27 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     public void mouseClicked(MouseEvent e) {
-
+        if (currentFrame != vmax) {
+            while (currentFrame != vmax) {
+                increaseCurrentFrame();
+                paintComponent(getGraphics());
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        } else {
+            while (currentFrame != 0){
+                decreaseCurrentFrame();
+                paintComponent(getGraphics());
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        }
     }
 
     public void mousePressed(MouseEvent e) {
