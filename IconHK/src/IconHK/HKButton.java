@@ -33,6 +33,12 @@ public class HKButton extends JButton implements MouseListener {
     // Boolean telling whether or not a modifier is used in the hotkey
     private boolean useMeta, useCtrl, useAlt, useSft;
 
+    // Boolean testing if buttons pressed
+    private boolean metaPressed = false;
+    private boolean altPressed = false;
+    private boolean ctrlPressed = false;
+    private boolean shftPressed = false;
+
     // The image shown by default (if not in mouse nor keyboard mode)
     private int defaultFrame=0;
     // Size of folder
@@ -101,7 +107,8 @@ public class HKButton extends JButton implements MouseListener {
             try {
                 BufferedImage img = ImageIO.read(f);
                 // Resize all images in order to fit dimension
-                BufferedImage scaledInstance = resize(img,(int)(dimension.getWidth() * 0.9), (int)(dimension.getHeight() * 0.9));
+                // TODO setter to modify the ratio
+                BufferedImage scaledInstance = resize(img,(int)(dimension.getWidth() * 0.75), (int)(dimension.getHeight() * 0.75));
                 iconsVector.add(scaledInstance);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -237,7 +244,27 @@ public class HKButton extends JButton implements MouseListener {
         this.modifierRadiusRatio = modifierRadiusRatio;
     }
 
-    /**
+    public void setMetaPressed(boolean metaPressed) {
+        this.metaPressed = metaPressed;
+        paintComponent(getGraphics());
+    }
+
+    public void setAltPressed(boolean altPressed) {
+        this.altPressed = altPressed;
+        paintComponent(getGraphics());
+    }
+
+    public void setCtrlPressed(boolean ctrlPressed) {
+        this.ctrlPressed = ctrlPressed;
+        paintComponent(getGraphics());
+    }
+
+    public void setShftPressed(boolean shftPressed) {
+        this.shftPressed = shftPressed;
+        paintComponent(getGraphics());
+    }
+
+/**
      * keep animating until it reaches the destination
      * return false if destination not reached
      * @return true if no more frame exist after this one

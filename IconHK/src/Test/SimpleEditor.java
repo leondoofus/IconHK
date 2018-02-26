@@ -4,17 +4,10 @@ import IconHK.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 import java.util.Vector;
 
 public class SimpleEditor extends JFrame implements ActionListener, KeyEventDispatcher {
-    // Boolean testing if buttons pressed
-    public static boolean metaPressed = false;
-    public static boolean altPressed = false;
-    public static boolean ctrlPressed = false;
-    public static boolean shftPressed = false;
 
     private static final Dimension dim = new Dimension(50,50);
     private static final int persistence = 20;
@@ -60,7 +53,12 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        animateall();
+
+        // Add mouse and keyboard events
+        KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
+        kfm.addKeyEventDispatcher(this);
+
+        //animateall();
     }
 
     private void addButtonToToolBar(JButton button) {
@@ -73,6 +71,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         }
     }
 
+    /*
     private void animateall(){
         for (Component c : toolbar.getComponents()) {
             if (c.getClass() == HKButton.class) {
@@ -81,7 +80,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                 animations.add(new IconAnimation(but, sequence, 40));
             }
         }
-    }
+    }*/
 
     protected void createActions() {
         cutAction = new HKAction("Cut");
@@ -177,6 +176,47 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent e) {
+        if (e.getID() == KeyEvent.KEY_PRESSED) {
+            switch(e.getKeyCode()){
+                case KeyEvent.VK_META:
+                    for (HKButton b : iconHKButtons)
+                        b.setMetaPressed(true);
+                    break;
+                case KeyEvent.VK_CONTROL:
+                    for (HKButton b : iconHKButtons)
+                        b.setCtrlPressed(true);
+                    break;
+                case KeyEvent.VK_ALT:
+                    for (HKButton b : iconHKButtons)
+                        b.setAltPressed(true);
+                    break;
+                case KeyEvent.VK_SHIFT:
+                    for (HKButton b : iconHKButtons)
+                        b.setShftPressed(true);
+                    break;
+            }
+        }
+        else if (e.getID() == KeyEvent.KEY_RELEASED) {
+            switch(e.getKeyCode()){
+                case KeyEvent.VK_META:
+                    for (HKButton b : iconHKButtons)
+                        b.setMetaPressed(false);
+                    break;
+                case KeyEvent.VK_CONTROL:
+                    for (HKButton b : iconHKButtons)
+                        b.setCtrlPressed(false);
+                    break;
+                case KeyEvent.VK_ALT:
+                    for (HKButton b : iconHKButtons)
+                        b.setAltPressed(false);
+                    break;
+                case KeyEvent.VK_SHIFT:
+                    for (HKButton b : iconHKButtons)
+                        b.setShftPressed(false);
+                    break;
+            }
+        }
+        repaint();
         return false;
     }
 
