@@ -12,7 +12,7 @@ import java.util.Vector;
 
 public class SimpleEditor extends JFrame implements ActionListener, KeyEventDispatcher {
 
-    private static final Dimension dim = new Dimension(30,30);
+    private static Dimension dim = new Dimension(50,50);
     private static final int persistence = 20;
 
     // Text Editor
@@ -33,6 +33,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
     public SimpleEditor (){
         super("Swing Editor");
+
         animations = new Vector<IconAnimation>();
         iconHKButtons = new Vector<HKButton>();
         timer = new Timer(50, this);
@@ -60,7 +61,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         content.add(this.toolbar, BorderLayout.NORTH);
         //this.setJMenuBar(new JMenuBar());
         //this.setJMenuBar(createMenuBar());
-        this.setSize(500, 300);
+        this.setSize(dim.width * 16, dim.height * 9);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -285,5 +286,9 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                 updateWidgetForCommand(text,modality);
             }
         }*/
+    }
+
+    public static void setDim (Dimension d){
+        SimpleEditor.dim = d;
     }
 }
