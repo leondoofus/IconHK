@@ -91,7 +91,7 @@ public class MySimpleEditor extends JFrame implements ActionListener, KeyEventDi
 		
 
 		//this.buildSettingsWindow();
-		//this.animateall();
+		this.animateall();
 		
 	}
 

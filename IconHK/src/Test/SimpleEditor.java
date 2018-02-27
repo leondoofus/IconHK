@@ -1,15 +1,18 @@
 package Test;
 
 import IconHK.*;
+import javafx.animation.Animation;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.Vector;
 
 public class SimpleEditor extends JFrame implements ActionListener, KeyEventDispatcher {
 
-    private static final Dimension dim = new Dimension(50,50);
+    private static final Dimension dim = new Dimension(30,30);
     private static final int persistence = 20;
 
     // Text Editor
@@ -41,15 +44,23 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
         // Start adding buttons to toolbar
         this.toolbar = new JToolBar();
-        addButtonToToolBar(new HKButton(newAction,dim));
-        addButtonToToolBar(new HKButton(saveAction,dim));
+        addAllButtonsToToolBar();
+        JButton aa = new JButton("Animate all");
+        aa.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                animateall();
+                animateToolbar();
+            }
+        });
+        toolbar.add(aa);
 
         Container content = getContentPane();
         content.add(textComp, BorderLayout.CENTER);
         content.add(this.toolbar, BorderLayout.NORTH);
         //this.setJMenuBar(new JMenuBar());
         //this.setJMenuBar(createMenuBar());
-        this.setSize(400, 300);
+        this.setSize(500, 300);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,7 +69,24 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         kfm.addKeyEventDispatcher(this);
 
-        //animateall();
+        animateall();
+        animateToolbar();
+    }
+
+    private void addAllButtonsToToolBar (){
+        addButtonToToolBar(new HKButton(newAction,dim));
+        addButtonToToolBar(new HKButton(saveAction,dim));
+        toolbar.addSeparator();
+        addButtonToToolBar(new HKButton(copyAction,dim));
+        addButtonToToolBar(new HKButton(cutAction,dim));
+        addButtonToToolBar(new HKButton(pasteAction,dim));
+        toolbar.addSeparator();
+        addButtonToToolBar(new HKButton(expandAction,dim));
+        addButtonToToolBar(new HKButton(rgbAction,dim));
+        addButtonToToolBar(new HKButton(findAction,dim));
+        addButtonToToolBar(new HKButton(moveAction,dim));
+        addButtonToToolBar(new HKButton(pencilAction,dim));
+        addButtonToToolBar(new HKButton(increaseAction,dim));
     }
 
     private void addButtonToToolBar(JButton button) {
@@ -71,16 +99,16 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         }
     }
 
-    /*
+
     private void animateall(){
         for (Component c : toolbar.getComponents()) {
             if (c.getClass() == HKButton.class) {
-                HKButton but = (HKButton) c;
+                HKButton button = (HKButton) c;
                 int[] sequence = { IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP };
-                animations.add(new IconAnimation(but, sequence, 40));
+                animations.add(new IconAnimation(button, sequence, 40));
             }
         }
-    }*/
+    }
 
     protected void createActions() {
         cutAction = new HKAction("Cut");
@@ -97,7 +125,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
         saveAction = new HKAction("Save");
         saveAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
-                KeyEvent.VK_S, ActionEvent.CTRL_MASK | ActionEvent.ALT_MASK));
+                KeyEvent.VK_S, ActionEvent.CTRL_MASK));
         newAction = new HKAction("New");
         newAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
                 KeyEvent.VK_N, ActionEvent.CTRL_MASK));
@@ -128,22 +156,18 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
     }
 
-    /*private void animateToolbar() {
-
+    private void animateToolbar() {
         if (animations.size() > 0) {
             Iterator<IconAnimation> i = animations.iterator();
             while (i.hasNext()) {
                 IconAnimation animation = i.next();
                 int objective = animation.getCurrentObjective();
-                boolean over = false;
+                boolean over;
                 switch (objective) {
-
                     case IconAnimation.HOTKEY_STEP:
                         over = animation.getButton().animateToDestination(IconAnimation.HOTKEY_STEP);
                         animation.getButton().repaint();
-
                         if (over) {
-
                             if(animation.hasToPersist()){
                                 animation.increaseCurrentPersistency();
                             }
@@ -172,7 +196,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                 }
             }
         }
-    }*/
+    }
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent e) {
@@ -195,8 +219,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                         b.setShftPressed(true);
                     break;
             }
-        }
-        else if (e.getID() == KeyEvent.KEY_RELEASED) {
+        } else if (e.getID() == KeyEvent.KEY_RELEASED) {
             switch(e.getKeyCode()){
                 case KeyEvent.VK_META:
                     for (HKButton b : iconHKButtons)
@@ -220,12 +243,14 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         return false;
     }
 
+    // TODO ask : should we synchronize this method ?
     @Override
-    public void actionPerformed(ActionEvent e) {
-        /*if (e.getSource() == timer) {
-            //animateToolbar();
+    public synchronized void actionPerformed(ActionEvent e) {
+        if (e.getSource() == timer) {
+            animateToolbar();
             repaint();
-        } else {
+            //System.out.println(animations.size());
+        } /*else {
 
             String text = null;
             int modality=0;

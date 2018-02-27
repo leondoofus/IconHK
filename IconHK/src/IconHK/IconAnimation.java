@@ -1,7 +1,7 @@
 package IconHK;
 
 public class IconAnimation {
-    public static final int ICON_STEP=1, DEFAULT_STEP=2,  HOTKEY_STEP=3, OVER_STEP=0;
+    public static final int ICON_STEP=1, DEFAULT_STEP=2, HOTKEY_STEP=3, OVER_STEP=0;
 
     private HKButton button;
     private int[] states;

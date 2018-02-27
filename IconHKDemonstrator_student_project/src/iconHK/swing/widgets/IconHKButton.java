@@ -277,7 +277,6 @@ public class IconHKButton extends JButton implements MouseListener{
 			} else {
 				g2.setColor(Color.DARK_GRAY);
 			}
-			g2.fillArc(-(int)radius, (int) (height-radius),(int)diameter, (int)diameter, 0, 90);
 		}
 		else {
 			g2.setColor(Color.WHITE);

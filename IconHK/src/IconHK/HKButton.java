@@ -50,6 +50,7 @@ public class HKButton extends JButton implements MouseListener {
     // Control the movement
     private boolean spinner = true;
 
+
     // int value referring the length of one side of the square
     // used for modifiers. 0 by default, must be initialized in the constructer
     // and updated if needed
@@ -268,12 +269,11 @@ public class HKButton extends JButton implements MouseListener {
         //paintComponent(getGraphics());
     }
 
-/**
+    /**
      * keep animating until it reaches the destination
      * return false if destination not reached
      * @return true if no more frame exist after this one
      */
-    /*
     public boolean animateToDestination(int destination){
         switch(destination){
             case IconAnimation.ICON_STEP:
@@ -283,8 +283,7 @@ public class HKButton extends JButton implements MouseListener {
                 if(this.currentFrame>this.defaultFrame){
                     this.decreaseCurrentFrame();
                     return isAnimationCompleteForDestination(destination);
-                }
-                else if(this.currentFrame<this.defaultFrame){
+                } else if(this.currentFrame<this.defaultFrame){
                     this.increaseCurrentFrame();
                     return isAnimationCompleteForDestination(destination);
                 }
@@ -294,7 +293,7 @@ public class HKButton extends JButton implements MouseListener {
                 return isAnimationCompleteForDestination(destination);
         }
         return false;
-    }*/
+    }
 
     /**
      * check whether or not currentFrame is the one expected
@@ -303,7 +302,6 @@ public class HKButton extends JButton implements MouseListener {
      * no otherwise
      * @return true if currentFrame is the expected
      */
-    /*
     private boolean isAnimationCompleteForDestination(int destination){
         switch(destination){
             case IconAnimation.ICON_STEP:
@@ -314,7 +312,7 @@ public class HKButton extends JButton implements MouseListener {
                 return(currentFrame==vmax);
         }
         return false;
-    }*/
+    }
 
     /**
      * decrease currentframe
@@ -323,8 +321,10 @@ public class HKButton extends JButton implements MouseListener {
 
     private void decreaseCurrentFrame(){
         this.currentFrame--;
-        if (this.currentFrame==0)
+        if (this.currentFrame<=0){
+            currentFrame = 0;
             spinner = !spinner;
+        }
     }
 
     /**
@@ -334,8 +334,10 @@ public class HKButton extends JButton implements MouseListener {
 
     private void increaseCurrentFrame(){
         this.currentFrame++;
-        if(currentFrame==vmax)
+        if(currentFrame>=vmax) {
+            currentFrame = vmax;
             spinner = !spinner;
+        }
     }
 
     private void changeCurrentFrame(){
