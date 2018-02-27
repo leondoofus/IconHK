@@ -34,10 +34,10 @@ public class HKButton extends JButton implements MouseListener {
     private boolean useMeta, useCtrl, useAlt, useSft;
 
     // Boolean testing if buttons pressed
-    private boolean metaPressed = false;
-    private boolean altPressed = false;
-    private boolean ctrlPressed = false;
-    private boolean shftPressed = false;
+    public static boolean metaPressed = false;
+    public static boolean altPressed = false;
+    public static boolean ctrlPressed = false;
+    public static boolean shftPressed = false;
 
     // The image shown by default (if not in mouse nor keyboard mode)
     private int defaultFrame=0;
@@ -46,6 +46,9 @@ public class HKButton extends JButton implements MouseListener {
 
     // The current frame drawn
     private int currentFrame;
+
+    // Control the movement
+    private boolean spinner = true;
 
     // int value referring the length of one side of the square
     // used for modifiers. 0 by default, must be initialized in the constructer
@@ -190,13 +193,14 @@ public class HKButton extends JButton implements MouseListener {
         float radius=  (diameter/2.0f);
 
         //Fill arcs
-        g2.setColor(useCtrl? Color.DARK_GRAY : Color.WHITE);
+        g2.setColor(useCtrl? (ctrlPressed? pressedColor : Color.DARK_GRAY) : Color.WHITE);
+        //g2.setColor(useCtrl? Color.DARK_GRAY : Color.WHITE);
         g2.fillArc(-(int)radius, (int) (height-radius),(int)diameter, (int)diameter, 0, 90);
-        g2.setColor(useSft? Color.DARK_GRAY : Color.WHITE);
+        g2.setColor(useSft? (shftPressed ? pressedColor : Color.DARK_GRAY) : Color.WHITE);
         g2.fillArc(-(int)radius, -(int) (radius),(int)diameter, (int)diameter, 270, 90);
-        g2.setColor(useAlt? Color.DARK_GRAY : Color.WHITE);
+        g2.setColor(useAlt? (altPressed? pressedColor : Color.DARK_GRAY) : Color.WHITE);
         g2.fillArc((int)(width-radius), (int) (height-radius),(int)diameter, (int)diameter, 90, 90);
-        g2.setColor(useMeta? Color.DARK_GRAY : Color.WHITE);
+        g2.setColor(useMeta? (metaPressed? pressedColor : Color.DARK_GRAY) : Color.WHITE);
         g2.fillArc((int)(width-radius), (int) (-radius),(int)diameter, (int)diameter, 180, 90);
 
         g2.setColor(Color.DARK_GRAY);
@@ -245,23 +249,23 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     public void setMetaPressed(boolean metaPressed) {
-        this.metaPressed = metaPressed;
-        paintComponent(getGraphics());
+        HKButton.metaPressed = metaPressed;
+        //paintComponent(getGraphics());
     }
 
     public void setAltPressed(boolean altPressed) {
-        this.altPressed = altPressed;
-        paintComponent(getGraphics());
+        HKButton.altPressed = altPressed;
+        //paintComponent(getGraphics());
     }
 
     public void setCtrlPressed(boolean ctrlPressed) {
-        this.ctrlPressed = ctrlPressed;
-        paintComponent(getGraphics());
+        HKButton.ctrlPressed = ctrlPressed;
+        //paintComponent(getGraphics());
     }
 
     public void setShftPressed(boolean shftPressed) {
-        this.shftPressed = shftPressed;
-        paintComponent(getGraphics());
+        HKButton.shftPressed = shftPressed;
+        //paintComponent(getGraphics());
     }
 
 /**
@@ -319,9 +323,8 @@ public class HKButton extends JButton implements MouseListener {
 
     private void decreaseCurrentFrame(){
         this.currentFrame--;
-        if (this.currentFrame<0){
-            this.currentFrame =0;
-        }
+        if (this.currentFrame==0)
+            spinner = !spinner;
     }
 
     /**
@@ -331,9 +334,15 @@ public class HKButton extends JButton implements MouseListener {
 
     private void increaseCurrentFrame(){
         this.currentFrame++;
-        if(currentFrame>=vmax){
-            currentFrame = vmax;
-        }
+        if(currentFrame==vmax)
+            spinner = !spinner;
+    }
+
+    private void changeCurrentFrame(){
+        if (spinner)
+            increaseCurrentFrame();
+        else
+            decreaseCurrentFrame();
     }
 
     // Resize image
@@ -387,9 +396,9 @@ public class HKButton extends JButton implements MouseListener {
     private class Redesign implements Runnable {
         @Override
         public void run() {
-            if (currentFrame != vmax) {
+            if (spinner) {
                 while (currentFrame != vmax) {
-                    increaseCurrentFrame();
+                    changeCurrentFrame();
                     paintComponent(getGraphics());
                     try {
                         Thread.sleep(10);
@@ -399,7 +408,7 @@ public class HKButton extends JButton implements MouseListener {
                 }
             } else {
                 while (currentFrame != 0){
-                    decreaseCurrentFrame();
+                    changeCurrentFrame();
                     paintComponent(getGraphics());
                     try {
                         Thread.sleep(100);

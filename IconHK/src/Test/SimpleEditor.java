@@ -97,7 +97,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
         saveAction = new HKAction("Save");
         saveAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
-                KeyEvent.VK_S, ActionEvent.CTRL_MASK));
+                KeyEvent.VK_S, ActionEvent.CTRL_MASK | ActionEvent.ALT_MASK));
         newAction = new HKAction("New");
         newAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
                 KeyEvent.VK_N, ActionEvent.CTRL_MASK));
