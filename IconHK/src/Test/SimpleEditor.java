@@ -11,7 +11,6 @@ import java.util.Vector;
 public class SimpleEditor extends JFrame implements ActionListener, KeyEventDispatcher {
 
     private static Dimension dim = new Dimension(50,50);
-    private static final int persistence = 20;
 
     // Text Editor
     private JTextArea textComp;
@@ -26,10 +25,10 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     private Action findAction, moveAction, pencilAction, increaseAction;
 
     // Boolean testing if buttons pressed
-    public static boolean metaPressed = false;
-    public static boolean altPressed = false;
-    public static boolean ctrlPressed = false;
-    public static boolean shftPressed = false;
+    private static boolean metaPressed = false;
+    private static boolean altPressed = false;
+    private static boolean ctrlPressed = false;
+    private static boolean shftPressed = false;
 
 
     private Vector<IconAnimation> animations;

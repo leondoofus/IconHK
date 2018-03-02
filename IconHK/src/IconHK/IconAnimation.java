@@ -35,7 +35,6 @@ public class IconAnimation {
         return this.states;
     }
 
-
     public int getPersistency(){
         return this.persistency;
     }

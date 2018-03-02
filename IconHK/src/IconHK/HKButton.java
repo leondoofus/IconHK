@@ -3,14 +3,11 @@ package IconHK;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Vector;
@@ -22,11 +19,11 @@ public class HKButton extends JButton implements MouseListener {
     // The dimension of the button
     private Dimension dimension = new Dimension(32, 32);
 
+    // All files for animation
+    File[] iconFiles;
+
     //TODO setter
     private static Color pressedColor= new Color(29,174,222);
-
-    // The border when overed
-    private static Border overedBorder = new LineBorder(pressedColor, 2);
 
     // A vector of buffered images ordered so it creates an animation from icon to symbol
     private Vector<BufferedImage> iconsVector;
@@ -55,7 +52,6 @@ public class HKButton extends JButton implements MouseListener {
     // int value referring the length of one side of the square
     // used for modifiers. 0 by default, must be initialized in the constructer
     // and updated if needed
-    // TODO setter
     private float modifierRadiusRatio=0.35f;
 
     public HKButton(Action a){
@@ -92,7 +88,7 @@ public class HKButton extends JButton implements MouseListener {
 
     private void initForName(String text) {
         this.name=text;
-        iconsVector = new Vector<BufferedImage>();
+        iconsVector = new Vector<>();
         String iconFolder = "./resources/icons/" + text + "/";
         this.setText("");
         Border border = BorderFactory.createLineBorder(Color.DARK_GRAY);
@@ -101,25 +97,13 @@ public class HKButton extends JButton implements MouseListener {
         //this.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         File dir = new File(iconFolder);
 
-        File[] iconFiles = dir.listFiles(new FilenameFilter() {
-            public boolean accept(File dir, String filename) {
-                return filename.endsWith(".png");
-            }
-        });
+        iconFiles = dir.listFiles((dir1, filename) -> filename.endsWith(".png"));
         // Files aren't in alphabetical order
+        assert iconFiles != null;
         Arrays.sort(iconFiles);
-        for (File f : iconFiles) {
-            try {
-                BufferedImage img = ImageIO.read(f);
-                // Resize all images in order to fit dimension
-                // TODO setter to modify the ratio
-                BufferedImage scaledInstance = resize(img,(int)(dimension.getWidth() * 0.75), (int)(dimension.getHeight() * 0.75));
-                iconsVector.add(scaledInstance);
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.err.println("image IOException for file " + f.getAbsolutePath());
-            }
-        }
+
+        fixAllImages();
+
         vmax = iconsVector.size() - 1;
 
         //TODO à voir des lignes suivantes
@@ -132,6 +116,23 @@ public class HKButton extends JButton implements MouseListener {
         this.setOpaque(true);
         fixCurrentFrame();
         this.currentFrame=defaultFrame;
+    }
+
+    private void fixAllImages (){
+        for (File f : iconFiles) {
+            try {
+                BufferedImage img = ImageIO.read(f);
+                // Resize all images in order to fit dimension
+                float w = (float)dimension.getWidth();
+                float h = (float)dimension.getHeight();
+                BufferedImage scaledInstance = resize(img,(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.9),
+                        (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.9));
+                iconsVector.add(scaledInstance);
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.err.println("image IOException for file " + f.getAbsolutePath());
+            }
+        }
     }
 
     private boolean fixCurrentFrame() {
@@ -157,36 +158,9 @@ public class HKButton extends JButton implements MouseListener {
         }
 
         drawModifiers(g2);
-
-        /*TODO this thing depends on Editor*/
-        int opacityValue = getOpacityDependingOfModifiersPressed();
-        //opacityValue=0;
-        if(opacityValue>0){
-            g2.setColor(new Color(255,255,255,opacityValue));
-            g2.fillRect(0, 0, getWidth(), getHeight());
-        }
-        g2.setColor(Color.DARK_GRAY);
     }
 
-    private int getOpacityDependingOfModifiersPressed(){
-        int value=0;
-        /*
-        if(!MySimpleEditor.ctrlPressed&&!MySimpleEditor.altPressed&&!MySimpleEditor.shftPressed&&!MySimpleEditor.metaPressed){
-            return value;
-        }
 
-        float nbOfMissingMods = getNumberOfMissingMods();
-
-        if(nbOfMissingMods>0){
-            return (int)(nbOfMissingMods/4.0f*255.0f);
-        }
-        float nbOfExtraMods = getNumberOfExtraMods();
-
-        if(nbOfExtraMods>0){
-            return (int)(nbOfExtraMods/4.0f*255.0f);
-        }*/
-        return value;
-    }
 
     private void drawModifiers(Graphics2D g2) {
         float width = (float) this.getWidth();
@@ -237,36 +211,32 @@ public class HKButton extends JButton implements MouseListener {
         return useSft;
     }
 
-    public void setDimension(Dimension dimension) {
-        this.dimension = dimension;
-    }
-
     public static void setPressedColor(Color pressedColor) {
         HKButton.pressedColor = pressedColor;
     }
 
+    public float getModifierRadiusRatio(){ return this.modifierRadiusRatio; }
+
     public void setModifierRadiusRatio(float modifierRadiusRatio) {
         this.modifierRadiusRatio = modifierRadiusRatio;
+        //TODO see this line
+        //fixAllImages();
     }
 
     public void setMetaPressed(boolean metaPressed) {
         this.metaPressed = metaPressed;
-        //paintComponent(getGraphics());
     }
 
     public void setAltPressed(boolean altPressed) {
         this.altPressed = altPressed;
-        //paintComponent(getGraphics());
     }
 
     public void setCtrlPressed(boolean ctrlPressed) {
         this.ctrlPressed = ctrlPressed;
-        //paintComponent(getGraphics());
     }
 
     public void setShftPressed(boolean shftPressed) {
         this.shftPressed = shftPressed;
-        //paintComponent(getGraphics());
     }
 
 
@@ -414,7 +384,7 @@ public class HKButton extends JButton implements MouseListener {
                     changeCurrentFrame();
                     paintComponent(getGraphics());
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(10);
                     } catch (InterruptedException e1) {
                         e1.printStackTrace();
                     }
