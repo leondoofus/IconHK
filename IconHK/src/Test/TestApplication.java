@@ -13,6 +13,7 @@ import java.awt.event.KeyEvent;
 
 public class TestApplication {
     public static void main(String[] args) {
+        /*
         JDialog dialog = new JDialog();
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 0, 0));
@@ -49,8 +50,11 @@ public class TestApplication {
         });
         panel.add(validate);
         dialog.add(panel);
-        dialog.setSize(350, 100);
+        dialog.setSize(300, 150);
         dialog.setLocationRelativeTo(null);
-        dialog.setVisible(true);
+        dialog.setVisible(true);*/
+
+        SimpleEditor.setDim(new Dimension(50,50));
+        SimpleEditor editor = new SimpleEditor();
     }
 }

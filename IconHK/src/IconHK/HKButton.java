@@ -5,6 +5,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
@@ -34,10 +35,10 @@ public class HKButton extends JButton implements MouseListener {
     private boolean useMeta, useCtrl, useAlt, useSft;
 
     // Boolean testing if buttons pressed
-    public static boolean metaPressed = false;
-    public static boolean altPressed = false;
-    public static boolean ctrlPressed = false;
-    public static boolean shftPressed = false;
+    private boolean metaPressed = false;
+    private boolean altPressed = false;
+    private boolean ctrlPressed = false;
+    private boolean shftPressed = false;
 
     // The image shown by default (if not in mouse nor keyboard mode)
     private int defaultFrame=0;
@@ -195,7 +196,6 @@ public class HKButton extends JButton implements MouseListener {
 
         //Fill arcs
         g2.setColor(useCtrl? (ctrlPressed? pressedColor : Color.DARK_GRAY) : Color.WHITE);
-        //g2.setColor(useCtrl? Color.DARK_GRAY : Color.WHITE);
         g2.fillArc(-(int)radius, (int) (height-radius),(int)diameter, (int)diameter, 0, 90);
         g2.setColor(useSft? (shftPressed ? pressedColor : Color.DARK_GRAY) : Color.WHITE);
         g2.fillArc(-(int)radius, -(int) (radius),(int)diameter, (int)diameter, 270, 90);
@@ -250,23 +250,39 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     public void setMetaPressed(boolean metaPressed) {
-        HKButton.metaPressed = metaPressed;
+        this.metaPressed = metaPressed;
         //paintComponent(getGraphics());
     }
 
     public void setAltPressed(boolean altPressed) {
-        HKButton.altPressed = altPressed;
+        this.altPressed = altPressed;
         //paintComponent(getGraphics());
     }
 
     public void setCtrlPressed(boolean ctrlPressed) {
-        HKButton.ctrlPressed = ctrlPressed;
+        this.ctrlPressed = ctrlPressed;
         //paintComponent(getGraphics());
     }
 
     public void setShftPressed(boolean shftPressed) {
-        HKButton.shftPressed = shftPressed;
+        this.shftPressed = shftPressed;
         //paintComponent(getGraphics());
+    }
+
+    public boolean isMetaPressed() {
+        return metaPressed;
+    }
+
+    public boolean isAltPressed() {
+        return altPressed;
+    }
+
+    public boolean isCtrlPressed() {
+        return ctrlPressed;
+    }
+
+    public boolean isShftPressed() {
+        return shftPressed;
     }
 
     /**
@@ -323,7 +339,7 @@ public class HKButton extends JButton implements MouseListener {
         this.currentFrame--;
         if (this.currentFrame<=0){
             currentFrame = 0;
-            spinner = !spinner;
+            spinner = true;
         }
     }
 
@@ -336,7 +352,7 @@ public class HKButton extends JButton implements MouseListener {
         this.currentFrame++;
         if(currentFrame>=vmax) {
             currentFrame = vmax;
-            spinner = !spinner;
+            spinner = false;
         }
     }
 

@@ -27,6 +27,12 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     private Action cutAction, pasteAction, copyAction, saveAction, newAction, expandAction, rgbAction;
     private Action findAction, moveAction, pencilAction, increaseAction;
 
+    // Boolean testing if buttons pressed
+    public static boolean metaPressed = false;
+    public static boolean altPressed = false;
+    public static boolean ctrlPressed = false;
+    public static boolean shftPressed = false;
+
 
     private Vector<IconAnimation> animations;
     private Vector<HKButton> iconHKButtons;
@@ -46,15 +52,6 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         // Start adding buttons to toolbar
         this.toolbar = new JToolBar();
         addAllButtonsToToolBar();
-        JButton aa = new JButton("Animate all");
-        aa.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                animateall();
-                animateToolbar();
-            }
-        });
-        toolbar.add(aa);
 
         Container content = getContentPane();
         content.add(textComp, BorderLayout.CENTER);
@@ -88,6 +85,13 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         addButtonToToolBar(new HKButton(moveAction,dim));
         addButtonToToolBar(new HKButton(pencilAction,dim));
         addButtonToToolBar(new HKButton(increaseAction,dim));
+        toolbar.addSeparator();
+        JButton aa = new JButton("Animate all");
+        aa.addActionListener(e -> {
+            animateall();
+            animateToolbar();
+        });
+        toolbar.add(aa);
     }
 
     private void addButtonToToolBar(JButton button) {
@@ -141,7 +145,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
         findAction = new HKAction("Find");
         findAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
-                KeyEvent.VK_Q, ActionEvent.CTRL_MASK));
+                KeyEvent.VK_Q, ActionEvent.CTRL_MASK|ActionEvent.SHIFT_MASK));
 
         moveAction = new HKAction("Move");
         moveAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
@@ -149,7 +153,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
         pencilAction = new HKAction("Pencil");
         pencilAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
-                KeyEvent.VK_W, ActionEvent.CTRL_MASK));
+                KeyEvent.VK_W, ActionEvent.CTRL_MASK|ActionEvent.ALT_MASK|ActionEvent.SHIFT_MASK));
 
         increaseAction = new HKAction("Increase");
         increaseAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
@@ -204,44 +208,90 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         if (e.getID() == KeyEvent.KEY_PRESSED) {
             switch(e.getKeyCode()){
                 case KeyEvent.VK_META:
-                    for (HKButton b : iconHKButtons)
+                    for (HKButton b : iconHKButtons) {
                         b.setMetaPressed(true);
+                        metaPressed = true;
+                        setAllModifiers(b);
+                    }
                     break;
                 case KeyEvent.VK_CONTROL:
-                    for (HKButton b : iconHKButtons)
+                    for (HKButton b : iconHKButtons) {
                         b.setCtrlPressed(true);
+                        ctrlPressed = true;
+                        setAllModifiers(b);
+                    }
                     break;
                 case KeyEvent.VK_ALT:
-                    for (HKButton b : iconHKButtons)
+                    for (HKButton b : iconHKButtons) {
                         b.setAltPressed(true);
+                        altPressed = true;
+                        setAllModifiers(b);
+                    }
                     break;
                 case KeyEvent.VK_SHIFT:
-                    for (HKButton b : iconHKButtons)
+                    for (HKButton b : iconHKButtons) {
                         b.setShftPressed(true);
+                        shftPressed = true;
+                        setAllModifiers(b);
+                    }
                     break;
             }
         } else if (e.getID() == KeyEvent.KEY_RELEASED) {
             switch(e.getKeyCode()){
                 case KeyEvent.VK_META:
-                    for (HKButton b : iconHKButtons)
+                    for (HKButton b : iconHKButtons) {
                         b.setMetaPressed(false);
+                        metaPressed = false;
+                        //setAllModifiers(b);
+                    }
                     break;
                 case KeyEvent.VK_CONTROL:
-                    for (HKButton b : iconHKButtons)
+                    for (HKButton b : iconHKButtons) {
                         b.setCtrlPressed(false);
+                        ctrlPressed = false;
+                        //setAllModifiers(b);
+                    }
                     break;
                 case KeyEvent.VK_ALT:
-                    for (HKButton b : iconHKButtons)
+                    for (HKButton b : iconHKButtons) {
                         b.setAltPressed(false);
+                        altPressed = false;
+                        //setAllModifiers(b);
+                    }
                     break;
                 case KeyEvent.VK_SHIFT:
-                    for (HKButton b : iconHKButtons)
+                    for (HKButton b : iconHKButtons) {
                         b.setShftPressed(false);
+                        shftPressed = false;
+                        //setAllModifiers(b);
+                    }
                     break;
             }
         }
-        repaint();
         return false;
+    }
+
+    private void setAllModifiers (HKButton b){
+        //System.out.println(ctrlPressed + " " + altPressed + " " + shftPressed + " " + metaPressed);
+        if (ctrlPressed)
+            if (!b.isUseCtrl())
+                desactiveAllModifiers(b);
+        if (altPressed)
+            if (!b.isUseAlt())
+                desactiveAllModifiers(b);
+        if (shftPressed)
+            if (!b.isUseSft())
+                desactiveAllModifiers(b);
+        if (metaPressed)
+            if (!b.isUseMeta())
+                desactiveAllModifiers(b);
+    }
+
+    private void desactiveAllModifiers (HKButton b){
+        b.setCtrlPressed(false);
+        b.setAltPressed(false);
+        b.setShftPressed(false);
+        b.setMetaPressed(false);
     }
 
     // TODO ask : should we synchronize this method ?
@@ -291,4 +341,5 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     public static void setDim (Dimension d){
         SimpleEditor.dim = d;
     }
+
 }
