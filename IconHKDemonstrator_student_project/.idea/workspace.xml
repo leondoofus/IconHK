@@ -12,28 +12,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MySimpleEditor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MySimpleEditor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/iconHK/swing/MySimpleEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="488" column="4" lean-forward="false" selection-start-line="488" selection-start-column="4" selection-end-line="488" selection-end-column="4" />
+            <state relative-caret-position="71">
+              <caret line="270" column="4" lean-forward="false" selection-start-line="270" selection-start-column="4" selection-end-line="342" selection-end-column="5" />
               <folding>
                 <element signature="method#buildSettingsWindow#0;class#MySimpleEditor#0" expanded="false" />
                 <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
                 <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
                 <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-                <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SettingsWindow.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/iconHK/swing/SettingsWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1466">
-              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -78,11 +67,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="683" />
-    <option name="y" value="24" />
-    <option name="width" value="683" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="960" />
+    <option name="y" value="27" />
+    <option name="width" value="961" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -99,6 +88,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,17 +160,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IconHK" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -339,7 +328,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
+    <frame x="960" y="27" width="961" height="1054" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -354,7 +343,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17348485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3608361" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -382,6 +371,27 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/iconHK/swing/MySimpleEditor.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5796">
+          <caret line="488" column="4" lean-forward="false" selection-start-line="488" selection-start-column="4" selection-end-line="488" selection-end-column="4" />
+          <folding>
+            <element signature="method#buildSettingsWindow#0;class#MySimpleEditor#0" expanded="false" />
+            <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
+            <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
+            <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iconHK/swing/SettingsWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iconHK/swing/MySimpleEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -389,7 +399,6 @@
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -403,7 +412,6 @@
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -417,7 +425,6 @@
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -447,7 +454,6 @@
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -464,10 +470,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6606">
           <caret line="399" column="0" lean-forward="false" selection-start-line="399" selection-start-column="0" selection-end-line="399" selection-end-column="0" />
-          <folding>
-            <element signature="e#13553#13554#0" expanded="false" />
-            <element signature="e#13576#13577#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -491,10 +494,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6606">
           <caret line="399" column="0" lean-forward="false" selection-start-line="399" selection-start-column="0" selection-end-line="399" selection-end-column="0" />
-          <folding>
-            <element signature="e#13553#13554#0" expanded="false" />
-            <element signature="e#13576#13577#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -507,7 +507,6 @@
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -529,7 +528,6 @@
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -538,10 +536,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6570">
           <caret line="399" column="0" lean-forward="true" selection-start-line="399" selection-start-column="0" selection-end-line="399" selection-end-column="0" />
-          <folding>
-            <element signature="e#13553#13554#0" expanded="false" />
-            <element signature="e#13576#13577#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -578,7 +573,6 @@
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -603,10 +597,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="e#13553#13554#0" expanded="false" />
-            <element signature="e#13576#13577#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -627,7 +618,6 @@
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -652,10 +642,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5922">
           <caret line="361" column="0" lean-forward="true" selection-start-line="361" selection-start-column="0" selection-end-line="361" selection-end-column="0" />
-          <folding>
-            <element signature="e#13553#13554#0" expanded="false" />
-            <element signature="e#13576#13577#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -676,7 +663,6 @@
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -701,10 +687,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3654">
           <caret line="229" column="15" lean-forward="true" selection-start-line="229" selection-start-column="15" selection-end-line="229" selection-end-column="15" />
-          <folding>
-            <element signature="e#13553#13554#0" expanded="false" />
-            <element signature="e#13576#13577#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -741,7 +724,6 @@
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -814,25 +796,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/iconHK/swing/SettingsWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/iconHK/swing/MySimpleEditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="488" column="4" lean-forward="false" selection-start-line="488" selection-start-column="4" selection-end-line="488" selection-end-column="4" />
+        <state relative-caret-position="71">
+          <caret line="270" column="4" lean-forward="false" selection-start-line="270" selection-start-column="4" selection-end-line="342" selection-end-column="5" />
           <folding>
             <element signature="method#buildSettingsWindow#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#init#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createTextComponent#0;class#MySimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#MySimpleEditor#0" expanded="false" />
-            <element signature="method#createMenuBar#0;class#MySimpleEditor#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iconHK/swing/SettingsWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1466">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>

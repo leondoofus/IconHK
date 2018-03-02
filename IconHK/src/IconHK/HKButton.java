@@ -269,21 +269,6 @@ public class HKButton extends JButton implements MouseListener {
         //paintComponent(getGraphics());
     }
 
-    public boolean isMetaPressed() {
-        return metaPressed;
-    }
-
-    public boolean isAltPressed() {
-        return altPressed;
-    }
-
-    public boolean isCtrlPressed() {
-        return ctrlPressed;
-    }
-
-    public boolean isShftPressed() {
-        return shftPressed;
-    }
 
     /**
      * keep animating until it reaches the destination
@@ -373,7 +358,7 @@ public class HKButton extends JButton implements MouseListener {
         return resized;
     }
 
-    // Redimensioned button
+    // Redimension button
     @Override
     public Dimension getPreferredSize() {
         return dimension;
@@ -402,7 +387,7 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     public void mouseEntered(MouseEvent e) {
-
+        this.setToolTipText((String) this.getAction().getValue(Action.NAME));
     }
 
     public void mouseExited(MouseEvent e) {
@@ -436,5 +421,9 @@ public class HKButton extends JButton implements MouseListener {
                 }
             }
         }
+    }
+
+    public boolean isActived (){
+        return metaPressed || shftPressed || altPressed || ctrlPressed;
     }
 }

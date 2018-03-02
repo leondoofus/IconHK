@@ -13,8 +13,8 @@ import java.awt.event.KeyEvent;
 
 public class TestApplication {
     public static void main(String[] args) {
-        /*
-        JDialog dialog = new JDialog();
+
+        /*JDialog dialog = new JDialog();
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 0, 0));
         JTextField text = new JTextField(4);

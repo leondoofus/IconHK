@@ -1,12 +1,11 @@
 package Test;
 
 import IconHK.*;
-import javafx.animation.Animation;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Collections;
+import java.util.EventListener;
 import java.util.Iterator;
 import java.util.Vector;
 
@@ -40,8 +39,8 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     public SimpleEditor (){
         super("Swing Editor");
 
-        animations = new Vector<IconAnimation>();
-        iconHKButtons = new Vector<HKButton>();
+        animations = new Vector<>();
+        iconHKButtons = new Vector<>();
         timer = new Timer(50, this);
         timer.start();
 
@@ -56,8 +55,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         Container content = getContentPane();
         content.add(textComp, BorderLayout.CENTER);
         content.add(this.toolbar, BorderLayout.NORTH);
-        //this.setJMenuBar(new JMenuBar());
-        //this.setJMenuBar(createMenuBar());
+        this.setJMenuBar(createMenuBar());
         this.setSize(dim.width * 16, dim.height * 9);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
@@ -104,13 +102,95 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         }
     }
 
+    protected JMenuBar createMenuBar() {
+        JMenuBar menubar = new JMenuBar();
+        JMenu file = new JMenu("File");
+        JMenu edit = new JMenu("Edit");
+        JMenu  other = new JMenu("Other");
+        menubar.add(file);
+        menubar.add(edit);
+        menubar.add(other);
+
+        JMenuItem newfile = new JMenuItem(newAction);
+        newfile.addActionListener(this);
+        //	newfile.setAccelerator(KeyStroke.getKeyStroke(
+        //  KeyEvent.VK_N, ActionEvent.CTRL_MASK));
+        file.add(newfile);
+
+        JMenuItem save = new JMenuItem(saveAction);
+        save.addActionListener(this);
+        //save.setAccelerator(KeyStroke.getKeyStroke(
+        //KeyEvent.VK_S, ActionEvent.CTRL_MASK|ActionEvent.ALT_MASK));
+        file.add(save);
+
+        JMenuItem copy = new JMenuItem(copyAction);
+        copy.addActionListener(this);
+        //	copy.setAccelerator(KeyStroke.getKeyStroke(
+        //   KeyEvent.VK_C, ActionEvent.CTRL_MASK));
+        edit.add(copy);
+
+        JMenuItem cut = new JMenuItem(cutAction);
+        cut.addActionListener(this);
+        //	cut.setAccelerator(KeyStroke.getKeyStroke(
+        //  KeyEvent.VK_X, ActionEvent.CTRL_MASK));
+        edit.add(cut);
+
+        JMenuItem paste = new JMenuItem(pasteAction);
+        paste.addActionListener(this);
+        //paste.setAccelerator(KeyStroke.getKeyStroke(
+        //KeyEvent.VK_V, ActionEvent.CTRL_MASK));
+        edit.add(paste);
+
+        JMenuItem rgb = new JMenuItem(rgbAction);
+        rgb.addActionListener(this);
+        other.add(rgb);
+
+        JMenuItem expand = new JMenuItem(expandAction);
+        expand.addActionListener(this);
+        other.add(expand);
+
+        JMenuItem find = new JMenuItem(findAction);
+        find.addActionListener(this);
+        other.add(find);
+
+        JMenuItem move = new JMenuItem(moveAction);
+        move.addActionListener(this);
+        other.add(move);
+
+
+        JMenuItem pencil = new JMenuItem(pencilAction);
+        pencil.addActionListener(this);
+        other.add(pencil);
+
+        JMenuItem increase = new JMenuItem(increaseAction);
+        increase.addActionListener(this);
+        other.add(increase);
+
+
+        return menubar;
+    }
+
 
     private void animateall(){
+        animations.removeAllElements();
         for (Component c : toolbar.getComponents()) {
             if (c.getClass() == HKButton.class) {
                 HKButton button = (HKButton) c;
                 int[] sequence = { IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP };
                 animations.add(new IconAnimation(button, sequence, 40));
+            }
+        }
+    }
+
+    private void animateActivated(){
+        animations.removeAllElements();
+        for (Component c : toolbar.getComponents()) {
+            if (c.getClass() == HKButton.class) {
+                HKButton button = (HKButton) c;
+                if (((HKButton) c).isActived()) {
+                    int[] sequence = {IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP};
+                    animations.add(new IconAnimation(button, sequence, 40));
+                }
             }
         }
     }
@@ -122,7 +202,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
         pasteAction = new HKAction("Paste");
         pasteAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
-                KeyEvent.VK_V, ActionEvent.CTRL_MASK));
+                KeyEvent.VK_V, ActionEvent.ALT_MASK|ActionEvent.SHIFT_MASK));
 
         copyAction = new HKAction("Copy");
         copyAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
@@ -149,7 +229,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
         moveAction = new HKAction("Move");
         moveAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
-                KeyEvent.VK_A, ActionEvent.CTRL_MASK));
+                KeyEvent.VK_A, ActionEvent.CTRL_MASK| ActionEvent.ALT_MASK));
 
         pencilAction = new HKAction("Pencil");
         pencilAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
@@ -209,29 +289,29 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
             switch(e.getKeyCode()){
                 case KeyEvent.VK_META:
                     for (HKButton b : iconHKButtons) {
-                        b.setMetaPressed(true);
                         metaPressed = true;
+                        updateModifiers(b);
                         setAllModifiers(b);
                     }
                     break;
                 case KeyEvent.VK_CONTROL:
                     for (HKButton b : iconHKButtons) {
-                        b.setCtrlPressed(true);
                         ctrlPressed = true;
+                        updateModifiers(b);
                         setAllModifiers(b);
                     }
                     break;
                 case KeyEvent.VK_ALT:
                     for (HKButton b : iconHKButtons) {
-                        b.setAltPressed(true);
                         altPressed = true;
+                        updateModifiers(b);
                         setAllModifiers(b);
                     }
                     break;
                 case KeyEvent.VK_SHIFT:
                     for (HKButton b : iconHKButtons) {
-                        b.setShftPressed(true);
                         shftPressed = true;
+                        updateModifiers(b);
                         setAllModifiers(b);
                     }
                     break;
@@ -240,34 +320,36 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
             switch(e.getKeyCode()){
                 case KeyEvent.VK_META:
                     for (HKButton b : iconHKButtons) {
-                        b.setMetaPressed(false);
                         metaPressed = false;
-                        //setAllModifiers(b);
+                        updateModifiers(b);
+                        setAllModifiers(b);
                     }
                     break;
                 case KeyEvent.VK_CONTROL:
                     for (HKButton b : iconHKButtons) {
-                        b.setCtrlPressed(false);
                         ctrlPressed = false;
-                        //setAllModifiers(b);
+                        updateModifiers(b);
+                        setAllModifiers(b);
                     }
                     break;
                 case KeyEvent.VK_ALT:
                     for (HKButton b : iconHKButtons) {
-                        b.setAltPressed(false);
                         altPressed = false;
-                        //setAllModifiers(b);
+                        updateModifiers(b);
+                        setAllModifiers(b);
                     }
                     break;
                 case KeyEvent.VK_SHIFT:
                     for (HKButton b : iconHKButtons) {
-                        b.setShftPressed(false);
                         shftPressed = false;
-                        //setAllModifiers(b);
+                        updateModifiers(b);
+                        setAllModifiers(b);
                     }
                     break;
             }
         }
+        animateActivated();
+        animateToolbar();
         return false;
     }
 
@@ -275,19 +357,26 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         //System.out.println(ctrlPressed + " " + altPressed + " " + shftPressed + " " + metaPressed);
         if (ctrlPressed)
             if (!b.isUseCtrl())
-                desactiveAllModifiers(b);
+                deactivateAllModifiers(b);
         if (altPressed)
             if (!b.isUseAlt())
-                desactiveAllModifiers(b);
+                deactivateAllModifiers(b);
         if (shftPressed)
             if (!b.isUseSft())
-                desactiveAllModifiers(b);
+                deactivateAllModifiers(b);
         if (metaPressed)
             if (!b.isUseMeta())
-                desactiveAllModifiers(b);
+                deactivateAllModifiers(b);
     }
 
-    private void desactiveAllModifiers (HKButton b){
+    private void updateModifiers (HKButton b){
+        b.setCtrlPressed(ctrlPressed);
+        b.setAltPressed(altPressed);
+        b.setShftPressed(shftPressed);
+        b.setMetaPressed(metaPressed);
+    }
+
+    private void deactivateAllModifiers(HKButton b){
         b.setCtrlPressed(false);
         b.setAltPressed(false);
         b.setShftPressed(false);
