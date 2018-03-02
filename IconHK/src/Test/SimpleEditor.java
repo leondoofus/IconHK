@@ -5,7 +5,6 @@ import IconHK.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.EventListener;
 import java.util.Iterator;
 import java.util.Vector;
 
@@ -65,7 +64,9 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         kfm.addKeyEventDispatcher(this);
 
-        animateall();
+        new IconHKSettingWindow(this.iconHKButtons);
+
+        //animateall();
         animateToolbar();
     }
 

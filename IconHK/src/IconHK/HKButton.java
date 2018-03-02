@@ -322,8 +322,8 @@ public class HKButton extends JButton implements MouseListener {
 
     private void decreaseCurrentFrame(){
         this.currentFrame--;
-        if (this.currentFrame<=0){
-            currentFrame = 0;
+        if (this.currentFrame<=defaultFrame){
+            currentFrame = defaultFrame;
             spinner = true;
         }
     }
@@ -410,7 +410,7 @@ public class HKButton extends JButton implements MouseListener {
                     }
                 }
             } else {
-                while (currentFrame != 0){
+                while (currentFrame != defaultFrame){
                     changeCurrentFrame();
                     paintComponent(getGraphics());
                     try {
@@ -426,4 +426,30 @@ public class HKButton extends JButton implements MouseListener {
     public boolean isActived (){
         return metaPressed || shftPressed || altPressed || ctrlPressed;
     }
+
+    public int getDefaultFrame(){
+        return this.defaultFrame;
+    }
+
+    public int getVMax(){
+        return this.vmax;
+    }
+
+    public void setDefaultFrame(int val){
+        this.defaultFrame = val;
+        this.currentFrame= this.defaultFrame;
+    }
+
+    public void setVMax(int val){
+        this.vmax = val;
+    }
+
+    public int getNumberOfIcons(){
+        return this.iconsVector.size();
+    }
+
+    public void setVMaxDefault(){
+        this.vmax = iconsVector.size() - 1;
+    }
+
 }

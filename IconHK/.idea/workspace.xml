@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/IconHK/Test/SimpleEditor.class" afterPath="$PROJECT_DIR$/out/production/IconHK/Test/SimpleEditor.class" />
       <change beforePath="$PROJECT_DIR$/src/IconHK/HKAction.java" afterPath="$PROJECT_DIR$/src/IconHK/HKAction.java" />
       <change beforePath="$PROJECT_DIR$/src/IconHK/HKButton.java" afterPath="$PROJECT_DIR$/src/IconHK/HKButton.java" />
+      <change beforePath="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" afterPath="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
       <change beforePath="$PROJECT_DIR$/src/Test/SimpleEditor.java" afterPath="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
       <change beforePath="$PROJECT_DIR$/src/Test/TestApplication.java" afterPath="$PROJECT_DIR$/src/Test/TestApplication.java" />
       <change beforePath="$PROJECT_DIR$/../IconHKDemonstrator_student_project/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../IconHKDemonstrator_student_project/.idea/workspace.xml" />
@@ -18,42 +19,37 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/IconHK$TestApplication.coverage" NAME="TestApplication Coverage Results" MODIFIED="1520001824736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SimpleEditor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SimpleEditor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="189" column="47" lean-forward="false" selection-start-line="189" selection-start-column="47" selection-end-line="189" selection-end-column="47" />
+            <state relative-caret-position="444">
+              <caret line="59" column="30" lean-forward="true" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
               <folding>
-                <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+                <element signature="imports" expanded="true" />
                 <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
                 <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
                 <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
                 <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
                 <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-                <element signature="e#15917#15918#0" expanded="true" />
-                <element signature="e#15953#15954#0" expanded="true" />
+                <element signature="e#15941#15942#0" expanded="true" />
+                <element signature="e#15977#15978#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IconAnimation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
+      <file leaf-file-name="IconHKSettingWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Test/TestApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="178">
+              <caret line="58" column="32" lean-forward="false" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,20 +57,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HKButton.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HKButton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="377" column="8" lean-forward="false" selection-start-line="377" selection-start-column="8" selection-end-line="377" selection-end-column="8" />
+            <state relative-caret-position="648">
+              <caret line="451" column="42" lean-forward="false" selection-start-line="451" selection-start-column="42" selection-end-line="451" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-                <element signature="e#12199#12200#0" expanded="true" />
-                <element signature="e#12237#12238#0" expanded="true" />
-                <element signature="e#12390#12391#0" expanded="true" />
-                <element signature="e#12474#12475#0" expanded="true" />
-                <element signature="e#13526#13527#0" expanded="true" />
-                <element signature="e#13604#13605#0" expanded="true" />
+                <element signature="e#12221#12222#0" expanded="true" />
+                <element signature="e#12259#12260#0" expanded="true" />
+                <element signature="e#12412#12413#0" expanded="true" />
+                <element signature="e#12496#12497#0" expanded="true" />
+                <element signature="e#13559#13560#0" expanded="true" />
+                <element signature="e#13637#13638#0" expanded="true" />
+                <element signature="e#13934#13935#0" expanded="true" />
+                <element signature="e#13965#13966#0" expanded="true" />
+                <element signature="e#14082#14083#0" expanded="true" />
+                <element signature="e#14132#14133#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,6 +104,7 @@
       <find>run</find>
       <find>animations</find>
       <find>spinner</find>
+      <find>vmax</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,8 +123,9 @@
         <option value="$PROJECT_DIR$/src/IconHK/HKAction.java" />
         <option value="$PROJECT_DIR$/src/Test/Clients.java" />
         <option value="$PROJECT_DIR$/src/Test/TestApplication.java" />
-        <option value="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
         <option value="$PROJECT_DIR$/src/IconHK/HKButton.java" />
+        <option value="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
+        <option value="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
       </list>
     </option>
   </component>
@@ -134,8 +136,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="451" />
-    <option name="y" value="165" />
+    <option name="x" value="714" />
+    <option name="y" value="339" />
     <option name="width" value="1360" />
     <option name="height" value="783" />
   </component>
@@ -341,7 +343,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="451" y="165" width="1360" height="783" extended-state="0" />
+    <frame x="714" y="339" width="1360" height="783" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -351,15 +353,16 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901296" sideWeight="0.5043956" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.4943182" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2866557" sideWeight="0.4956044" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.5056818" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901296" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13149847" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973261" sideWeight="0.4943182" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997996" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -394,14 +397,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -423,12 +426,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -446,14 +453,14 @@
         <state relative-caret-position="3960">
           <caret line="228" column="26" lean-forward="false" selection-start-line="228" selection-start-column="26" selection-end-line="228" selection-end-column="26" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -465,12 +472,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -480,14 +491,14 @@
         <state relative-caret-position="1422">
           <caret line="84" column="35" lean-forward="false" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -507,12 +518,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -522,14 +537,14 @@
         <state relative-caret-position="3348">
           <caret line="191" column="24" lean-forward="true" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -541,12 +556,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -564,14 +583,14 @@
         <state relative-caret-position="3024">
           <caret line="214" column="21" lean-forward="true" selection-start-line="214" selection-start-column="21" selection-end-line="214" selection-end-column="21" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -583,12 +602,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -606,14 +629,14 @@
         <state relative-caret-position="2664">
           <caret line="192" column="31" lean-forward="true" selection-start-line="192" selection-start-column="31" selection-end-line="192" selection-end-column="31" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -625,12 +648,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -648,14 +675,14 @@
         <state relative-caret-position="306">
           <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="15" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -667,12 +694,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -682,14 +713,14 @@
         <state relative-caret-position="306">
           <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="15" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -709,12 +740,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -724,14 +759,14 @@
         <state relative-caret-position="198">
           <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -768,12 +803,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -783,14 +822,14 @@
         <state relative-caret-position="576">
           <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -827,12 +866,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -854,12 +897,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -868,14 +915,6 @@
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/awt/event/MouseListener.java" />
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/awt/Component.java" />
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/javax/swing/JComponent.java" />
-    <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/Clients.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-144">
@@ -892,6 +931,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/TestApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/HKAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -903,54 +960,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/TestApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        <state relative-caret-position="648">
+          <caret line="451" column="42" lean-forward="false" selection-start-line="451" selection-start-column="42" selection-end-line="451" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#resize#0;class#HKButton#0" expanded="false" />
+            <element signature="e#12221#12222#0" expanded="true" />
+            <element signature="e#12259#12260#0" expanded="true" />
+            <element signature="e#12412#12413#0" expanded="true" />
+            <element signature="e#12496#12497#0" expanded="true" />
+            <element signature="e#13559#13560#0" expanded="true" />
+            <element signature="e#13637#13638#0" expanded="true" />
+            <element signature="e#13934#13935#0" expanded="true" />
+            <element signature="e#13965#13966#0" expanded="true" />
+            <element signature="e#14082#14083#0" expanded="true" />
+            <element signature="e#14132#14133#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
+    <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="178">
+          <caret line="58" column="32" lean-forward="false" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="189" column="47" lean-forward="false" selection-start-line="189" selection-start-column="47" selection-end-line="189" selection-end-column="47" />
+        <state relative-caret-position="444">
+          <caret line="59" column="30" lean-forward="true" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
           <folding>
-            <element signature="method#SimpleEditor#0;class#SimpleEditor#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addAllButtonsToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#addButtonToToolBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createMenuBar#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#createActions#0;class#SimpleEditor#0" expanded="false" />
             <element signature="method#animateToolbar#0;class#SimpleEditor#0" expanded="false" />
-            <element signature="e#15917#15918#0" expanded="true" />
-            <element signature="e#15953#15954#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="377" column="8" lean-forward="false" selection-start-line="377" selection-start-column="8" selection-end-line="377" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#resize#0;class#HKButton#0" expanded="false" />
-            <element signature="e#12199#12200#0" expanded="true" />
-            <element signature="e#12237#12238#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#13526#13527#0" expanded="true" />
-            <element signature="e#13604#13605#0" expanded="true" />
+            <element signature="e#15941#15942#0" expanded="true" />
+            <element signature="e#15977#15978#0" expanded="true" />
           </folding>
         </state>
       </provider>
