@@ -123,7 +123,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
             //System.out.println((int)(button.getModifierRadiusRatio()*100));
 
-            JSlider r = new JSlider(JSlider.HORIZONTAL, 0, 100, (int)(button.getModifierRadiusRatio()*100));
+            JSlider r = new JSlider(JSlider.HORIZONTAL, 0, 50, (int)(button.getModifierRadiusRatio()*100));
             r.addChangeListener(e -> {
                 float value = ((float)r.getValue())/100;
                 button.setModifierRadiusRatio(value);
@@ -167,20 +167,26 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()== minall){
+        if(e.getSource() == minall){
             for(HKButton button : this.iconHKButtons) {
                 button.setDefaultFrame(0);
                 for (JSlider s : mins)
                     s.setValue(0);
             }
         }
-        else if(e.getSource()== maxall){
+        else if(e.getSource() == maxall){
             for(HKButton button : this.iconHKButtons) {
                 button.setVMaxDefault();
                 for (JSlider s : maxs)
                     s.setValue(button.getVMax());
             }
 
+        } else if(e.getSource() == resetRadius){
+            for(HKButton button : this.iconHKButtons) {
+                button.setModifierRadiusRatio((float)0.35);
+                for (JSlider s : radius)
+                    s.setValue((int) (button.getModifierRadiusRatio() * 100));
+            }
         }
 
     }

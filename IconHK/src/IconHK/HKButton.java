@@ -119,14 +119,15 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     private void fixAllImages (){
+        iconsVector.removeAllElements();
         for (File f : iconFiles) {
             try {
                 BufferedImage img = ImageIO.read(f);
                 // Resize all images in order to fit dimension
                 float w = (float)dimension.getWidth();
                 float h = (float)dimension.getHeight();
-                BufferedImage scaledInstance = resize(img,(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.9),
-                        (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.9));
+                BufferedImage scaledInstance = resize(img,(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
+                        (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8));
                 iconsVector.add(scaledInstance);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -156,10 +157,8 @@ public class HKButton extends JButton implements MouseListener {
             int y = (getHeight() - icon.getHeight()) / 2;
             g2.drawImage(icon, x, y, this);
         }
-
         drawModifiers(g2);
     }
-
 
 
     private void drawModifiers(Graphics2D g2) {
@@ -219,8 +218,7 @@ public class HKButton extends JButton implements MouseListener {
 
     public void setModifierRadiusRatio(float modifierRadiusRatio) {
         this.modifierRadiusRatio = modifierRadiusRatio;
-        //TODO see this line
-        //fixAllImages();
+        fixAllImages();
     }
 
     public void setMetaPressed(boolean metaPressed) {
@@ -421,5 +419,4 @@ public class HKButton extends JButton implements MouseListener {
     public void setVMaxDefault(){
         this.vmax = iconsVector.size() - 1;
     }
-
 }
