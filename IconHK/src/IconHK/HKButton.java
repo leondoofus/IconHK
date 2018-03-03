@@ -20,10 +20,9 @@ public class HKButton extends JButton implements MouseListener {
     private Dimension dimension = new Dimension(32, 32);
 
     // All files for animation
-    File[] iconFiles;
+    private File[] iconFiles;
 
-    //TODO setter
-    private static Color pressedColor= new Color(29,174,222);
+    private Color pressedColor = new Color(29,174,222);
 
     // A vector of buffered images ordered so it creates an animation from icon to symbol
     private Vector<BufferedImage> iconsVector;
@@ -210,8 +209,12 @@ public class HKButton extends JButton implements MouseListener {
         return useSft;
     }
 
-    public static void setPressedColor(Color pressedColor) {
-        HKButton.pressedColor = pressedColor;
+    public Color getPressedColor() {
+        return this.pressedColor;
+    }
+
+    public void setPressedColor(Color pressedColor) {
+        this.pressedColor = pressedColor;
     }
 
     public float getModifierRadiusRatio(){ return this.modifierRadiusRatio; }

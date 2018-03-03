@@ -63,8 +63,6 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         kfm.addKeyEventDispatcher(this);
 
-        new IconHKSettingWindow(this.iconHKButtons);
-
         //animateall();
         animateToolbar();
     }
@@ -84,12 +82,24 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         addButtonToToolBar(new HKButton(pencilAction,dim));
         addButtonToToolBar(new HKButton(increaseAction,dim));
         toolbar.addSeparator();
+
+        JPanel panel = new JPanel(new SpringLayout());
         JButton aa = new JButton("Animate all");
         aa.addActionListener(e -> {
             animateall();
             animateToolbar();
         });
-        toolbar.add(aa);
+        JButton settings = new JButton("Setting");
+        settings.addActionListener(e -> {
+            new IconHKSettingWindow(this.iconHKButtons);
+        });
+        panel.add(aa);
+        panel.add(settings);
+        SpringUtilities.makeCompactGrid(panel, //parent
+                2, 1,
+                3, 3,  //initX, initY
+                0, 5);
+        toolbar.add(panel);
     }
 
     private void addButtonToToolBar(JButton button) {
@@ -102,7 +112,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         }
     }
 
-    protected JMenuBar createMenuBar() {
+    private JMenuBar createMenuBar() {
         JMenuBar menubar = new JMenuBar();
         JMenu file = new JMenu("File");
         JMenu edit = new JMenu("Edit");
@@ -386,11 +396,11 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     // TODO ask : should we synchronize this method ?
     @Override
     public synchronized void actionPerformed(ActionEvent e) {
-        if (e.getSource() == timer) {
+        /*if (e.getSource() == timer) {
             animateToolbar();
             repaint();
             //System.out.println(animations.size());
-        } /*else {
+        } else {
 
             String text = null;
             int modality=0;

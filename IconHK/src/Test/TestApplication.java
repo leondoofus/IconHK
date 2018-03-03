@@ -1,20 +1,16 @@
 package Test;
 
-
 import javax.swing.*;
-import javax.swing.border.TitledBorder;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public class TestApplication {
     public static void main(String[] args) {
 
-        /*JDialog dialog = new JDialog();
+        JDialog dialog = new JDialog();
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 0, 0));
         JTextField text = new JTextField(4);
@@ -44,17 +40,18 @@ public class TestApplication {
         panel.add(text);
         JButton validate = new JButton("Validate");
         validate.addActionListener(e -> {
-        dialog.setVisible(false);
-        SimpleEditor.setDim(new Dimension(slider.getValue(),slider.getValue()));
-        SimpleEditor editor = new SimpleEditor();
+            dialog.setVisible(false);
+            SimpleEditor.setDim(new Dimension(slider.getValue(),slider.getValue()));
+            SimpleEditor editor = new SimpleEditor();
         });
         panel.add(validate);
         dialog.add(panel);
-        dialog.setSize(300, 150);
+        //TODO ask how to use invoke later
+        dialog.setSize(300, 100);
         dialog.setLocationRelativeTo(null);
-        dialog.setVisible(true);*/
+        dialog.setVisible(true);
 
-        SimpleEditor.setDim(new Dimension(50,50));
-        SimpleEditor editor = new SimpleEditor();
+        //SimpleEditor.setDim(new Dimension(50,50));
+        //SimpleEditor editor = new SimpleEditor();
     }
 }

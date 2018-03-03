@@ -1,7 +1,5 @@
 package IconHK;
 
-import com.sun.scenario.effect.impl.sw.java.JSWLinearConvolvePeer;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,16 +11,18 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
     private Vector<HKButton> iconHKButtons;
 
-    private JButton maxall, minall,resetRadius;
+    private JButton maxall, minall,resetRadius, resetColor;
     private ArrayList<JSlider> mins;
     private ArrayList<JSlider> maxs;
     private ArrayList<JSlider> radius;
+    private ArrayList<JButton> colors;
 
     public IconHKSettingWindow(Vector<HKButton> iconHKButtons) throws HeadlessException {
         this.iconHKButtons = iconHKButtons;
         mins = new ArrayList<>();
         maxs = new ArrayList<>();
         radius = new ArrayList<>();
+        colors = new ArrayList<>();
         build();
     }
 
@@ -93,14 +93,13 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         JPanel panel = new JPanel(new SpringLayout());
 
         int rows = this.iconHKButtons.size()+1;
-        int cols = 4;
+        int cols = 5;
         for(HKButton button : this.iconHKButtons){
             panel.add(new JLabel(button.getName()),BorderLayout.WEST);
             int min = button.getDefaultFrame();
             int max = button.getVMax();
 
             JSlider minSlider = new JSlider(JSlider.HORIZONTAL, 0, max, min);
-            // Turn on labels at major tick marks.
             minSlider.setMinorTickSpacing(1);
             minSlider.setPaintTicks(true);
 
@@ -130,13 +129,25 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                 button.repaint();
             });
 
+            JButton c = new JButton();
+            c.setBackground(button.getPressedColor());
+            c.addChangeListener(e -> {
+                Color newColor = JColorChooser.showDialog(c, "Choose Modifier Color", new Color(29,174,222));
+                if(newColor != null) {
+                    c.setBackground(newColor);
+                    button.setPressedColor(newColor);
+                }
+            });
+
             mins.add(minSlider);
             maxs.add(maxSlider);
             radius.add(r);
+            colors.add(c);
 
             panel.add(minSlider);
             panel.add(maxSlider);
             panel.add(r);
+            panel.add(c);
         }
 
         panel.add(new JLabel("All"),BorderLayout.WEST);
@@ -146,9 +157,12 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         minall.addActionListener(this);
         resetRadius = new JButton("Reset Radius");
         resetRadius.addActionListener(this);
+        resetColor = new JButton("Reset Color");
+        resetColor.addActionListener(this);
         panel.add(minall);
         panel.add(maxall);
         panel.add(resetRadius);
+        panel.add(resetColor);
 
 
         //Lay out the panel.
@@ -186,6 +200,12 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                 button.setModifierRadiusRatio((float)0.35);
                 for (JSlider s : radius)
                     s.setValue((int) (button.getModifierRadiusRatio() * 100));
+            }
+        } else if(e.getSource() == resetColor){
+            for(HKButton button : this.iconHKButtons) {
+                button.setPressedColor(new Color(29,174,222));
+                for (JButton b : colors)
+                    b.setBackground(button.getPressedColor());
             }
         }
 
