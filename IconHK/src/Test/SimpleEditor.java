@@ -89,16 +89,15 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
             animateall();
             animateToolbar();
         });
-        JButton settings = new JButton("Setting");
+        JButton settings = new JButton("Settings");
         settings.addActionListener(e -> {
             new IconHKSettingWindow(this.iconHKButtons);
         });
         panel.add(aa);
         panel.add(settings);
-        SpringUtilities.makeCompactGrid(panel, //parent
-                2, 1,
-                3, 3,  //initX, initY
-                0, 5);
+        SpringUtilities.makeCompactGrid(panel, 2, 1, 3, 3, 0, 5);
+        //toolbar.add(aa);
+        //toolbar.add(settings);
         toolbar.add(panel);
     }
 
@@ -394,13 +393,14 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     }
 
     // TODO ask : should we synchronize this method ?
+    // How does this method perform ?
     @Override
     public synchronized void actionPerformed(ActionEvent e) {
-        /*if (e.getSource() == timer) {
+        if (e.getSource() == timer) {
             animateToolbar();
             repaint();
             //System.out.println(animations.size());
-        } else {
+        }/* else {
 
             String text = null;
             int modality=0;

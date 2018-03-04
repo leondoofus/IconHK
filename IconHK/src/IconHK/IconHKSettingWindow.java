@@ -132,7 +132,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             JButton c = new JButton();
             c.setBackground(button.getPressedColor());
             c.addChangeListener(e -> {
-                Color newColor = JColorChooser.showDialog(c, "Choose Modifier Color", new Color(29,174,222));
+                Color newColor = JColorChooser.showDialog(c, "Choose Modifier Color", button.getPressedColor());
                 if(newColor != null) {
                     c.setBackground(newColor);
                     button.setPressedColor(newColor);
