@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afac57bb-ce5b-4b3c-9ded-416c92446340" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/IconHK/HKButton.java" afterPath="$PROJECT_DIR$/src/IconHK/HKButton.java" />
       <change beforePath="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" afterPath="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
+      <change beforePath="$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderDemo.java" afterPath="$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderDemo.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,21 +24,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RangeSliderDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderDemo.java">
+      <file leaf-file-name="IconHKSettingWindow.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-              <folding />
+            <state relative-caret-position="209">
+              <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+              <folding>
+                <element signature="class#1264:2483" expanded="false" />
+                <element signature="e#1991#1992#0" expanded="true" />
+                <element signature="e#2058#2059#0" expanded="true" />
+                <element signature="e#2137#2138#0" expanded="true" />
+                <element signature="e#2204#2205#0" expanded="true" />
+                <element signature="e#2283#2284#0" expanded="true" />
+                <element signature="e#2350#2351#0" expanded="true" />
+                <element signature="e#2410#2411#0" expanded="true" />
+                <element signature="e#2468#2469#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RangeSliderUI.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderUI.java">
+      <file leaf-file-name="IconAnimation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="293" column="5" lean-forward="true" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
+            <state relative-caret-position="448">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,6 +85,9 @@
       <find>Gr</find>
       <find>Red</find>
       <find>Blue</find>
+      <find>paintCom</find>
+      <find>iconsV</find>
+      <find>static</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -91,12 +106,12 @@
         <option value="$PROJECT_DIR$/src/Test/Clients.java" />
         <option value="$PROJECT_DIR$/src/IconHK/IconAnimation.java" />
         <option value="$PROJECT_DIR$/src/IconHK/SpringUtilities.java" />
-        <option value="$PROJECT_DIR$/src/IconHK/HKButton.java" />
         <option value="$PROJECT_DIR$/src/Test/TestApplication.java" />
         <option value="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
         <option value="$PROJECT_DIR$/src/IconHK/slider/RangeSliderDemo.java" />
-        <option value="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
         <option value="$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderDemo.java" />
+        <option value="$PROJECT_DIR$/src/IconHK/HKButton.java" />
+        <option value="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
       </list>
     </option>
   </component>
@@ -367,6 +382,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18051359" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945055" sideWeight="0.4892704" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -379,7 +395,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5107296" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -441,8 +456,8 @@
         <state relative-caret-position="3960">
           <caret line="228" column="26" lean-forward="false" selection-start-line="228" selection-start-column="26" selection-end-line="228" selection-end-column="26" />
           <folding>
-            <element signature="e#16280#16281#0" expanded="true" />
-            <element signature="e#16316#16317#0" expanded="true" />
+            <element signature="e#16280#16281#0" expanded="false" />
+            <element signature="e#16316#16317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -459,8 +474,8 @@
         <state relative-caret-position="1422">
           <caret line="84" column="35" lean-forward="false" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
           <folding>
-            <element signature="e#16280#16281#0" expanded="true" />
-            <element signature="e#16316#16317#0" expanded="true" />
+            <element signature="e#16280#16281#0" expanded="false" />
+            <element signature="e#16316#16317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -485,8 +500,8 @@
         <state relative-caret-position="3348">
           <caret line="191" column="24" lean-forward="true" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
           <folding>
-            <element signature="e#16280#16281#0" expanded="true" />
-            <element signature="e#16316#16317#0" expanded="true" />
+            <element signature="e#16280#16281#0" expanded="false" />
+            <element signature="e#16316#16317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -511,8 +526,8 @@
         <state relative-caret-position="3024">
           <caret line="214" column="21" lean-forward="true" selection-start-line="214" selection-start-column="21" selection-end-line="214" selection-end-column="21" />
           <folding>
-            <element signature="e#16280#16281#0" expanded="true" />
-            <element signature="e#16316#16317#0" expanded="true" />
+            <element signature="e#16280#16281#0" expanded="false" />
+            <element signature="e#16316#16317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -537,8 +552,8 @@
         <state relative-caret-position="2664">
           <caret line="192" column="31" lean-forward="true" selection-start-line="192" selection-start-column="31" selection-end-line="192" selection-end-column="31" />
           <folding>
-            <element signature="e#16280#16281#0" expanded="true" />
-            <element signature="e#16316#16317#0" expanded="true" />
+            <element signature="e#16280#16281#0" expanded="false" />
+            <element signature="e#16316#16317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -563,8 +578,8 @@
         <state relative-caret-position="306">
           <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="15" />
           <folding>
-            <element signature="e#16280#16281#0" expanded="true" />
-            <element signature="e#16316#16317#0" expanded="true" />
+            <element signature="e#16280#16281#0" expanded="false" />
+            <element signature="e#16316#16317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -581,8 +596,8 @@
         <state relative-caret-position="306">
           <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="15" />
           <folding>
-            <element signature="e#16280#16281#0" expanded="true" />
-            <element signature="e#16316#16317#0" expanded="true" />
+            <element signature="e#16280#16281#0" expanded="false" />
+            <element signature="e#16316#16317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -606,8 +621,8 @@
         <state relative-caret-position="198">
           <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
           <folding>
-            <element signature="e#16280#16281#0" expanded="true" />
-            <element signature="e#16316#16317#0" expanded="true" />
+            <element signature="e#16280#16281#0" expanded="false" />
+            <element signature="e#16316#16317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -645,8 +660,8 @@
         <state relative-caret-position="576">
           <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding>
-            <element signature="e#16280#16281#0" expanded="true" />
-            <element signature="e#16316#16317#0" expanded="true" />
+            <element signature="e#16280#16281#0" expanded="false" />
+            <element signature="e#16316#16317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -707,23 +722,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/awt/Container.java" />
     <entry file="jar://$USER_HOME$/Scripts/jdk1.8.0_121/src.zip!/java/awt/event/ActionListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5870">
-          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/SpringUtilities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-668">
@@ -744,8 +744,8 @@
         <state relative-caret-position="1692">
           <caret line="100" column="8" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
           <folding>
-            <element signature="e#16280#16281#0" expanded="true" />
-            <element signature="e#16316#16317#0" expanded="true" />
+            <element signature="e#16280#16281#0" expanded="false" />
+            <element signature="e#16316#16317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -766,27 +766,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1358">
-          <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+        <state relative-caret-position="3906">
+          <caret line="293" column="5" lean-forward="true" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="305">
+          <caret line="47" column="98" lean-forward="true" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderUI.java">
+    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="293" column="5" lean-forward="true" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
+        <state relative-caret-position="3010">
+          <caret line="322" column="10" lean-forward="false" selection-start-line="322" selection-start-column="10" selection-end-line="322" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding>
+            <element signature="class#1264:2483" expanded="false" />
+            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="e#2137#2138#0" expanded="true" />
+            <element signature="e#2204#2205#0" expanded="true" />
+            <element signature="e#2283#2284#0" expanded="true" />
+            <element signature="e#2350#2351#0" expanded="true" />
+            <element signature="e#2410#2411#0" expanded="true" />
+            <element signature="e#2468#2469#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -320,7 +320,7 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     // Resize image
-    private static BufferedImage resize(BufferedImage img, int width, int height) {
+    public static BufferedImage resize(BufferedImage img, int width, int height) {
         Image tmp = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
         BufferedImage resized = new BufferedImage(width, height, Image.SCALE_SMOOTH);
         Graphics2D g2d = resized.createGraphics();
@@ -422,4 +422,8 @@ public class HKButton extends JButton implements MouseListener {
     public void setVMaxDefault(){
         this.vmax = iconsVector.size() - 1;
     }
+
+    public BufferedImage getImage (int position){
+        return iconsVector.get(position)
+;    }
 }
