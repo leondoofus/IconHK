@@ -1,5 +1,7 @@
 package IconHK;
 
+import IconHK.rangeslider.RangeSlider;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,18 +13,16 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
     private Vector<HKButton> iconHKButtons;
 
-    private JButton maxall, minall,resetRadius, resetColor;
-    private ArrayList<JSlider> mins;
-    private ArrayList<JSlider> maxs;
+    private JButton resetRadius, resetColor, resetRange;
     private ArrayList<JSlider> radius;
     private ArrayList<JButton> colors;
+    private ArrayList<RangeSlider> ranges;
 
     public IconHKSettingWindow(Vector<HKButton> iconHKButtons) throws HeadlessException {
         this.iconHKButtons = iconHKButtons;
-        mins = new ArrayList<>();
-        maxs = new ArrayList<>();
         radius = new ArrayList<>();
         colors = new ArrayList<>();
+        ranges = new ArrayList<>();
         build();
     }
 
@@ -33,31 +33,18 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         JPanel panel = new JPanel(new SpringLayout());
 
         int rows = this.iconHKButtons.size()+1;
-        int cols = 5;
+        int cols = 4;
         for(HKButton button : this.iconHKButtons){
             panel.add(new JLabel(button.getName()),BorderLayout.WEST);
-            int min = button.getDefaultFrame();
-            int max = button.getVMax();
-
-            JSlider minSlider = new JSlider(JSlider.HORIZONTAL, 0, max, min);
-            minSlider.setMinorTickSpacing(1);
-            minSlider.setPaintTicks(true);
-
-            JSlider maxSlider = new JSlider(JSlider.HORIZONTAL, min, button.getNumberOfIcons()-1, max);
-            maxSlider.setMinorTickSpacing(1);
-            maxSlider.setPaintTicks(true);
-
-            minSlider.addChangeListener(e -> {
-                int value = minSlider.getValue();
-                button.setDefaultFrame(value);
-                button.repaint();
-                maxSlider.setMinimum(value);
-            });
-
-            maxSlider.addChangeListener(e -> {
-                int value = maxSlider.getValue();
-                button.setVMax(value);
-                button.repaint();
+            RangeSlider range = new RangeSlider();
+            range.setPreferredSize(new Dimension(240, range.getPreferredSize().height));
+            range.setMinimum(0);
+            range.setMaximum(20);
+            range.setValue(button.getDefaultFrame());
+            range.setUpperValue(button.getVMax());
+            range.addChangeListener(e -> {
+                button.setDefaultFrame(range.getValue());
+                button.setVMax(range.getUpperValue());
             });
 
             JSlider r = new JSlider(JSlider.HORIZONTAL, 0, 50, (int)(button.getModifierRadiusRatio()*100));
@@ -77,28 +64,23 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                 }
             });
 
-            mins.add(minSlider);
-            maxs.add(maxSlider);
+            ranges.add(range);
             radius.add(r);
             colors.add(c);
 
-            panel.add(minSlider);
-            panel.add(maxSlider);
+            panel.add(range);
             panel.add(r);
             panel.add(c);
         }
 
         panel.add(new JLabel("All"),BorderLayout.WEST);
-        maxall = new JButton("Default transition image");
-        maxall.addActionListener(this);
-        minall = new JButton("Default image");
-        minall.addActionListener(this);
         resetRadius = new JButton("Reset Radius");
         resetRadius.addActionListener(this);
         resetColor = new JButton("Reset Color");
         resetColor.addActionListener(this);
-        panel.add(minall);
-        panel.add(maxall);
+        resetRange = new JButton("Reset ranges");
+        resetRange.addActionListener(this);
+        panel.add(resetRange);
         panel.add(resetRadius);
         panel.add(resetColor);
 
@@ -119,20 +101,15 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == minall){
+        if(e.getSource() == resetRange){
             for(HKButton button : this.iconHKButtons) {
                 button.setDefaultFrame(0);
-                for (JSlider s : mins)
+                button.setVMax(20);
+                for (RangeSlider s : ranges) {
                     s.setValue(0);
+                    s.setUpperValue(20);
+                }
             }
-        }
-        else if(e.getSource() == maxall){
-            for(HKButton button : this.iconHKButtons) {
-                button.setVMaxDefault();
-                for (JSlider s : maxs)
-                    s.setValue(button.getVMax());
-            }
-
         } else if(e.getSource() == resetRadius){
             for(HKButton button : this.iconHKButtons) {
                 button.setModifierRadiusRatio((float)0.35);
