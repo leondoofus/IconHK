@@ -40,7 +40,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
             class Icon extends JButton{
                 private BufferedImage image;
-                public Icon(BufferedImage image) {
+                private Icon(BufferedImage image) {
                     super();
                     this.image = image;
                 }
@@ -67,12 +67,15 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                 public Dimension getMaximumSize() {
                     return new Dimension(20,20);
                 }
-                public void setImage (BufferedImage image){
+                private void setImage (BufferedImage image){
                     this.image = image;
                 }
             }
             Icon deb = new Icon(button.getImage(button.getDefaultFrame()));
             Icon fin = new Icon(button.getImage(button.getVMax()));
+            deb.setBorder(BorderFactory.createEmptyBorder());
+            fin.setBorder(BorderFactory.createEmptyBorder());
+
 
             RangeSlider range = new RangeSlider();
             range.setPreferredSize(new Dimension(240, range.getPreferredSize().height));
