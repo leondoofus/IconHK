@@ -16,32 +16,32 @@ public class TestApplication {
         JTextField text = new JTextField(4);
         text.setBounds(10, 10, 20, 20);
         int defaultValue = 50;
-        JSlider slider = new JSlider(0,100,defaultValue);
-        slider.setMajorTickSpacing(20);
-        slider.setMinorTickSpacing(10);
-        slider.setPaintTicks(true);
-        slider.setPaintLabels(true);
-        slider.addChangeListener(e -> text.setText(String.valueOf(slider.getValue())));
+        JSlider rangeslider = new JSlider(0,100,defaultValue);
+        rangeslider.setMajorTickSpacing(20);
+        rangeslider.setMinorTickSpacing(10);
+        rangeslider.setPaintTicks(true);
+        rangeslider.setPaintLabels(true);
+        rangeslider.addChangeListener(e -> text.setText(String.valueOf(rangeslider.getValue())));
         text.addKeyListener(new KeyAdapter(){
             @Override
             public void keyReleased(KeyEvent ke) {
                 String typed = text.getText();
-                slider.setValue(0);
+                rangeslider.setValue(0);
                 if(!typed.matches("\\d+") || typed.length() > 3) {
                     return;
                 }
                 int value = Integer.parseInt(typed);
-                slider.setValue(value);
+                rangeslider.setValue(value);
             }
         });
         text.setText(Integer.toString(defaultValue));
         panel.setBorder(BorderFactory.createTitledBorder("Button's dimension"));
-        panel.add(slider);
+        panel.add(rangeslider);
         panel.add(text);
         JButton validate = new JButton("Validate");
         validate.addActionListener(e -> {
             dialog.setVisible(false);
-            SimpleEditor.setDim(new Dimension(slider.getValue(),slider.getValue()));
+            SimpleEditor.setDim(new Dimension(rangeslider.getValue(),rangeslider.getValue()));
             SimpleEditor editor = new SimpleEditor();
         });
         panel.add(validate);
