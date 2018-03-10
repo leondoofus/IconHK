@@ -83,7 +83,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             RangeSlider range = new RangeSlider();
             range.setPreferredSize(new Dimension(240, range.getPreferredSize().height));
             range.setMinimum(0);
-            range.setMaximum(20);
+            range.setMaximum(button.getVmaxDef());
             range.setValue(button.getDefaultFrame());
             range.setUpperValue(button.getVMax());
             range.addChangeListener(e -> {

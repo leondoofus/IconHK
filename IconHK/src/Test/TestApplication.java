@@ -50,7 +50,8 @@ public class TestApplication {
         dialog.setLocationRelativeTo(null);
         dialog.setVisible(true);*/
 
-        SimpleEditor.setDim(new Dimension(50,50));
-        SimpleEditor editor = new SimpleEditor();
+        //SimpleEditor.setDim(new Dimension(50,50));
+        //SimpleEditor editor = new SimpleEditor();
+        new TestSuperposition();
     }
 }

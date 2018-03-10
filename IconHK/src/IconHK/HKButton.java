@@ -40,6 +40,7 @@ public class HKButton extends JButton implements MouseListener {
     // The image shown by default (if not in mouse nor keyboard mode)
     private int defaultFrame=0;
     // Size of folder
+    private int vmaxDef;
     private int vmax = 20;
 
     // The current frame drawn
@@ -104,6 +105,7 @@ public class HKButton extends JButton implements MouseListener {
 
         fixAllImages();
 
+        vmaxDef = iconsVector.size() - 1;
         vmax = iconsVector.size() - 1;
 
         //TODO à voir des lignes suivantes
@@ -120,6 +122,15 @@ public class HKButton extends JButton implements MouseListener {
 
     private void fixAllImages (){
         iconsVector.removeAllElements();
+        try {
+            float w = (float)dimension.getWidth();
+            float h = (float)dimension.getHeight();
+            iconsVector = Image.generate(ImageIO.read(iconFiles[0]),(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
+                    (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8),'M',Image.LINEAR);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        /*
         for (File f : iconFiles) {
             try {
                 BufferedImage img = ImageIO.read(f);
@@ -133,7 +144,7 @@ public class HKButton extends JButton implements MouseListener {
                 e.printStackTrace();
                 System.err.println("image IOException for file " + f.getAbsolutePath());
             }
-        }
+        }*/
     }
 
     private boolean fixCurrentFrame() {
@@ -397,6 +408,10 @@ public class HKButton extends JButton implements MouseListener {
 
     public int getVMax(){
         return this.vmax;
+    }
+
+    public int getVmaxDef() {
+        return vmaxDef;
     }
 
     public void setDefaultFrame(int val){
