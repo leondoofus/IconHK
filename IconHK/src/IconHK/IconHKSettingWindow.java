@@ -156,10 +156,10 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         if(e.getSource() == resetRange){
             for(HKButton button : this.iconHKButtons) {
                 button.setDefaultFrame(0);
-                button.setVMax(20);
+                button.setVMax(button.getVmaxDef());
                 for (RangeSlider s : ranges) {
                     s.setValue(0);
-                    s.setUpperValue(20);
+                    s.setUpperValue(button.getVmaxDef());
                 }
             }
         } else if(e.getSource() == resetRadius){

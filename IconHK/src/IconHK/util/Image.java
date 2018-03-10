@@ -36,9 +36,9 @@ public class Image {
         try {
             BufferedImage c = ImageIO.read(f);
             switch (style){
-                case LINEAR: // y = (1/25)x + b
+                case LINEAR: // y = (1/25)x
                     double size = 25;
-                    for (double i = 0; i < size; i++){
+                    for (double i = 0; i <= size; i++){
                         double a = 1./size;
                         int d1 = Math.min((int)(((double)width) * (a * i)),width);
                         int d2 = Math.min((int)(((double)height) * (a * i)),height);

@@ -99,7 +99,6 @@ public class TestSuperposition extends JFrame implements ActionListener, KeyEven
         toolbar.add(Box.createRigidArea(new Dimension(2,0)));
         if(button.getClass() == HKButton.class){
             iconHKButtons.add((HKButton)button);
-            System.out.println(((HKButton) button).getVMax());
         }
     }
 
@@ -151,7 +150,7 @@ public class TestSuperposition extends JFrame implements ActionListener, KeyEven
     protected void createActions() {
         mushroomAction = new HKAction("Mushroom");
         mushroomAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
-                KeyEvent.VK_M, ActionEvent.CTRL_MASK));
+                KeyEvent.VK_L, ActionEvent.CTRL_MASK|ActionEvent.SHIFT_MASK));
 
     }
 

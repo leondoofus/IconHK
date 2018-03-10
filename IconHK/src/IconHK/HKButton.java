@@ -30,6 +30,7 @@ public class HKButton extends JButton implements MouseListener {
 
     // Boolean telling whether or not a modifier is used in the hotkey
     private boolean useMeta, useCtrl, useAlt, useSft;
+    private char hotkey;
 
     // Boolean testing if buttons pressed
     private boolean metaPressed = false;
@@ -77,6 +78,7 @@ public class HKButton extends JButton implements MouseListener {
 
     private void updateModifiersForKeystroke(KeyStroke ks){
         String s = ks.toString();
+        hotkey = s.charAt(s.length()-1);
         if(s.contains("ctrl"))
             useCtrl=true;
         if(s.contains("shift"))
@@ -126,7 +128,7 @@ public class HKButton extends JButton implements MouseListener {
             float w = (float)dimension.getWidth();
             float h = (float)dimension.getHeight();
             iconsVector = Image.generate(ImageIO.read(iconFiles[0]),(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
-                    (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8),'M',Image.LINEAR);
+                    (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8),hotkey,Image.LINEAR);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -259,21 +261,22 @@ public class HKButton extends JButton implements MouseListener {
      * @return true if no more frame exist after this one
      */
     public boolean animateToDestination(int destination){
+        changeCurrentFrame();
         switch(destination){
             case IconAnimation.ICON_STEP:
-                this.decreaseCurrentFrame();
+                //this.decreaseCurrentFrame();
                 return isAnimationCompleteForDestination(destination);
             case IconAnimation.DEFAULT_STEP:
                 if(this.currentFrame>this.defaultFrame){
-                    this.decreaseCurrentFrame();
+                    //this.decreaseCurrentFrame();
                     return isAnimationCompleteForDestination(destination);
                 } else if(this.currentFrame<this.defaultFrame){
-                    this.increaseCurrentFrame();
+                    //this.increaseCurrentFrame();
                     return isAnimationCompleteForDestination(destination);
                 }
                 return true;
             case IconAnimation.HOTKEY_STEP:
-                this.increaseCurrentFrame();
+                //this.increaseCurrentFrame();
                 return isAnimationCompleteForDestination(destination);
         }
         return false;
@@ -369,8 +372,6 @@ public class HKButton extends JButton implements MouseListener {
 
     }
 
-    //TODO Ask prof if we can implement a thread like this
-    //TODO Should we perform this ?
     private class Redesign implements Runnable {
         @Override
         public void run() {
