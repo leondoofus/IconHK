@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Vector;
+import IconHK.util.Image;
 
 public class HKButton extends JButton implements MouseListener {
     // Name of the button
@@ -125,7 +126,7 @@ public class HKButton extends JButton implements MouseListener {
                 // Resize all images in order to fit dimension
                 float w = (float)dimension.getWidth();
                 float h = (float)dimension.getHeight();
-                BufferedImage scaledInstance = resize(img,(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
+                BufferedImage scaledInstance = Image.resize(img,(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
                         (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8));
                 iconsVector.add(scaledInstance);
             } catch (IOException e) {
@@ -319,15 +320,7 @@ public class HKButton extends JButton implements MouseListener {
             decreaseCurrentFrame();
     }
 
-    // Resize image
-    public static BufferedImage resize(BufferedImage img, int width, int height) {
-        Image tmp = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
-        BufferedImage resized = new BufferedImage(width, height, Image.SCALE_SMOOTH);
-        Graphics2D g2d = resized.createGraphics();
-        g2d.drawImage(tmp, 0, 0, Color.WHITE, null);
-        g2d.dispose();
-        return resized;
-    }
+
 
     // Redimension button
     @Override

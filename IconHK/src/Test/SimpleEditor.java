@@ -1,6 +1,7 @@
 package Test;
 
 import IconHK.*;
+import IconHK.util.SpringUtilities;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,6 +1,8 @@
 package IconHK;
 
 import IconHK.rangeslider.RangeSlider;
+import IconHK.util.Image;
+import IconHK.util.SpringUtilities;
 
 import javax.swing.*;
 import java.awt.*;
@@ -35,6 +37,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
         int rows = this.iconHKButtons.size()+1;
         int cols = 6;
+
         for(HKButton button : this.iconHKButtons){
             panel.add(new JLabel(button.getName()),BorderLayout.WEST);
 
@@ -48,7 +51,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                 protected void paintComponent(Graphics g) {
                     super.paintComponent(g);
                     Graphics2D g2 = (Graphics2D) g.create();
-                    BufferedImage icon = HKButton.resize(image,18,18);
+                    BufferedImage icon = Image.resize(image,18,18);
                     int x = (getWidth() - icon.getWidth()) / 2;
                     int y = (getHeight() - icon.getHeight()) / 2;
                     g2.drawImage(icon, x, y, this);
@@ -123,9 +126,9 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         panel.add(new JLabel("All"),BorderLayout.WEST);
         resetRadius = new JButton("Reset Radius");
         resetRadius.addActionListener(this);
-        resetColor = new JButton("Reset Color");
+        resetColor = new JButton("Reset Colors");
         resetColor.addActionListener(this);
-        resetRange = new JButton("Reset ranges");
+        resetRange = new JButton("Reset Ranges");
         resetRange.addActionListener(this);
         panel.add(new JLabel());
         panel.add(resetRange);
