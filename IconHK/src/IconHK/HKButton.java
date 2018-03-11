@@ -128,7 +128,7 @@ public class HKButton extends JButton implements MouseListener {
             float w = (float)dimension.getWidth();
             float h = (float)dimension.getHeight();
             iconsVector = Image.generate(ImageIO.read(iconFiles[0]),(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
-                    (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8),hotkey,Image.LINEAR);
+                    (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8),hotkey,Image.CUBIC);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -261,22 +261,25 @@ public class HKButton extends JButton implements MouseListener {
      * @return true if no more frame exist after this one
      */
     public boolean animateToDestination(int destination){
-        changeCurrentFrame();
         switch(destination){
             case IconAnimation.ICON_STEP:
-                //this.decreaseCurrentFrame();
+                //changeCurrentFrame();
+                this.decreaseCurrentFrame();
                 return isAnimationCompleteForDestination(destination);
             case IconAnimation.DEFAULT_STEP:
                 if(this.currentFrame>this.defaultFrame){
-                    //this.decreaseCurrentFrame();
+                    //changeCurrentFrame();
+                    this.decreaseCurrentFrame();
                     return isAnimationCompleteForDestination(destination);
                 } else if(this.currentFrame<this.defaultFrame){
-                    //this.increaseCurrentFrame();
+                    //changeCurrentFrame();
+                    this.increaseCurrentFrame();
                     return isAnimationCompleteForDestination(destination);
                 }
                 return true;
             case IconAnimation.HOTKEY_STEP:
-                //this.increaseCurrentFrame();
+                //changeCurrentFrame();
+                this.increaseCurrentFrame();
                 return isAnimationCompleteForDestination(destination);
         }
         return false;
