@@ -128,7 +128,7 @@ public class HKButton extends JButton implements MouseListener {
             float w = (float)dimension.getWidth();
             float h = (float)dimension.getHeight();
             iconsVector = Image.generate(ImageIO.read(iconFiles[0]),(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
-                    (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8),hotkey,Image.CUBIC);
+                    (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8),hotkey,Image.LINEAR);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -263,22 +263,18 @@ public class HKButton extends JButton implements MouseListener {
     public boolean animateToDestination(int destination){
         switch(destination){
             case IconAnimation.ICON_STEP:
-                //changeCurrentFrame();
                 this.decreaseCurrentFrame();
                 return isAnimationCompleteForDestination(destination);
             case IconAnimation.DEFAULT_STEP:
                 if(this.currentFrame>this.defaultFrame){
-                    //changeCurrentFrame();
                     this.decreaseCurrentFrame();
                     return isAnimationCompleteForDestination(destination);
                 } else if(this.currentFrame<this.defaultFrame){
-                    //changeCurrentFrame();
                     this.increaseCurrentFrame();
                     return isAnimationCompleteForDestination(destination);
                 }
                 return true;
             case IconAnimation.HOTKEY_STEP:
-                //changeCurrentFrame();
                 this.increaseCurrentFrame();
                 return isAnimationCompleteForDestination(destination);
         }
@@ -309,7 +305,7 @@ public class HKButton extends JButton implements MouseListener {
      * and fix if out of bounds
      */
 
-    private void decreaseCurrentFrame(){
+    public void decreaseCurrentFrame(){
         this.currentFrame--;
         if (this.currentFrame<=defaultFrame){
             currentFrame = defaultFrame;
@@ -322,7 +318,7 @@ public class HKButton extends JButton implements MouseListener {
      * and fix if out of bounds
      */
 
-    private void increaseCurrentFrame(){
+    public void increaseCurrentFrame(){
         this.currentFrame++;
         if(currentFrame>=vmax) {
             currentFrame = vmax;
@@ -330,7 +326,7 @@ public class HKButton extends JButton implements MouseListener {
         }
     }
 
-    private void changeCurrentFrame(){
+    public void changeCurrentFrame(){
         if (spinner)
             increaseCurrentFrame();
         else

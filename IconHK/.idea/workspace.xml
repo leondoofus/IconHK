@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="afac57bb-ce5b-4b3c-9ded-416c92446340" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton$Redesign.class" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton$Redesign.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton.class" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/IconHK/Test/SimpleEditor.class" afterPath="$PROJECT_DIR$/out/production/IconHK/Test/SimpleEditor.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/IconHK/Test/TestSuperposition.class" afterPath="$PROJECT_DIR$/out/production/IconHK/Test/TestSuperposition.class" />
       <change beforePath="$PROJECT_DIR$/src/IconHK/HKButton.java" afterPath="$PROJECT_DIR$/src/IconHK/HKButton.java" />
-      <change beforePath="$PROJECT_DIR$/src/IconHK/util/Image.java" afterPath="$PROJECT_DIR$/src/IconHK/util/Image.java" />
+      <change beforePath="$PROJECT_DIR$/src/Test/SimpleEditor.java" afterPath="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
+      <change beforePath="$PROJECT_DIR$/src/Test/TestSuperposition.java" afterPath="$PROJECT_DIR$/src/Test/TestSuperposition.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,22 +29,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IconHKSettingWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
+      <file leaf-file-name="IconAnimation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="158" column="50" lean-forward="false" selection-start-line="158" selection-start-column="50" selection-end-line="158" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2052#2053#0" expanded="true" />
-                <element signature="e#2119#2120#0" expanded="true" />
-                <element signature="e#2198#2199#0" expanded="true" />
-                <element signature="e#2265#2266#0" expanded="true" />
-                <element signature="e#2344#2345#0" expanded="true" />
-                <element signature="e#2411#2412#0" expanded="true" />
-                <element signature="e#2472#2473#0" expanded="true" />
-                <element signature="e#2530#2531#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-233">
+              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -47,74 +42,13 @@
       <file leaf-file-name="TestSuperposition.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/TestSuperposition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1960">
-              <caret line="152" column="29" lean-forward="false" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
+            <state relative-caret-position="300">
+              <caret line="313" column="33" lean-forward="true" selection-start-line="310" selection-start-column="12" selection-end-line="313" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#animateToolbar#0;class#TestSuperposition#0" expanded="false" />
-                <element signature="method#dispatchKeyEvent#0;class#TestSuperposition#0" expanded="false" />
                 <element signature="method#setAllModifiers#0;class#TestSuperposition#0" expanded="false" />
                 <element signature="method#updateModifiers#0;class#TestSuperposition#0" expanded="false" />
                 <element signature="method#deactivateAllModifiers#0;class#TestSuperposition#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#TestSuperposition#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HKButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="130" column="104" lean-forward="false" selection-start-line="130" selection-start-column="104" selection-end-line="130" selection-end-column="104" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7533#7534#0" expanded="true" />
-                <element signature="e#7560#7561#0" expanded="true" />
-                <element signature="e#7594#7595#0" expanded="true" />
-                <element signature="e#7624#7625#0" expanded="true" />
-                <element signature="e#7658#7659#0" expanded="true" />
-                <element signature="e#7688#7689#0" expanded="true" />
-                <element signature="e#7721#7722#0" expanded="true" />
-                <element signature="e#7750#7751#0" expanded="true" />
-                <element signature="e#7783#7784#0" expanded="true" />
-                <element signature="e#7812#7813#0" expanded="true" />
-                <element signature="e#7850#7851#0" expanded="true" />
-                <element signature="e#7890#7891#0" expanded="true" />
-                <element signature="e#7945#7946#0" expanded="true" />
-                <element signature="e#7993#7994#0" expanded="true" />
-                <element signature="e#8282#8283#0" expanded="true" />
-                <element signature="e#8328#8329#0" expanded="true" />
-                <element signature="e#8381#8382#0" expanded="true" />
-                <element signature="e#8425#8426#0" expanded="true" />
-                <element signature="e#8480#8481#0" expanded="true" />
-                <element signature="e#8526#8527#0" expanded="true" />
-                <element signature="e#8581#8582#0" expanded="true" />
-                <element signature="e#8627#8628#0" expanded="true" />
-                <element signature="e#11280#11281#0" expanded="true" />
-                <element signature="e#11312#11313#0" expanded="true" />
-                <element signature="e#11367#11368#0" expanded="true" />
-                <element signature="e#11399#11400#0" expanded="true" />
-                <element signature="e#11454#11455#0" expanded="true" />
-                <element signature="e#11486#11487#0" expanded="true" />
-                <element signature="e#11532#11533#0" expanded="true" />
-                <element signature="e#11570#11571#0" expanded="true" />
-                <element signature="e#11723#11724#0" expanded="true" />
-                <element signature="e#11807#11808#0" expanded="true" />
-                <element signature="e#12774#12775#0" expanded="true" />
-                <element signature="e#12852#12853#0" expanded="true" />
-                <element signature="e#12887#12888#0" expanded="true" />
-                <element signature="e#12927#12928#0" expanded="true" />
-                <element signature="e#12954#12955#0" expanded="true" />
-                <element signature="e#12986#12987#0" expanded="true" />
-                <element signature="e#13017#13018#0" expanded="true" />
-                <element signature="e#13047#13048#0" expanded="true" />
-                <element signature="e#13210#13211#0" expanded="true" />
-                <element signature="e#13241#13242#0" expanded="true" />
-                <element signature="e#13277#13278#0" expanded="true" />
-                <element signature="e#13323#13324#0" expanded="true" />
-                <element signature="e#13358#13359#0" expanded="true" />
-                <element signature="e#13408#13409#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,21 +57,77 @@
       <file leaf-file-name="SimpleEditor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="233" column="60" lean-forward="false" selection-start-line="233" selection-start-column="60" selection-end-line="233" selection-end-column="60" />
+            <state relative-caret-position="117">
+              <caret line="414" column="33" lean-forward="false" selection-start-line="414" selection-start-column="33" selection-end-line="414" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Image.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/IconHK/util/Image.java">
+      <file leaf-file-name="HKButton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="81" column="52" lean-forward="false" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
+            <state relative-caret-position="445">
+              <caret line="328" column="10" lean-forward="false" selection-start-line="328" selection-start-column="10" selection-end-line="328" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#7534#7535#0" expanded="true" />
+                <element signature="e#7561#7562#0" expanded="true" />
+                <element signature="e#7595#7596#0" expanded="true" />
+                <element signature="e#7625#7626#0" expanded="true" />
+                <element signature="e#7659#7660#0" expanded="true" />
+                <element signature="e#7689#7690#0" expanded="true" />
+                <element signature="e#7722#7723#0" expanded="true" />
+                <element signature="e#7751#7752#0" expanded="true" />
+                <element signature="e#7784#7785#0" expanded="true" />
+                <element signature="e#7813#7814#0" expanded="true" />
+                <element signature="e#7851#7852#0" expanded="true" />
+                <element signature="e#7891#7892#0" expanded="true" />
+                <element signature="e#7946#7947#0" expanded="true" />
+                <element signature="e#7994#7995#0" expanded="true" />
+                <element signature="e#8283#8284#0" expanded="true" />
+                <element signature="e#8329#8330#0" expanded="true" />
+                <element signature="e#8382#8383#0" expanded="true" />
+                <element signature="e#8426#8427#0" expanded="true" />
+                <element signature="e#8481#8482#0" expanded="true" />
+                <element signature="e#8527#8528#0" expanded="true" />
+                <element signature="e#8582#8583#0" expanded="true" />
+                <element signature="e#8628#8629#0" expanded="true" />
+                <element signature="e#11110#11111#0" expanded="true" />
+                <element signature="e#11142#11143#0" expanded="true" />
+                <element signature="e#11197#11198#0" expanded="true" />
+                <element signature="e#11229#11230#0" expanded="true" />
+                <element signature="e#11284#11285#0" expanded="true" />
+                <element signature="e#11316#11317#0" expanded="true" />
+                <element signature="e#11362#11363#0" expanded="true" />
+                <element signature="e#11400#11401#0" expanded="true" />
+                <element signature="e#11553#11554#0" expanded="true" />
+                <element signature="e#11637#11638#0" expanded="true" />
+                <element signature="e#12604#12605#0" expanded="true" />
+                <element signature="e#12682#12683#0" expanded="true" />
+                <element signature="e#12717#12718#0" expanded="true" />
+                <element signature="e#12757#12758#0" expanded="true" />
+                <element signature="e#12784#12785#0" expanded="true" />
+                <element signature="e#12816#12817#0" expanded="true" />
+                <element signature="e#12847#12848#0" expanded="true" />
+                <element signature="e#12877#12878#0" expanded="true" />
+                <element signature="e#13040#13041#0" expanded="true" />
+                <element signature="e#13071#13072#0" expanded="true" />
+                <element signature="e#13107#13108#0" expanded="true" />
+                <element signature="e#13153#13154#0" expanded="true" />
+                <element signature="e#13188#13189#0" expanded="true" />
+                <element signature="e#13238#13239#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Test/TestApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,7 +143,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>curren</find>
       <find>currentFra</find>
       <find>getWi</find>
       <find>getW</find>
@@ -181,8 +170,9 @@
       <find>getVmax</find>
       <find>Syst</find>
       <find>Sys</find>
-      <find>fix</find>
       <find>fixa</find>
+      <find>animateT</find>
+      <find>fix</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,17 +189,17 @@
         <option value="$PROJECT_DIR$/src/IconHK/IconHKButton.java" />
         <option value="$PROJECT_DIR$/src/IconHK/HKAction.java" />
         <option value="$PROJECT_DIR$/src/Test/Clients.java" />
-        <option value="$PROJECT_DIR$/src/IconHK/IconAnimation.java" />
         <option value="$PROJECT_DIR$/src/IconHK/SpringUtilities.java" />
-        <option value="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
         <option value="$PROJECT_DIR$/src/IconHK/slider/RangeSliderDemo.java" />
         <option value="$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderDemo.java" />
         <option value="$PROJECT_DIR$/src/IconHK/util/SpringUtilities.java" />
-        <option value="$PROJECT_DIR$/src/Test/TestApplication.java" />
         <option value="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
-        <option value="$PROJECT_DIR$/src/Test/TestSuperposition.java" />
-        <option value="$PROJECT_DIR$/src/IconHK/HKButton.java" />
         <option value="$PROJECT_DIR$/src/IconHK/util/Image.java" />
+        <option value="$PROJECT_DIR$/src/IconHK/IconAnimation.java" />
+        <option value="$PROJECT_DIR$/src/IconHK/HKButton.java" />
+        <option value="$PROJECT_DIR$/src/Test/TestSuperposition.java" />
+        <option value="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
+        <option value="$PROJECT_DIR$/src/Test/TestApplication.java" />
       </list>
     </option>
   </component>
@@ -221,7 +211,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
-    <option name="y" value="-782" />
+    <option name="y" value="-14" />
     <option name="width" value="1368" />
     <option name="height" value="783" />
   </component>
@@ -463,7 +453,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-782" width="1368" height="783" extended-state="6" />
+    <frame x="-1" y="-14" width="1368" height="783" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -480,6 +470,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18957704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945055" sideWeight="0.4892704" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -492,7 +483,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5107296" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -750,14 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Scripts/jdk1.8.0_121/src.zip!/javax/swing/event/ChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -769,22 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
           <caret line="72" column="38" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/HKAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/TestApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,22 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/TestSuperposition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1960">
-          <caret line="152" column="29" lean-forward="false" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#animateToolbar#0;class#TestSuperposition#0" expanded="false" />
-            <element signature="method#dispatchKeyEvent#0;class#TestSuperposition#0" expanded="false" />
-            <element signature="method#setAllModifiers#0;class#TestSuperposition#0" expanded="false" />
-            <element signature="method#updateModifiers#0;class#TestSuperposition#0" expanded="false" />
-            <element signature="method#deactivateAllModifiers#0;class#TestSuperposition#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#TestSuperposition#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -837,70 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="233" column="60" lean-forward="false" selection-start-line="233" selection-start-column="60" selection-end-line="233" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="130" column="104" lean-forward="false" selection-start-line="130" selection-start-column="104" selection-end-line="130" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7533#7534#0" expanded="true" />
-            <element signature="e#7560#7561#0" expanded="true" />
-            <element signature="e#7594#7595#0" expanded="true" />
-            <element signature="e#7624#7625#0" expanded="true" />
-            <element signature="e#7658#7659#0" expanded="true" />
-            <element signature="e#7688#7689#0" expanded="true" />
-            <element signature="e#7721#7722#0" expanded="true" />
-            <element signature="e#7750#7751#0" expanded="true" />
-            <element signature="e#7783#7784#0" expanded="true" />
-            <element signature="e#7812#7813#0" expanded="true" />
-            <element signature="e#7850#7851#0" expanded="true" />
-            <element signature="e#7890#7891#0" expanded="true" />
-            <element signature="e#7945#7946#0" expanded="true" />
-            <element signature="e#7993#7994#0" expanded="true" />
-            <element signature="e#8282#8283#0" expanded="true" />
-            <element signature="e#8328#8329#0" expanded="true" />
-            <element signature="e#8381#8382#0" expanded="true" />
-            <element signature="e#8425#8426#0" expanded="true" />
-            <element signature="e#8480#8481#0" expanded="true" />
-            <element signature="e#8526#8527#0" expanded="true" />
-            <element signature="e#8581#8582#0" expanded="true" />
-            <element signature="e#8627#8628#0" expanded="true" />
-            <element signature="e#11280#11281#0" expanded="true" />
-            <element signature="e#11312#11313#0" expanded="true" />
-            <element signature="e#11367#11368#0" expanded="true" />
-            <element signature="e#11399#11400#0" expanded="true" />
-            <element signature="e#11454#11455#0" expanded="true" />
-            <element signature="e#11486#11487#0" expanded="true" />
-            <element signature="e#11532#11533#0" expanded="true" />
-            <element signature="e#11570#11571#0" expanded="true" />
-            <element signature="e#11723#11724#0" expanded="true" />
-            <element signature="e#11807#11808#0" expanded="true" />
-            <element signature="e#12774#12775#0" expanded="true" />
-            <element signature="e#12852#12853#0" expanded="true" />
-            <element signature="e#12887#12888#0" expanded="true" />
-            <element signature="e#12927#12928#0" expanded="true" />
-            <element signature="e#12954#12955#0" expanded="true" />
-            <element signature="e#12986#12987#0" expanded="true" />
-            <element signature="e#13017#13018#0" expanded="true" />
-            <element signature="e#13047#13048#0" expanded="true" />
-            <element signature="e#13210#13211#0" expanded="true" />
-            <element signature="e#13241#13242#0" expanded="true" />
-            <element signature="e#13277#13278#0" expanded="true" />
-            <element signature="e#13323#13324#0" expanded="true" />
-            <element signature="e#13358#13359#0" expanded="true" />
-            <element signature="e#13408#13409#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/util/Image.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -908,6 +794,107 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/HKAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-233">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/TestSuperposition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="313" column="33" lean-forward="true" selection-start-line="310" selection-start-column="12" selection-end-line="313" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setAllModifiers#0;class#TestSuperposition#0" expanded="false" />
+            <element signature="method#updateModifiers#0;class#TestSuperposition#0" expanded="false" />
+            <element signature="method#deactivateAllModifiers#0;class#TestSuperposition#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="414" column="33" lean-forward="false" selection-start-line="414" selection-start-column="33" selection-end-line="414" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="328" column="10" lean-forward="false" selection-start-line="328" selection-start-column="10" selection-end-line="328" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7534#7535#0" expanded="true" />
+            <element signature="e#7561#7562#0" expanded="true" />
+            <element signature="e#7595#7596#0" expanded="true" />
+            <element signature="e#7625#7626#0" expanded="true" />
+            <element signature="e#7659#7660#0" expanded="true" />
+            <element signature="e#7689#7690#0" expanded="true" />
+            <element signature="e#7722#7723#0" expanded="true" />
+            <element signature="e#7751#7752#0" expanded="true" />
+            <element signature="e#7784#7785#0" expanded="true" />
+            <element signature="e#7813#7814#0" expanded="true" />
+            <element signature="e#7851#7852#0" expanded="true" />
+            <element signature="e#7891#7892#0" expanded="true" />
+            <element signature="e#7946#7947#0" expanded="true" />
+            <element signature="e#7994#7995#0" expanded="true" />
+            <element signature="e#8283#8284#0" expanded="true" />
+            <element signature="e#8329#8330#0" expanded="true" />
+            <element signature="e#8382#8383#0" expanded="true" />
+            <element signature="e#8426#8427#0" expanded="true" />
+            <element signature="e#8481#8482#0" expanded="true" />
+            <element signature="e#8527#8528#0" expanded="true" />
+            <element signature="e#8582#8583#0" expanded="true" />
+            <element signature="e#8628#8629#0" expanded="true" />
+            <element signature="e#11110#11111#0" expanded="true" />
+            <element signature="e#11142#11143#0" expanded="true" />
+            <element signature="e#11197#11198#0" expanded="true" />
+            <element signature="e#11229#11230#0" expanded="true" />
+            <element signature="e#11284#11285#0" expanded="true" />
+            <element signature="e#11316#11317#0" expanded="true" />
+            <element signature="e#11362#11363#0" expanded="true" />
+            <element signature="e#11400#11401#0" expanded="true" />
+            <element signature="e#11553#11554#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#12604#12605#0" expanded="true" />
+            <element signature="e#12682#12683#0" expanded="true" />
+            <element signature="e#12717#12718#0" expanded="true" />
+            <element signature="e#12757#12758#0" expanded="true" />
+            <element signature="e#12784#12785#0" expanded="true" />
+            <element signature="e#12816#12817#0" expanded="true" />
+            <element signature="e#12847#12848#0" expanded="true" />
+            <element signature="e#12877#12878#0" expanded="true" />
+            <element signature="e#13040#13041#0" expanded="true" />
+            <element signature="e#13071#13072#0" expanded="true" />
+            <element signature="e#13107#13108#0" expanded="true" />
+            <element signature="e#13153#13154#0" expanded="true" />
+            <element signature="e#13188#13189#0" expanded="true" />
+            <element signature="e#13238#13239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/TestApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

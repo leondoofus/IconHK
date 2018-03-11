@@ -258,6 +258,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                 IconAnimation animation = i.next();
                 int objective = animation.getCurrentObjective();
                 boolean over;
+                System.out.println(objective);
                 switch (objective) {
                     case IconAnimation.HOTKEY_STEP:
                         over = animation.getButton().animateToDestination(IconAnimation.HOTKEY_STEP);
@@ -289,6 +290,18 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                         i.remove();
                         break;
                 }
+            }
+        }
+    }
+
+    private void animateHotkeyPressed() {
+        if (animations.size() > 0) {
+            Iterator<IconAnimation> i = animations.iterator();
+            while (i.hasNext()) {
+                IconAnimation animation = i.next();
+                int objective = animation.getCurrentObjective();
+                animation.getButton().changeCurrentFrame();
+                animation.getButton().repaint();
             }
         }
     }
@@ -393,14 +406,14 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         b.setMetaPressed(false);
     }
 
-    // TODO ask : should we synchronize this method ?
-    // How does this method perform ?
     @Override
-    public synchronized void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) {
         if (e.getSource() == timer) {
-            animateToolbar();
+            if (ctrlPressed || altPressed || metaPressed || shftPressed)
+                animateHotkeyPressed();
+            else
+                animateToolbar();
             repaint();
-            //System.out.println(animations.size());
         }/* else {
 
             String text = null;

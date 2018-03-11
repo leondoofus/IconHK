@@ -117,8 +117,6 @@ public class TestSuperposition extends JFrame implements ActionListener, KeyEven
         //  KeyEvent.VK_X, ActionEvent.CTRL_MASK));
         edit.add(cut);
 
-
-
         return menubar;
     }
 
@@ -128,7 +126,7 @@ public class TestSuperposition extends JFrame implements ActionListener, KeyEven
         for (Component c : toolbar.getComponents()) {
             if (c.getClass() == HKButton.class) {
                 HKButton button = (HKButton) c;
-                int[] sequence = { IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP };
+                int[] sequence = { IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP, IconAnimation.OVER_STEP };
                 animations.add(new IconAnimation(button, sequence, 40));
             }
         }
@@ -192,6 +190,18 @@ public class TestSuperposition extends JFrame implements ActionListener, KeyEven
                         i.remove();
                         break;
                 }
+            }
+        }
+    }
+
+    private void animateHotkeyPressed() {
+        if (animations.size() > 0) {
+            Iterator<IconAnimation> i = animations.iterator();
+            while (i.hasNext()) {
+                IconAnimation animation = i.next();
+                int objective = animation.getCurrentObjective();
+                animation.getButton().changeCurrentFrame();
+                animation.getButton().repaint();
             }
         }
     }
@@ -262,7 +272,7 @@ public class TestSuperposition extends JFrame implements ActionListener, KeyEven
             }
         }
         animateActivated();
-        animateToolbar();
+        animateHotkeyPressed();
         return false;
     }
 
@@ -298,9 +308,11 @@ public class TestSuperposition extends JFrame implements ActionListener, KeyEven
     @Override
     public synchronized void actionPerformed(ActionEvent e) {
         if (e.getSource() == timer) {
-            animateToolbar();
+            if (ctrlPressed || altPressed || metaPressed || shftPressed)
+                animateHotkeyPressed();
+            else
+                animateToolbar();
             repaint();
-            //System.out.println(animations.size());
         }
     }
 }
