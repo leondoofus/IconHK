@@ -50,28 +50,33 @@ public class HKButton extends JButton implements MouseListener {
     // Control the movement
     private boolean spinner = true;
 
+    private int mode;
+
 
     // int value referring the length of one side of the square
     // used for modifiers. 0 by default, must be initialized in the constructer
     // and updated if needed
     private float modifierRadiusRatio=0.35f;
 
-    public HKButton(Action a){
+    public HKButton(Action a, int mode){
         super(a);
+        this.mode = mode;
         KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
         updateModifiersForKeystroke(ks);
         initForName((String) a.getValue(Action.NAME));
     }
 
-    public HKButton(Action a, Dimension d){
+    public HKButton(Action a, Dimension d, int mode){
         super(a);
+        this.mode = mode;
         this.dimension = d;
         KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
         updateModifiersForKeystroke(ks);
         initForName((String) a.getValue(Action.NAME));
     }
 
-    public HKButton(String text, Dimension d) {
+    public HKButton(String text, Dimension d, int mode) {
+        this.mode = mode;
         this.dimension = d;
         initForName(text);
     }
@@ -124,29 +129,31 @@ public class HKButton extends JButton implements MouseListener {
 
     private void fixAllImages (){
         iconsVector.removeAllElements();
-        try {
-            float w = (float)dimension.getWidth();
-            float h = (float)dimension.getHeight();
-            iconsVector = Image.generate(ImageIO.read(iconFiles[0]),(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
-                    (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8),hotkey,Image.LINEAR);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        /*
-        for (File f : iconFiles) {
+        if (mode == Image.DEFAULT){
+            for (File f : iconFiles) {
+                try {
+                    BufferedImage img = ImageIO.read(f);
+                    // Resize all images in order to fit dimension
+                    float w = (float)dimension.getWidth();
+                    float h = (float)dimension.getHeight();
+                    BufferedImage scaledInstance = Image.resize(img,(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
+                            (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8));
+                    iconsVector.add(scaledInstance);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    System.err.println("image IOException for file " + f.getAbsolutePath());
+                }
+            }
+        } else {
             try {
-                BufferedImage img = ImageIO.read(f);
-                // Resize all images in order to fit dimension
-                float w = (float)dimension.getWidth();
-                float h = (float)dimension.getHeight();
-                BufferedImage scaledInstance = Image.resize(img,(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
-                        (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8));
-                iconsVector.add(scaledInstance);
+                float w = (float) dimension.getWidth();
+                float h = (float) dimension.getHeight();
+                iconsVector = Image.generate(ImageIO.read(iconFiles[0]), (int) (((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
+                        (int) (((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8), hotkey, mode);
             } catch (IOException e) {
                 e.printStackTrace();
-                System.err.println("image IOException for file " + f.getAbsolutePath());
             }
-        }*/
+        }
     }
 
     private boolean fixCurrentFrame() {

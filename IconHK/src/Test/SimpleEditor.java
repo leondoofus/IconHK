@@ -1,6 +1,7 @@
 package Test;
 
 import IconHK.*;
+import IconHK.util.Image;
 import IconHK.util.SpringUtilities;
 
 import javax.swing.*;
@@ -23,7 +24,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
     //Actions
     private Action cutAction, pasteAction, copyAction, saveAction, newAction, expandAction, rgbAction;
-    private Action findAction, moveAction, pencilAction, increaseAction;
+    private Action findAction, moveAction, pencilAction, increaseAction, mushroomAction, marioAction;
 
     // Boolean testing if buttons pressed
     private static boolean metaPressed = false;
@@ -55,7 +56,8 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         content.add(textComp, BorderLayout.CENTER);
         content.add(this.toolbar, BorderLayout.NORTH);
         this.setJMenuBar(createMenuBar());
-        this.setSize(dim.width * 16, dim.height * 9);
+        this.pack();
+        this.setSize(this.getWidth(), this.getHeight()*4);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -69,20 +71,22 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     }
 
     private void addAllButtonsToToolBar (){
-        addButtonToToolBar(new HKButton(newAction,dim));
-        addButtonToToolBar(new HKButton(saveAction,dim));
+        addButtonToToolBar(new HKButton(newAction,dim,Image.DEFAULT));
+        addButtonToToolBar(new HKButton(saveAction,dim,Image.DEFAULT));
         toolbar.addSeparator();
-        addButtonToToolBar(new HKButton(copyAction,dim));
-        addButtonToToolBar(new HKButton(cutAction,dim));
-        addButtonToToolBar(new HKButton(pasteAction,dim));
+        addButtonToToolBar(new HKButton(copyAction,dim,Image.DEFAULT));
+        addButtonToToolBar(new HKButton(cutAction,dim,Image.DEFAULT));
+        addButtonToToolBar(new HKButton(pasteAction,dim,Image.DEFAULT));
         toolbar.addSeparator();
-        addButtonToToolBar(new HKButton(expandAction,dim));
-        addButtonToToolBar(new HKButton(rgbAction,dim));
-        addButtonToToolBar(new HKButton(findAction,dim));
-        addButtonToToolBar(new HKButton(moveAction,dim));
-        addButtonToToolBar(new HKButton(pencilAction,dim));
-        addButtonToToolBar(new HKButton(increaseAction,dim));
+        addButtonToToolBar(new HKButton(expandAction,dim,Image.DEFAULT));
+        addButtonToToolBar(new HKButton(rgbAction,dim,Image.DEFAULT));
+        addButtonToToolBar(new HKButton(findAction,dim,Image.DEFAULT));
+        addButtonToToolBar(new HKButton(moveAction,dim,Image.DEFAULT));
+        addButtonToToolBar(new HKButton(pencilAction,dim,Image.DEFAULT));
+        addButtonToToolBar(new HKButton(increaseAction,dim,Image.DEFAULT));
         toolbar.addSeparator();
+        addButtonToToolBar(new HKButton(mushroomAction,dim,Image.QUADRATIC));
+        addButtonToToolBar(new HKButton(marioAction,dim,Image.CUBIC));
 
         JPanel panel = new JPanel(new SpringLayout());
         JButton aa = new JButton("Animate all");
@@ -176,6 +180,14 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         increase.addActionListener(this);
         other.add(increase);
 
+        JMenuItem mushroom = new JMenuItem(mushroomAction);
+        mushroom.addActionListener(this);
+        other.add(mushroom);
+
+        JMenuItem mario = new JMenuItem(marioAction);
+        mario.addActionListener(this);
+        other.add(mario);
+
 
         return menubar;
     }
@@ -249,6 +261,13 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         increaseAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
                 KeyEvent.VK_H, ActionEvent.CTRL_MASK));
 
+        mushroomAction = new HKAction("Mushroom");
+        mushroomAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
+                KeyEvent.VK_C, ActionEvent.ALT_MASK));
+
+        marioAction = new HKAction("Mario");
+        marioAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
+                KeyEvent.VK_M, ActionEvent.ALT_MASK));
     }
 
     private void animateToolbar() {
@@ -258,7 +277,6 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                 IconAnimation animation = i.next();
                 int objective = animation.getCurrentObjective();
                 boolean over;
-                System.out.println(objective);
                 switch (objective) {
                     case IconAnimation.HOTKEY_STEP:
                         over = animation.getButton().animateToDestination(IconAnimation.HOTKEY_STEP);
@@ -299,7 +317,6 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
             Iterator<IconAnimation> i = animations.iterator();
             while (i.hasNext()) {
                 IconAnimation animation = i.next();
-                int objective = animation.getCurrentObjective();
                 animation.getButton().changeCurrentFrame();
                 animation.getButton().repaint();
             }
@@ -372,7 +389,6 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
             }
         }
         animateActivated();
-        animateToolbar();
         return false;
     }
 

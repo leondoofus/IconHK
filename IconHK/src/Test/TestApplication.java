@@ -9,8 +9,7 @@ import java.awt.event.WindowListener;
 
 public class TestApplication {
     public static void main(String[] args) {
-/*
-        JDialog dialog = new JDialog();
+        JFrame dialog = new JFrame();
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 0, 0));
         JTextField text = new JTextField(4);
@@ -40,18 +39,20 @@ public class TestApplication {
         panel.add(text);
         JButton validate = new JButton("Validate");
         validate.addActionListener(e -> {
-            dialog.setVisible(false);
-            SimpleEditor.setDim(new Dimension(rangeslider.getValue(),rangeslider.getValue()));
-            SimpleEditor editor = new SimpleEditor();
+            if (rangeslider.getValue() != 0) {
+                dialog.setVisible(false);
+                SimpleEditor.setDim(new Dimension(rangeslider.getValue(), rangeslider.getValue()));
+                SimpleEditor editor = new SimpleEditor();
+            }
         });
         panel.add(validate);
         dialog.add(panel);
-        dialog.setSize(300, 100);
+        dialog.pack();
         dialog.setLocationRelativeTo(null);
-        dialog.setVisible(true);*/
+        dialog.setVisible(true);
+        dialog.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //SimpleEditor.setDim(new Dimension(50,50));
         //SimpleEditor editor = new SimpleEditor();
-        new TestSuperposition();
     }
 }

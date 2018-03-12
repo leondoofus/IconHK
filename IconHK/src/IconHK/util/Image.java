@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Vector;
 
 public class Image {
-    public static final int LINEAR = 1, QUADRATIC = 2, CUBIC = 3;
+    public static final int DEFAULT = 0, LINEAR = 1, QUADRATIC = 2, CUBIC = 3;
 
     // Resize image
     public static BufferedImage resize(BufferedImage img, int width, int height) {
@@ -60,10 +60,6 @@ public class Image {
                     double[][] d = {{size*size,size},{alpha*alpha,alpha}};
                     double a = determinant(2,array1)/determinant(2,d);
                     double b = determinant(2,array2)/determinant(2,d);
-                    //double a = (alpha - size*beta)/(size*size*alpha - size*alpha*alpha);
-                    //double b = (size*size*beta - alpha*alpha)/(size*size*alpha - size*alpha*alpha);
-                    System.out.println(a);
-                    System.out.println(b);
                     for (double i = 0; i <= size; i++){
                         int d1 = Math.min((int)(((double)width) * (a*i*i + b*i)),width);
                         int d2 = Math.min((int)(((double)height) * (a*i*i + b*i)),height);
@@ -79,18 +75,14 @@ public class Image {
                     }
                     break;
                 case CUBIC:
-                    double x1 = 8, y1 = 0.8, x2 = 14, y2 = 0.5;
+                    double x1 = 8, y1 = 0.8, x2 = 14, y2 = 0.2;
                     double[][] a1 = {{y1,x1*x1,x1},{y2,x2*x2,x2},{1,size*size,size}};
-                    double[][] a2 = {{x1*x1*x1,y1,x1},{x2*x2*x2,y2,y2},{size*size*size,1,size}};
+                    double[][] a2 = {{x1*x1*x1,y1,x1},{x2*x2*x2,y2,x2},{size*size*size,1,size}};
                     double[][] a3 = {{x1*x1*x1,x1*x1,y1},{x2*x2*x2,x2*x2,y2},{size*size*size,size*size,1}};
                     double[][] delta = {{x1*x1*x1,x1*x1,x1},{x2*x2*x2,x2*x2,x2},{size*size*size,size*size,size}};
                     double u = determinant(3,a1)/determinant(3,delta);
                     double v = determinant(3,a2)/determinant(3,delta);
                     double w = determinant(3,a3)/determinant(3,delta);
-                    System.out.println(determinant(3,delta));
-                    System.out.println(u);
-                    System.out.println(v);
-                    System.out.println(w);
                     for (double i = 0; i <= size; i++){
                         int d1 = Math.min((int)(((double)width) * (u*i*i*i + v*i*i + w*i)),width);
                         int d2 = Math.min((int)(((double)height) * (u*i*i*i + v*i*i + w*i)),height);
@@ -105,6 +97,8 @@ public class Image {
                         }
                     }
                     break;
+                default:
+                    return null;
             }
         } catch (IOException e) {
             e.printStackTrace();
