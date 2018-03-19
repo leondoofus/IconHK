@@ -14,9 +14,6 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
     private static Dimension dim = new Dimension(50,50);
 
-    // Text Editor
-    private JTextArea textComp;
-
     // Tool bar
     private JToolBar toolbar;
 
@@ -32,6 +29,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     private static boolean ctrlPressed = false;
     private static boolean shftPressed = false;
 
+    private JButton aa;
 
     private Vector<IconAnimation> animations;
     private Vector<HKButton> iconHKButtons;
@@ -44,7 +42,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         timer = new Timer(50, this);
         timer.start();
 
-        textComp = new JTextArea();
+        JTextArea textComp = new JTextArea();
         textComp.setLineWrap(true);
         createActions();
 
@@ -89,15 +87,13 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         addButtonToToolBar(new HKButton(marioAction,dim,Image.CUBIC));
 
         JPanel panel = new JPanel(new SpringLayout());
-        JButton aa = new JButton("Animate all");
+        aa = new JButton("Animate all");
         aa.addActionListener(e -> {
             animateall();
             animateToolbar();
         });
         JButton settings = new JButton("Settings");
-        settings.addActionListener(e -> {
-            new IconHKSettingWindow(this.iconHKButtons);
-        });
+        settings.addActionListener(e -> new IconHKSettingWindow(this.iconHKButtons));
         panel.add(aa);
         panel.add(settings);
         SpringUtilities.makeCompactGrid(panel, 2, 1, 3, 3, 0, 5);
@@ -247,6 +243,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     }
 
     private void animateToolbar() {
+        if (animations.size() < iconHKButtons.size()) return;
         if (animations.size() > 0) {
             Iterator<IconAnimation> i = animations.iterator();
             while (i.hasNext()) {
@@ -313,9 +310,27 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     }
 
     private void animateHotkeyPressed() {
-        if (animations.size() > 0) {
+        if (HKButton.lockHotkey){
+            if (animations.size() > 0) {
+                for (IconAnimation animation : animations) {
+                    animation.getButton().increaseCurrentFrame();
+                    animation.getButton().repaint();
+                }
+            }
+        } else {
+            if (animations.size() > 0) {
+                for (IconAnimation animation : animations) {
+                    animation.getButton().changeCurrentFrame();
+                    animation.getButton().repaint();
+                }
+            }
+        }
+    }
+
+    private void desanimateHotkeyPressed(){
+        if (HKButton.lockHotkey){
             for (IconAnimation animation : animations) {
-                animation.getButton().changeCurrentFrame();
+                animation.getButton().decreaseCurrentFrame();
                 animation.getButton().repaint();
             }
         }
@@ -354,6 +369,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                     }
                     break;
             }
+            animateActivated();
         } else if (e.getID() == KeyEvent.KEY_RELEASED) {
             switch (e.getKeyCode()) {
                 case KeyEvent.VK_META:
@@ -386,12 +402,10 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                     break;
             }
         }
-        animateActivated();
         return false;
     }
 
     private void setAllModifiers (HKButton b){
-        //System.out.println(ctrlPressed + " " + altPressed + " " + shftPressed + " " + metaPressed);
         if (ctrlPressed)
             if (!b.isUseCtrl())
                 deactivateAllModifiers(b);
@@ -425,8 +439,10 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         if (e.getSource() == timer) {
             if (ctrlPressed || altPressed || metaPressed || shftPressed)
                 animateHotkeyPressed();
-            else
+            else{
+                desanimateHotkeyPressed();
                 animateToolbar();
+            }
             repaint();
         }/* else {
 

@@ -120,7 +120,9 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             panel.add(range);
             panel.add(fin);
             panel.add(r);
-            panel.add(c);
+            //TODO commented in order not to show popup
+            //panel.add(c);
+            panel.add(new JLabel());
         }
 
         panel.add(new JLabel("All"),BorderLayout.WEST);
@@ -138,19 +140,31 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
         panel.add(new JLabel("Other options"));
         panel.add(new JLabel());
-        JCheckBox cb1 = new JCheckBox("Lock hotkey");
+        JCheckBox cb1 = new JCheckBox(HKButton.lockHotkey? "Hotkey locked" : "Hotkey unlocked");
         cb1.setSelected(HKButton.lockHotkey);
-        cb1.addItemListener(e -> {HKButton.lockHotkey = e.getStateChange() == 1; System.out.println(HKButton.lockHotkey);});
+        cb1.addItemListener(e -> {
+            if (e.getStateChange() == 1){
+                HKButton.lockHotkey = true;
+                cb1.setText("Hotkey locked");
+            } else {
+                HKButton.lockHotkey = false;
+                cb1.setText("Hotkey unlocked");
+            }});
         panel.add(cb1);
         panel.add(new JLabel());
-        JCheckBox cb2 = new JCheckBox("Lock click");
+
+        JCheckBox cb2 = new JCheckBox(HKButton.lockClick? "Click locked" : "Click unlocked");
         cb2.setSelected(HKButton.lockClick);
-        cb2.addItemListener(e -> {HKButton.lockClick = e.getStateChange() == 1; System.out.println(HKButton.lockClick);});
+        cb2.addItemListener(e -> {
+            if (e.getStateChange() == 1){
+                HKButton.lockClick = true;
+                cb2.setText("Click locked");
+            } else {
+                HKButton.lockClick = false;
+                cb2.setText("Click unlocked");
+            }});
         panel.add(cb2);
-        JCheckBox cb3 = new JCheckBox("Learn to use HK");
-        cb3.setSelected(HKButton.animateOnce);
-        cb3.addItemListener(e -> {HKButton.animateOnce = e.getStateChange() == 1; System.out.println(HKButton.animateOnce);});
-        panel.add(cb3);
+        panel.add(new JLabel());
 
 
         //Lay out the panel.
