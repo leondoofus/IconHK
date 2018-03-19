@@ -75,7 +75,7 @@ public class Image {
                     }
                     break;
                 case CUBIC:
-                    double x1 = 8, y1 = 0.8, x2 = 14, y2 = 0.2;
+                    double x1 = 8, y1 = 0.9, x2 = 14, y2 = 0.7;
                     double[][] a1 = {{y1,x1*x1,x1},{y2,x2*x2,x2},{1,size*size,size}};
                     double[][] a2 = {{x1*x1*x1,y1,x1},{x2*x2*x2,y2,x2},{size*size*size,1,size}};
                     double[][] a3 = {{x1*x1*x1,x1*x1,y1},{x2*x2*x2,x2*x2,y2},{size*size*size,size*size,1}};

@@ -50,6 +50,12 @@ public class HKButton extends JButton implements MouseListener {
     // Control the movement
     private boolean spinner = true;
 
+    //Animation lock
+    public static boolean lockHotkey = false;
+    public static boolean lockClick = false;
+    public static boolean animateOnce = false;
+
+    // Mode d'animation
     private int mode;
 
 
@@ -312,7 +318,7 @@ public class HKButton extends JButton implements MouseListener {
      * and fix if out of bounds
      */
 
-    public void decreaseCurrentFrame(){
+    private void decreaseCurrentFrame(){
         this.currentFrame--;
         if (this.currentFrame<=defaultFrame){
             currentFrame = defaultFrame;
@@ -325,7 +331,7 @@ public class HKButton extends JButton implements MouseListener {
      * and fix if out of bounds
      */
 
-    public void increaseCurrentFrame(){
+    private void increaseCurrentFrame(){
         this.currentFrame++;
         if(currentFrame>=vmax) {
             currentFrame = vmax;
@@ -359,7 +365,32 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     public void mouseClicked(MouseEvent e) {
-        (new Redesign()).run();
+        if (lockClick) {
+            changeCurrentFrame();
+            paintComponent(getGraphics());
+        } else {
+            if (spinner) {
+                while (currentFrame != vmax) {
+                    changeCurrentFrame();
+                    paintComponent(getGraphics());
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            } else {
+                while (currentFrame != defaultFrame) {
+                    changeCurrentFrame();
+                    paintComponent(getGraphics());
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }
+        }
     }
 
     public void mousePressed(MouseEvent e) {
@@ -376,33 +407,6 @@ public class HKButton extends JButton implements MouseListener {
 
     public void mouseExited(MouseEvent e) {
 
-    }
-
-    private class Redesign implements Runnable {
-        @Override
-        public void run() {
-            if (spinner) {
-                while (currentFrame != vmax) {
-                    changeCurrentFrame();
-                    paintComponent(getGraphics());
-                    try {
-                        Thread.sleep(10);
-                    } catch (InterruptedException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-            } else {
-                while (currentFrame != defaultFrame){
-                    changeCurrentFrame();
-                    paintComponent(getGraphics());
-                    try {
-                        Thread.sleep(10);
-                    } catch (InterruptedException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-            }
-        }
     }
 
     public boolean isActived (){

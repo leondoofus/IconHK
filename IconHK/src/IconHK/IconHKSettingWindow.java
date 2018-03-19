@@ -35,7 +35,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
         JPanel panel = new JPanel(new SpringLayout());
 
-        int rows = this.iconHKButtons.size()+1;
+        int rows = this.iconHKButtons.size()+2;
         int cols = 6;
 
         for(HKButton button : this.iconHKButtons){
@@ -135,6 +135,22 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         panel.add(new JLabel());
         panel.add(resetRadius);
         panel.add(resetColor);
+
+        panel.add(new JLabel("Other options"));
+        panel.add(new JLabel());
+        JCheckBox cb1 = new JCheckBox("Lock hotkey");
+        cb1.setSelected(HKButton.lockHotkey);
+        cb1.addItemListener(e -> {HKButton.lockHotkey = e.getStateChange() == 1; System.out.println(HKButton.lockHotkey);});
+        panel.add(cb1);
+        panel.add(new JLabel());
+        JCheckBox cb2 = new JCheckBox("Lock click");
+        cb2.setSelected(HKButton.lockClick);
+        cb2.addItemListener(e -> {HKButton.lockClick = e.getStateChange() == 1; System.out.println(HKButton.lockClick);});
+        panel.add(cb2);
+        JCheckBox cb3 = new JCheckBox("Learn to use HK");
+        cb3.setSelected(HKButton.animateOnce);
+        cb3.addItemListener(e -> {HKButton.animateOnce = e.getStateChange() == 1; System.out.println(HKButton.animateOnce);});
+        panel.add(cb3);
 
 
         //Lay out the panel.

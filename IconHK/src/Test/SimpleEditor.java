@@ -193,30 +193,6 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     }
 
 
-    private void animateall(){
-        animations.removeAllElements();
-        for (Component c : toolbar.getComponents()) {
-            if (c.getClass() == HKButton.class) {
-                HKButton button = (HKButton) c;
-                int[] sequence = { IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP };
-                animations.add(new IconAnimation(button, sequence, 40));
-            }
-        }
-    }
-
-    private void animateActivated(){
-        animations.removeAllElements();
-        for (Component c : toolbar.getComponents()) {
-            if (c.getClass() == HKButton.class) {
-                HKButton button = (HKButton) c;
-                if (((HKButton) c).isActived()) {
-                    int[] sequence = {IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP};
-                    animations.add(new IconAnimation(button, sequence, 40));
-                }
-            }
-        }
-    }
-
     protected void createActions() {
         cutAction = new HKAction("Cut");
         cutAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
@@ -312,11 +288,33 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         }
     }
 
+    private void animateall(){
+        animations.removeAllElements();
+        for (Component c : toolbar.getComponents()) {
+            if (c.getClass() == HKButton.class) {
+                HKButton button = (HKButton) c;
+                int[] sequence = { IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP };
+                animations.add(new IconAnimation(button, sequence, 40));
+            }
+        }
+    }
+
+    private void animateActivated(){
+        animations.removeAllElements();
+        for (Component c : toolbar.getComponents()) {
+            if (c.getClass() == HKButton.class) {
+                HKButton button = (HKButton) c;
+                if (((HKButton) c).isActived()) {
+                    int[] sequence = {IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP};
+                    animations.add(new IconAnimation(button, sequence, 40));
+                }
+            }
+        }
+    }
+
     private void animateHotkeyPressed() {
         if (animations.size() > 0) {
-            Iterator<IconAnimation> i = animations.iterator();
-            while (i.hasNext()) {
-                IconAnimation animation = i.next();
+            for (IconAnimation animation : animations) {
                 animation.getButton().changeCurrentFrame();
                 animation.getButton().repaint();
             }
@@ -326,7 +324,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     @Override
     public boolean dispatchKeyEvent(KeyEvent e) {
         if (e.getID() == KeyEvent.KEY_PRESSED) {
-            switch(e.getKeyCode()){
+            switch (e.getKeyCode()) {
                 case KeyEvent.VK_META:
                     for (HKButton b : iconHKButtons) {
                         metaPressed = true;
@@ -357,7 +355,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                     break;
             }
         } else if (e.getID() == KeyEvent.KEY_RELEASED) {
-            switch(e.getKeyCode()){
+            switch (e.getKeyCode()) {
                 case KeyEvent.VK_META:
                     for (HKButton b : iconHKButtons) {
                         metaPressed = false;
