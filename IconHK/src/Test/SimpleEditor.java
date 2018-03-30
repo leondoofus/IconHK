@@ -421,6 +421,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     }
 
     private void updateModifiers (HKButton b){
+        b.setHotkeyUsed(true);
         b.setCtrlPressed(ctrlPressed);
         b.setAltPressed(altPressed);
         b.setShftPressed(shftPressed);
@@ -428,6 +429,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     }
 
     private void deactivateAllModifiers(HKButton b){
+        b.setHotkeyUsed(false);
         b.setCtrlPressed(false);
         b.setAltPressed(false);
         b.setShftPressed(false);

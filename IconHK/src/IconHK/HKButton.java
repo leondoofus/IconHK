@@ -4,6 +4,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
@@ -13,9 +15,11 @@ import java.util.Arrays;
 import java.util.Vector;
 import IconHK.util.Image;
 
-public class HKButton extends JButton implements MouseListener {
+public class HKButton extends JButton implements MouseListener,ActionListener {
     // Name of the button
     private String name;
+
+    private Timer timer;
 
     // The dimension of the button
     private Dimension dimension = new Dimension(32, 32);
@@ -57,6 +61,8 @@ public class HKButton extends JButton implements MouseListener {
     // Mode d'animation
     private int mode;
 
+    private boolean mousePressed = false;
+    private boolean hotkeyUsed = false;
 
     // int value referring the length of one side of the square
     // used for modifiers. 0 by default, must be initialized in the constructer
@@ -65,6 +71,8 @@ public class HKButton extends JButton implements MouseListener {
 
     public HKButton(Action a, int mode){
         super(a);
+        timer = new Timer(50, this);
+        timer.start();
         this.mode = mode;
         KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
         updateModifiersForKeystroke(ks);
@@ -73,6 +81,8 @@ public class HKButton extends JButton implements MouseListener {
 
     public HKButton(Action a, Dimension d, int mode){
         super(a);
+        timer = new Timer(50, this);
+        timer.start();
         this.mode = mode;
         this.dimension = d;
         KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
@@ -81,6 +91,8 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     public HKButton(String text, Dimension d, int mode) {
+        timer = new Timer(50, this);
+        timer.start();
         this.mode = mode;
         this.dimension = d;
         initForName(text);
@@ -390,32 +402,18 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     public void mousePressed(MouseEvent e) {
+        setHotkeyUsed(false);
         if (lockClick)
-            while (currentFrame != vmax) {
-                increaseCurrentFrame();
-                paintComponent(getGraphics());
-                try {
-                    Thread.sleep(50);
-                } catch (InterruptedException e1) {
-                    e1.printStackTrace();
-                }
-            }
+            mousePressed = true;
     }
 
     public void mouseReleased(MouseEvent e) {
         if (lockClick)
-            while (currentFrame != defaultFrame) {
-                decreaseCurrentFrame();
-                paintComponent(getGraphics());
-                try {
-                    Thread.sleep(50);
-                } catch (InterruptedException e1) {
-                    e1.printStackTrace();
-                }
-            }
+            mousePressed = false;
     }
 
     public void mouseEntered(MouseEvent e) {
+        this.setToolTipText(name);
     }
 
     public void mouseExited(MouseEvent e) {
@@ -456,6 +454,24 @@ public class HKButton extends JButton implements MouseListener {
     }
 
     public BufferedImage getImage (int position){
-        return iconsVector.get(position)
-;    }
+        return iconsVector.get(position);
+    }
+
+    public void setHotkeyUsed(boolean hotkeyUsed) {
+        this.hotkeyUsed = hotkeyUsed;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == timer) {
+            if (!hotkeyUsed)
+                if (lockClick) {
+                    if (mousePressed) {
+                        increaseCurrentFrame();
+                    } else {
+                        decreaseCurrentFrame();
+                    }
+                }
+        }
+    }
 }
