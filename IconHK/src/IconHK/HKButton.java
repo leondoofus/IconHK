@@ -26,6 +26,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     // All files for animation
     private File[] iconFiles;
+    private BufferedImage icon;
 
     private Color pressedColor = new Color(29,174,222);
 
@@ -64,6 +65,9 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     private boolean mousePressed = false;
     private boolean hotkeyUsed = false;
 
+    private final int range = 1;
+    private int click = 0;
+
     // int value referring the length of one side of the square
     // used for modifiers. 0 by default, must be initialized in the constructer
     // and updated if needed
@@ -96,6 +100,38 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         this.mode = mode;
         this.dimension = d;
         initForName(text);
+    }
+
+    public HKButton(Action a, Icon icon, KeyStroke ks){
+        super(a);
+        timer = new Timer(50, this);
+        timer.start();
+        updateModifiersForKeystroke(ks);
+        this.mode = Image.LINEAR;
+        this.dimension = new Dimension(icon.getIconWidth(),icon.getIconHeight());
+        iconsVector = new Vector<>();
+        this.setText("");
+        Border border = BorderFactory.createLineBorder(Color.DARK_GRAY);
+        this.setBorder(border);
+
+        iconFiles = null;
+        this.icon = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_RGB);
+        Graphics g = this.icon.createGraphics();
+        icon.paintIcon(null, g, 0,0);
+        g.dispose();
+
+        fixAllImages();
+
+        vmaxDef = iconsVector.size() - 1;
+        vmax = iconsVector.size() - 1;
+        this.setOpaque(true);
+        this.setBackground(Color.WHITE);
+        this.setContentAreaFilled(false);
+        this.setBorderPainted(true);
+        this.addMouseListener(this);
+        this.setOpaque(true);
+        fixCurrentFrame();
+        this.currentFrame=defaultFrame;
     }
 
     private void updateModifiersForKeystroke(KeyStroke ks){
@@ -165,8 +201,13 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
             try {
                 float w = (float) dimension.getWidth();
                 float h = (float) dimension.getHeight();
-                iconsVector = Image.generate(ImageIO.read(iconFiles[0]), (int) (((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
+                if (iconFiles != null)
+                    iconsVector = Image.generate(ImageIO.read(iconFiles[0]), (int) (((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
                         (int) (((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8), hotkey, mode);
+                else
+                    iconsVector = Image.generate(icon, (int) (((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
+                            (int) (((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8), hotkey, mode);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -403,6 +444,11 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     public void mousePressed(MouseEvent e) {
         setHotkeyUsed(false);
+        click++;
+        if (click >= range){
+            click = 0;
+            defaultFrame++;
+        }
         if (lockClick)
             mousePressed = true;
     }
