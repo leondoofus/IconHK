@@ -3,6 +3,7 @@ package IconHK;
 import IconHK.rangeslider.RangeSlider;
 import IconHK.util.Image;
 import IconHK.util.SpringUtilities;
+import Test.SimpleEditor;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,7 +22,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     private ArrayList<JButton> colors;
     private ArrayList<RangeSlider> ranges;
 
-    public IconHKSettingWindow(Vector<HKButton> iconHKButtons) throws HeadlessException {
+    public IconHKSettingWindow(Vector<HKButton> iconHKButtons) {
         this.iconHKButtons = iconHKButtons;
         radius = new ArrayList<>();
         colors = new ArrayList<>();
@@ -35,7 +36,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
         JPanel panel = new JPanel(new SpringLayout());
 
-        int rows = this.iconHKButtons.size()+2;
+        int rows = this.iconHKButtons.size() + 3;
         int cols = 6;
 
         for(HKButton button : this.iconHKButtons){
@@ -78,7 +79,8 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             Icon fin = new Icon(button.getImage(button.getVMax()));
             deb.setBorder(BorderFactory.createEmptyBorder());
             fin.setBorder(BorderFactory.createEmptyBorder());
-
+            deb.setEnabled(false);
+            fin.setEnabled(false);
 
             RangeSlider range = new RangeSlider();
             range.setPreferredSize(new Dimension(240, range.getPreferredSize().height));
@@ -165,6 +167,24 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             }});
         panel.add(cb2);
         panel.add(new JLabel());
+        panel.add(new JLabel());
+        JSpinner spinner = new JSpinner(new SpinnerNumberModel(HKAction.range,1,5,1));
+        JLabel click = new JLabel("click to change frame");
+        spinner.addChangeListener(e -> {
+            HKAction.range = (int) spinner.getValue();
+            click.setText(HKAction.range > 1? "clicks to change frame":"click to change frame");
+        });
+        panel.add(spinner);
+        panel.add(click);
+        JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(SimpleEditor.getTimer(),50,200,50));
+        JLabel speed = new JLabel("Animation speed");
+        spinner2.addChangeListener(e -> {
+            SimpleEditor.setTimer((int) spinner2.getValue());
+            System.out.println("lala");
+        });
+        panel.add(spinner2);
+        panel.add(speed);
+        panel.add(new JLabel());
 
 
         //Lay out the panel.
@@ -205,6 +225,5 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                     b.setBackground(button.getPressedColor());
             }
         }
-
     }
 }

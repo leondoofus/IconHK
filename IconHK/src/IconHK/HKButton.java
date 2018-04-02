@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
+import java.awt.image.RescaleOp;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
@@ -65,9 +66,6 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     private boolean mousePressed = false;
     private boolean hotkeyUsed = false;
 
-    private final int range = 1;
-    private int click = 0;
-
     // int value referring the length of one side of the square
     // used for modifiers. 0 by default, must be initialized in the constructer
     // and updated if needed
@@ -75,22 +73,24 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     public HKButton(Action a, int mode){
         super(a);
+        KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
+        updateModifiersForKeystroke(ks);
+        if (a instanceof HKAction) ((HKAction) a).setButton(this);
         timer = new Timer(50, this);
         timer.start();
         this.mode = mode;
-        KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
-        updateModifiersForKeystroke(ks);
         initForName((String) a.getValue(Action.NAME));
     }
 
     public HKButton(Action a, Dimension d, int mode){
         super(a);
+        KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
+        updateModifiersForKeystroke(ks);
+        if (a instanceof HKAction) ((HKAction) a).setButton(this);
         timer = new Timer(50, this);
         timer.start();
         this.mode = mode;
         this.dimension = d;
-        KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
-        updateModifiersForKeystroke(ks);
         initForName((String) a.getValue(Action.NAME));
     }
 
@@ -104,9 +104,10 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     public HKButton(Action a, Icon icon, KeyStroke ks){
         super(a);
+        updateModifiersForKeystroke(ks);
+        if (a instanceof HKAction) ((HKAction) a).setButton(this);
         timer = new Timer(50, this);
         timer.start();
-        updateModifiersForKeystroke(ks);
         this.mode = Image.LINEAR;
         this.dimension = new Dimension(icon.getIconWidth(),icon.getIconHeight());
         iconsVector = new Vector<>();
@@ -444,11 +445,6 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     public void mousePressed(MouseEvent e) {
         setHotkeyUsed(false);
-        click++;
-        if (click >= range){
-            click = 0;
-            defaultFrame++;
-        }
         if (lockClick)
             mousePressed = true;
     }
@@ -483,12 +479,16 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     }
 
     public void setDefaultFrame(int val){
-        this.defaultFrame = val;
-        this.currentFrame= this.defaultFrame;
+        this.defaultFrame = Math.min (val,iconsVector.size() - 1);
+        //this.defaultFrame = val;
+        this.currentFrame = Math.max(this.currentFrame,this.defaultFrame);
+        //this.currentFrame = this.defaultFrame;
     }
 
     public void setVMax(int val){
-        this.vmax = val;
+        this.vmax = Math.min(val,this.vmax);
+        //this.vmax = val;
+        this.currentFrame = Math.min(this.currentFrame,this.vmax);
     }
 
     public int getNumberOfIcons(){

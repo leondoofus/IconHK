@@ -17,7 +17,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     // Tool bar
     private JToolBar toolbar;
 
-    private Timer timer;
+    private static Timer timer;
 
     //Actions
     private Action cutAction, pasteAction, copyAction, saveAction, newAction, expandAction, rgbAction;
@@ -329,6 +329,9 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
 
     private void desanimateHotkeyPressed(){
         if (HKButton.lockHotkey){
+            animations.clear();
+            for (HKButton button : iconHKButtons)
+                animations.add(new IconAnimation(button,new int[]{IconAnimation.DEFAULT_STEP},40));
             for (IconAnimation animation : animations) {
                 animation.getButton().decreaseCurrentFrame();
                 animation.getButton().repaint();
@@ -487,4 +490,12 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         SimpleEditor.dim = d;
     }
 
+    public static void setTimer(int val){
+        timer.setDelay(val);
+        timer.restart();
+    }
+
+    public static int getTimer (){
+        return timer.getDelay();
+    }
 }

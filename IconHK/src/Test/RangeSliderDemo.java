@@ -1,4 +1,6 @@
-package IconHK.rangeslider;
+package Test;
+
+import IconHK.rangeslider.RangeSlider;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
