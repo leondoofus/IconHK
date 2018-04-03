@@ -58,16 +58,12 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     //Animation lock
     public static boolean lockHotkey = false;
-    public static boolean lockClick = true;
 
     // Mode d'animation
     private int mode;
 
     private boolean mousePressed = false;
     private boolean hotkeyUsed = false;
-
-    private final int range = 1;
-    private int click = 0;
 
     // int value referring the length of one side of the square
     // used for modifiers. 0 by default, must be initialized in the constructer
@@ -76,22 +72,24 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     public HKButton(Action a, int mode){
         super(a);
+        KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
+        updateModifiersForKeystroke(ks);
+        if (a instanceof HKAction) ((HKAction) a).setButton(this);
         timer = new Timer(50, this);
         timer.start();
         this.mode = mode;
-        KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
-        updateModifiersForKeystroke(ks);
         initForName((String) a.getValue(Action.NAME));
     }
 
     public HKButton(Action a, Dimension d, int mode){
         super(a);
+        KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
+        updateModifiersForKeystroke(ks);
+        if (a instanceof HKAction) ((HKAction) a).setButton(this);
         timer = new Timer(50, this);
         timer.start();
         this.mode = mode;
         this.dimension = d;
-        KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
-        updateModifiersForKeystroke(ks);
         initForName((String) a.getValue(Action.NAME));
     }
 
@@ -105,9 +103,10 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     public HKButton(Action a, Icon icon, KeyStroke ks){
         super(a);
+        updateModifiersForKeystroke(ks);
+        if (a instanceof HKAction) ((HKAction) a).setButton(this);
         timer = new Timer(50, this);
         timer.start();
-        updateModifiersForKeystroke(ks);
         this.mode = Image.LINEAR;
         this.dimension = new Dimension(icon.getIconWidth(),icon.getIconHeight());
         iconsVector = new Vector<>();
@@ -155,7 +154,6 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         this.setText("");
         Border border = BorderFactory.createLineBorder(Color.DARK_GRAY);
         this.setBorder(border);
-        //TODO à voir que fait cette ligne
         //this.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         File dir = new File(iconFolder);
 
@@ -169,7 +167,6 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         vmaxDef = iconsVector.size() - 1;
         vmax = iconsVector.size() - 1;
 
-        //TODO à voir des lignes suivantes
         //this.modifierSquareLength = (int) ((float) dimension.getHeight() * 0.2f);
         this.setOpaque(true);
         this.setBackground(Color.WHITE);
@@ -418,45 +415,15 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     }
 
     public void mouseClicked(MouseEvent e) {
-        if (!lockClick) {
-            if (spinner) {
-                while (currentFrame != vmax) {
-                    changeCurrentFrame();
-                    paintComponent(getGraphics());
-                    try {
-                        Thread.sleep(50);
-                    } catch (InterruptedException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-            } else {
-                while (currentFrame != defaultFrame) {
-                    changeCurrentFrame();
-                    paintComponent(getGraphics());
-                    try {
-                        Thread.sleep(50);
-                    } catch (InterruptedException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-            }
-        }
     }
 
     public void mousePressed(MouseEvent e) {
         setHotkeyUsed(false);
-        click++;
-        if (click >= range){
-            click = 0;
-            defaultFrame++;
-        }
-        if (lockClick)
-            mousePressed = true;
+        mousePressed = true;
     }
 
     public void mouseReleased(MouseEvent e) {
-        if (lockClick)
-            mousePressed = false;
+        mousePressed = false;
     }
 
     public void mouseEntered(MouseEvent e) {
@@ -475,6 +442,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         return this.defaultFrame;
     }
 
+
     public int getVMax(){
         return this.vmax;
     }
@@ -484,21 +452,20 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     }
 
     public void setDefaultFrame(int val){
-        this.defaultFrame = val;
-        this.currentFrame= this.defaultFrame;
+        if (val < 0 || val >= this.iconsVector.size()) return;
+        this.defaultFrame = Math.min (val,vmaxDef);
+        //this.defaultFrame = val;
+        this.currentFrame = Math.max(this.currentFrame,this.defaultFrame);
+        //this.currentFrame = this.defaultFrame;
     }
 
     public void setVMax(int val){
-        this.vmax = val;
+        if (val < 0 || val >= this.iconsVector.size()) return;
+        this.vmax = Math.min(val,vmaxDef);
+        //this.vmax = val;
+        this.currentFrame = Math.min(this.currentFrame,this.vmax);
     }
 
-    public int getNumberOfIcons(){
-        return this.iconsVector.size();
-    }
-
-    public void setVMaxDefault(){
-        this.vmax = iconsVector.size() - 1;
-    }
 
     public BufferedImage getImage (int position){
         return iconsVector.get(position);
@@ -512,12 +479,12 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == timer) {
             if (!hotkeyUsed)
-                if (lockClick) {
-                    if (mousePressed) {
+                if (mousePressed) {
+                    increaseCurrentFrame();
+                } else {
+                    if (spinner && currentFrame != vmax && currentFrame != defaultFrame)
                         increaseCurrentFrame();
-                    } else {
-                        decreaseCurrentFrame();
-                    }
+                    else decreaseCurrentFrame();
                 }
         }
     }

@@ -58,7 +58,6 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     //Animation lock
     public static boolean lockHotkey = false;
-    public static boolean lockClick = false;
 
     // Mode d'animation
     private int mode;
@@ -155,7 +154,6 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         this.setText("");
         Border border = BorderFactory.createLineBorder(Color.DARK_GRAY);
         this.setBorder(border);
-        //TODO à voir que fait cette ligne
         //this.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         File dir = new File(iconFolder);
 
@@ -169,7 +167,6 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         vmaxDef = iconsVector.size() - 1;
         vmax = iconsVector.size() - 1;
 
-        //TODO à voir des lignes suivantes
         //this.modifierSquareLength = (int) ((float) dimension.getHeight() * 0.2f);
         this.setOpaque(true);
         this.setBackground(Color.WHITE);
@@ -418,40 +415,15 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     }
 
     public void mouseClicked(MouseEvent e) {
-        if (!lockClick) {
-            if (spinner) {
-                while (currentFrame != vmax) {
-                    changeCurrentFrame();
-                    paintComponent(getGraphics());
-                    try {
-                        Thread.sleep(50);
-                    } catch (InterruptedException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-            } else {
-                while (currentFrame != defaultFrame) {
-                    changeCurrentFrame();
-                    paintComponent(getGraphics());
-                    try {
-                        Thread.sleep(50);
-                    } catch (InterruptedException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-            }
-        }
     }
 
     public void mousePressed(MouseEvent e) {
         setHotkeyUsed(false);
-        if (lockClick)
-            mousePressed = true;
+        mousePressed = true;
     }
 
     public void mouseReleased(MouseEvent e) {
-        if (lockClick)
-            mousePressed = false;
+        mousePressed = false;
     }
 
     public void mouseEntered(MouseEvent e) {
@@ -470,6 +442,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         return this.defaultFrame;
     }
 
+
     public int getVMax(){
         return this.vmax;
     }
@@ -479,25 +452,20 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     }
 
     public void setDefaultFrame(int val){
-        this.defaultFrame = Math.min (val,iconsVector.size() - 1);
+        if (val < 0 || val >= this.iconsVector.size()) return;
+        this.defaultFrame = Math.min (val,vmaxDef);
         //this.defaultFrame = val;
         this.currentFrame = Math.max(this.currentFrame,this.defaultFrame);
         //this.currentFrame = this.defaultFrame;
     }
 
     public void setVMax(int val){
-        this.vmax = Math.min(val,this.vmax);
+        if (val < 0 || val >= this.iconsVector.size()) return;
+        this.vmax = Math.min(val,vmaxDef);
         //this.vmax = val;
         this.currentFrame = Math.min(this.currentFrame,this.vmax);
     }
 
-    public int getNumberOfIcons(){
-        return this.iconsVector.size();
-    }
-
-    public void setVMaxDefault(){
-        this.vmax = iconsVector.size() - 1;
-    }
 
     public BufferedImage getImage (int position){
         return iconsVector.get(position);
@@ -511,12 +479,12 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == timer) {
             if (!hotkeyUsed)
-                if (lockClick) {
-                    if (mousePressed) {
+                if (mousePressed) {
+                    increaseCurrentFrame();
+                } else {
+                    if (spinner && currentFrame != vmax && currentFrame != defaultFrame)
                         increaseCurrentFrame();
-                    } else {
-                        decreaseCurrentFrame();
-                    }
+                    else decreaseCurrentFrame();
                 }
         }
     }

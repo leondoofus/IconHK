@@ -140,49 +140,46 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         panel.add(resetRadius);
         panel.add(resetColor);
 
-        panel.add(new JLabel("Other options"));
-        panel.add(new JLabel());
-        JCheckBox cb1 = new JCheckBox(HKButton.lockHotkey? "Hotkey locked" : "Hotkey unlocked");
-        cb1.setSelected(HKButton.lockHotkey);
-        cb1.addItemListener(e -> {
+
+        JCheckBox cb = new JCheckBox(HKButton.lockHotkey? "Hotkey locked" : "Hotkey unlocked");
+        cb.setSelected(HKButton.lockHotkey);
+        cb.addItemListener(e -> {
             if (e.getStateChange() == 1){
                 HKButton.lockHotkey = true;
-                cb1.setText("Hotkey locked");
+                cb.setText("Hotkey locked");
             } else {
                 HKButton.lockHotkey = false;
-                cb1.setText("Hotkey unlocked");
+                cb.setText("Hotkey unlocked");
             }});
-        panel.add(cb1);
+        JSpinner spinner1 = new JSpinner(new SpinnerNumberModel(HKAction.rangeInf,1,5,1));
+        JLabel click1 = new JLabel("click to change lower bound");
+        spinner1.addChangeListener(e -> {
+            HKAction.rangeInf = (int) spinner1.getValue();
+            click1.setText(HKAction.rangeInf > 1? "clicks to change lower bound":"click to change lower bound");
+        });
+        JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(HKAction.rangeSup,1,5,1));
+        JLabel click2 = new JLabel("click to change upper bound");
+        spinner2.addChangeListener(e -> {
+            HKAction.rangeSup = (int) spinner2.getValue();
+            click2.setText(HKAction.rangeSup > 1? "clicks to change upper bound":"click to change upper bound");
+        });
+        JSpinner spinner3 = new JSpinner(new SpinnerNumberModel(SimpleEditor.getTimer(),50,200,50));
+        JLabel speed = new JLabel("Animation speed");
+        spinner3.addChangeListener(e -> {
+            SimpleEditor.setTimer((int) spinner3.getValue());
+        });
+
+        panel.add(new JLabel("Other options"));
+        panel.add(spinner1);
+        panel.add(click1);
+        panel.add(new JLabel());
+        panel.add(cb);
         panel.add(new JLabel());
 
-        JCheckBox cb2 = new JCheckBox(HKButton.lockClick? "Click locked" : "Click unlocked");
-        cb2.setSelected(HKButton.lockClick);
-        cb2.addItemListener(e -> {
-            if (e.getStateChange() == 1){
-                HKButton.lockClick = true;
-                cb2.setText("Click locked");
-            } else {
-                HKButton.lockClick = false;
-                cb2.setText("Click unlocked");
-            }});
-        panel.add(cb2);
         panel.add(new JLabel());
-        panel.add(new JLabel());
-        JSpinner spinner = new JSpinner(new SpinnerNumberModel(HKAction.range,1,5,1));
-        JLabel click = new JLabel("click to change frame");
-        spinner.addChangeListener(e -> {
-            HKAction.range = (int) spinner.getValue();
-            click.setText(HKAction.range > 1? "clicks to change frame":"click to change frame");
-        });
-        panel.add(spinner);
-        panel.add(click);
-        JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(SimpleEditor.getTimer(),50,200,50));
-        JLabel speed = new JLabel("Animation speed");
-        spinner2.addChangeListener(e -> {
-            SimpleEditor.setTimer((int) spinner2.getValue());
-            System.out.println("lala");
-        });
         panel.add(spinner2);
+        panel.add(click2);
+        panel.add(spinner3);
         panel.add(speed);
         panel.add(new JLabel());
 
