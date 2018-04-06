@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afac57bb-ce5b-4b3c-9ded-416c92446340" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKAction.class" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKAction.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton.class" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/IconHKSettingWindow.class" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/IconHKSettingWindow.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/IconHK/Test/SimpleEditor.class" afterPath="$PROJECT_DIR$/out/production/IconHK/Test/SimpleEditor.class" />
-      <change beforePath="$PROJECT_DIR$/src/IconHK/HKAction.java" afterPath="$PROJECT_DIR$/src/IconHK/HKAction.java" />
-      <change beforePath="$PROJECT_DIR$/src/IconHK/HKButton.java" afterPath="$PROJECT_DIR$/src/IconHK/HKButton.java" />
       <change beforePath="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" afterPath="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/HKAction.class" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/HKAction.class" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/HKButton.class" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/HKButton.class" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/IconHKSettingWindow$1Icon.class" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/IconHKSettingWindow$1Icon.class" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/IconHKSettingWindow.class" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/IconHKSettingWindow.class" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/rangeslider/RangeSliderDemo$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/rangeslider/RangeSliderDemo$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/rangeslider/RangeSliderDemo.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/util/Image.class" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/util/Image.class" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/util/SpringUtilities.class" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/IconHK/util/SpringUtilities.class" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/simplejavatexteditor/UI.class" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/bin/simplejavatexteditor/UI.class" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/HKAction.java" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/HKAction.java" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/HKButton.java" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/HKButton.java" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/IconAnimation.java" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/IconAnimation.java" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/IconHKSettingWindow.java" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/IconHKSettingWindow.java" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/rangeslider/RangeSliderDemo.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/rangeslider/RangeSliderUI.java" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/rangeslider/RangeSliderUI.java" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/util/SpringUtilities.java" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/src/IconHK/util/SpringUtilities.java" />
+      <change beforePath="$PROJECT_DIR$/src/Test/SimpleEditor.java" afterPath="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,12 +23,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SimpleEditor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SimpleEditor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7956">
-              <caret line="450" column="18" lean-forward="false" selection-start-line="450" selection-start-column="18" selection-end-line="450" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="221">
+              <caret line="345" column="20" lean-forward="false" selection-start-line="345" selection-start-column="20" selection-end-line="345" selection-end-column="20" />
+              <folding>
+                <element signature="e#19092#19093#0" expanded="true" />
+                <element signature="e#19128#19129#0" expanded="true" />
+                <element signature="e#19267#19268#0" expanded="true" />
+                <element signature="e#19306#19307#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,12 +41,10 @@
       <file leaf-file-name="HKButton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1458">
-              <caret line="95" column="16" lean-forward="false" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+            <state relative-caret-position="172">
+              <caret line="59" column="32" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#13844#13845#0" expanded="true" />
-                <element signature="e#13880#13881#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,8 +53,8 @@
       <file leaf-file-name="HKAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IconHK/HKAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+            <state relative-caret-position="288">
+              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,19 +65,23 @@
       <file leaf-file-name="Image.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IconHK/util/Image.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
+            <state relative-caret-position="-995">
               <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IconHKSettingWindow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IconHKSettingWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="485">
+              <caret line="227" column="28" lean-forward="false" selection-start-line="227" selection-start-column="28" selection-end-line="227" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#8398#8399#0" expanded="true" />
+                <element signature="e#8435#8436#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,13 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>animate</find>
-      <find>animate a</find>
-      <find>Color</find>
-      <find>Gr</find>
-      <find>Red</find>
-      <find>Blue</find>
-      <find>paintCom</find>
       <find>iconsV</find>
       <find>static</find>
       <find>Sprin</find>
@@ -151,7 +125,6 @@
       <find>getVma</find>
       <find>getVmax</find>
       <find>fixa</find>
-      <find>animateT</find>
       <find>fix</find>
       <find>Syste</find>
       <find>Syst</find>
@@ -166,6 +139,14 @@
       <find>setDe</find>
       <find>draw</find>
       <find>println</find>
+      <find>lockH</find>
+      <find>lockHo</find>
+      <find>animateToo</find>
+      <find>lockHO</find>
+      <find>animateT</find>
+      <find>des</find>
+      <find>dea</find>
+      <find>cb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,10 +174,10 @@
         <option value="$PROJECT_DIR$/src/Test/HKFrame.java" />
         <option value="$PROJECT_DIR$/src/Test/MyAction.java" />
         <option value="$PROJECT_DIR$/src/Test/RangeSliderDemo.java" />
-        <option value="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
         <option value="$PROJECT_DIR$/src/IconHK/HKAction.java" />
         <option value="$PROJECT_DIR$/src/IconHK/HKButton.java" />
         <option value="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
+        <option value="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
       </list>
     </option>
   </component>
@@ -212,11 +193,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="293" />
-    <option name="y" value="428" />
-    <option name="width" value="1344" />
-    <option name="height" value="889" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="945" />
+    <option name="y" value="284" />
+    <option name="width" value="1336" />
+    <option name="height" value="899" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -234,7 +215,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -278,8 +258,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -498,21 +479,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="293" y="428" width="1344" height="889" extended-state="0" />
+    <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901296" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206256" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26099706" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.4892704" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37398374" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16389811" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942328" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901296" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1266766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15614618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945055" sideWeight="0.4892704" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -525,10 +509,8 @@
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206256" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5107296" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32746822" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,8 +550,6 @@
           <caret line="252" column="0" lean-forward="true" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#13844#13845#0" expanded="true" />
-            <element signature="e#13880#13881#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -596,7 +576,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8398#8399#0" expanded="true" />
+            <element signature="e#8435#8436#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -627,7 +611,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3024">
           <caret line="214" column="21" lean-forward="true" selection-start-line="214" selection-start-column="21" selection-end-line="214" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#19092#19093#0" expanded="true" />
+            <element signature="e#19128#19129#0" expanded="true" />
+            <element signature="e#19267#19268#0" expanded="true" />
+            <element signature="e#19306#19307#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -649,7 +638,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2664">
           <caret line="192" column="31" lean-forward="true" selection-start-line="192" selection-start-column="31" selection-end-line="192" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="e#19092#19093#0" expanded="true" />
+            <element signature="e#19128#19129#0" expanded="true" />
+            <element signature="e#19267#19268#0" expanded="true" />
+            <element signature="e#19306#19307#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -664,7 +658,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#19092#19093#0" expanded="true" />
+            <element signature="e#19128#19129#0" expanded="true" />
+            <element signature="e#19267#19268#0" expanded="true" />
+            <element signature="e#19306#19307#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -679,7 +678,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#19092#19093#0" expanded="true" />
+            <element signature="e#19128#19129#0" expanded="true" />
+            <element signature="e#19267#19268#0" expanded="true" />
+            <element signature="e#19306#19307#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -694,7 +698,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#19092#19093#0" expanded="true" />
+            <element signature="e#19128#19129#0" expanded="true" />
+            <element signature="e#19267#19268#0" expanded="true" />
+            <element signature="e#19306#19307#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -723,7 +732,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#19092#19093#0" expanded="true" />
+            <element signature="e#19128#19129#0" expanded="true" />
+            <element signature="e#19267#19268#0" expanded="true" />
+            <element signature="e#19306#19307#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -806,11 +820,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
+    <entry file="file://$PROJECT_DIR$/src/IconHK/HKAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7956">
-          <caret line="450" column="18" lean-forward="false" selection-start-line="450" selection-start-column="18" selection-end-line="450" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="288">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -822,41 +838,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/util/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/HKAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1458">
-          <caret line="95" column="16" lean-forward="false" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+        <state relative-caret-position="172">
+          <caret line="59" column="32" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#13844#13845#0" expanded="true" />
-            <element signature="e#13880#13881#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="25" />
+        <state relative-caret-position="485">
+          <caret line="227" column="28" lean-forward="false" selection-start-line="227" selection-start-column="28" selection-end-line="227" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8398#8399#0" expanded="true" />
+            <element signature="e#8435#8436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/util/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-995">
+          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="345" column="20" lean-forward="false" selection-start-line="345" selection-start-column="20" selection-end-line="345" selection-end-column="20" />
+          <folding>
+            <element signature="e#19092#19093#0" expanded="true" />
+            <element signature="e#19128#19129#0" expanded="true" />
+            <element signature="e#19267#19268#0" expanded="true" />
+            <element signature="e#19306#19307#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

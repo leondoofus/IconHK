@@ -21,6 +21,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     private ArrayList<JSlider> radius;
     private ArrayList<JButton> colors;
     private ArrayList<RangeSlider> ranges;
+    private static JCheckBox cb;
 
     public IconHKSettingWindow(Vector<HKButton> iconHKButtons) {
         this.iconHKButtons = iconHKButtons;
@@ -141,7 +142,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         panel.add(resetColor);
 
 
-        JCheckBox cb = new JCheckBox(HKButton.lockHotkey? "Hotkey locked" : "Hotkey unlocked");
+        cb = new JCheckBox(HKButton.lockHotkey? "Hotkey locked" : "Hotkey unlocked");
         cb.setSelected(HKButton.lockHotkey);
         cb.addItemListener(e -> {
             if (e.getStateChange() == 1){
@@ -222,5 +223,9 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                     b.setBackground(button.getPressedColor());
             }
         }
+    }
+
+    public static void deactiveCb (){
+        cb.setSelected(false);
     }
 }

@@ -89,8 +89,24 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         JPanel panel = new JPanel(new SpringLayout());
         aa = new JButton("Animate all");
         aa.addActionListener(e -> {
-            animateall();
-            animateToolbar();
+            if (HKButton.lockHotkey){
+                Object[] options = {"Yes", "No"};
+                int n = JOptionPane.showOptionDialog(this,
+                        "By clicking this button you will unlock all hotkeys.\n"
+                                + "Would you like to continue?",
+                        "Warning !",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null, options, options[0]);
+                if (n == 0){
+                    HKButton.lockHotkey = false;
+                    IconHKSettingWindow.deactiveCb();
+                }
+            }
+            if (!HKButton.lockHotkey){
+                animateall();
+                animateToolbar();
+            }
         });
         JButton settings = new JButton("Settings");
         settings.addActionListener(e -> new IconHKSettingWindow(this.iconHKButtons));
@@ -327,7 +343,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         }
     }
 
-    private void desanimateHotkeyPressed(){
+    private void desanimateAll(){
         if (HKButton.lockHotkey){
             animations.clear();
             for (HKButton button : iconHKButtons)
@@ -445,7 +461,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
             if (ctrlPressed || altPressed || metaPressed || shftPressed)
                 animateHotkeyPressed();
             else{
-                desanimateHotkeyPressed();
+                desanimateAll();
                 animateToolbar();
             }
             repaint();
