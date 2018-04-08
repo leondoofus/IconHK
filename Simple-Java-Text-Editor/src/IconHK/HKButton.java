@@ -1,7 +1,5 @@
 package IconHK;
 
-import IconHK.util.Image;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -11,10 +9,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
+import java.awt.image.RescaleOp;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Vector;
+import IconHK.util.Image;
 
 public class HKButton extends JButton implements MouseListener,ActionListener {
     // Name of the button
@@ -38,7 +38,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     private boolean useMeta, useCtrl, useAlt, useSft;
     private char hotkey;
 
-    // Boolean testing if buttons pressed
+    // Boolean testing if iconHKButtons pressed
     private boolean metaPressed = false;
     private boolean altPressed = false;
     private boolean ctrlPressed = false;

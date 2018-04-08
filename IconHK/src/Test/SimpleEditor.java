@@ -1,13 +1,16 @@
 package Test;
 
-import IconHK.*;
+import IconHK.HKAction;
+import IconHK.HKButton;
+import IconHK.HKKeyListener;
+import IconHK.IconHKSettingWindow;
 import IconHK.util.Image;
 import IconHK.util.SpringUtilities;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.Iterator;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.util.Vector;
 
 public class SimpleEditor extends JFrame{
@@ -20,8 +23,6 @@ public class SimpleEditor extends JFrame{
     //Actions
     private Action cutAction, pasteAction, copyAction, saveAction, newAction, expandAction, rgbAction;
     private Action findAction, moveAction, pencilAction, increaseAction, mushroomAction, marioAction;
-
-    private JButton aa;
 
     private Vector<HKButton> iconHKButtons;
 
@@ -77,7 +78,7 @@ public class SimpleEditor extends JFrame{
         addButtonToToolBar(new HKButton(marioAction,dim,Image.CUBIC));
 
         JPanel panel = new JPanel(new SpringLayout());
-        aa = new JButton("Animate all");
+        JButton aa = new JButton("Animate all");
         aa.addActionListener(e -> {
             if (HKButton.lockHotkey){
                 Object[] options = {"Yes", "No"};

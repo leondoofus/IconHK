@@ -38,6 +38,9 @@
 package simplejavatexteditor;
 
 import IconHK.HKButton;
+import IconHK.HKKeyListener;
+import IconHK.IconHKSettingWindow;
+import IconHK.util.SpringUtilities;
 
 import javax.swing.*;
 import java.awt.*;
@@ -48,6 +51,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Vector;
 import javax.swing.text.DefaultEditorKit;
 
 public class UI extends JFrame implements ActionListener {
@@ -62,6 +66,7 @@ public class UI extends JFrame implements ActionListener {
     private final JToolBar mainToolbar;
     JButton newButton, openButton, saveButton, clearButton, quickButton, aboutMeButton, aboutButton, closeButton, boldButton, italicButton;
     private final Action selectAllAction;
+    private final Vector<HKButton> iconHKButtons = new Vector<>();
 
     //setup icons - Bold and Italic
      private final ImageIcon boldIcon = new ImageIcon("icons/bold.png");
@@ -272,14 +277,17 @@ public class UI extends JFrame implements ActionListener {
         mainToolbar = new JToolBar();
         this.add(mainToolbar, BorderLayout.NORTH);
         // used to create space between button groups
+        //newButton = new JButton(newIcon);
         newButton = new HKButton(newFile.getAction(),newIcon,KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
+        iconHKButtons.add((HKButton) newButton);
         newButton.setToolTipText("New");
         newButton.addActionListener(this);
         mainToolbar.add(newButton);
         mainToolbar.addSeparator();
 
-        openButton = new HKButton(openFile.getAction(),openIcon,KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
         //openButton = new JButton(openIcon);
+        openButton = new HKButton(openFile.getAction(),openIcon,KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
+        iconHKButtons.add((HKButton) openButton);
         openButton.setToolTipText("Open");
         openButton.addActionListener(this);
         mainToolbar.add(openButton);
@@ -384,6 +392,49 @@ public class UI extends JFrame implements ActionListener {
             }
         });
         //FONT SIZE SETTINGS SECTION END
+
+        //From HK package
+
+        HKKeyListener keyListener = new HKKeyListener(iconHKButtons,mainToolbar);
+
+        JPanel panel = new JPanel(new SpringLayout());
+        JButton aa = new JButton("Animate all");
+        aa.addActionListener(e -> {
+            if (HKButton.lockHotkey){
+                Object[] options = {"Yes", "No"};
+                int n = JOptionPane.showOptionDialog(this,
+                        "By clicking this button you will unlock all hotkeys.\n"
+                                + "Would you like to continue?",
+                        "Warning !",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null, options, options[0]);
+                if (n == 0){
+                    HKButton.lockHotkey = false;
+                    IconHKSettingWindow.deactiveCb();
+                }
+            }
+            if (!HKButton.lockHotkey){
+                keyListener.animateall();
+                keyListener.animateToolbar();
+            }
+        });
+        JButton settings = new JButton("Settings");
+        settings.addActionListener(e -> new IconHKSettingWindow(this.iconHKButtons));
+        panel.add(aa);
+        panel.add(settings);
+        SpringUtilities.makeCompactGrid(panel, 2, 1, 3, 3, 0, 5);
+        //toolbar.add(aa);
+        //toolbar.add(settings);
+        mainToolbar.add(panel);
+
+        // Add mouse and keyboard events
+        KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
+        kfm.addKeyEventDispatcher(keyListener);
+
+        //animateall();
+        keyListener.animateToolbar();
+
     }
 
     @Override

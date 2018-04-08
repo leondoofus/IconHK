@@ -3,7 +3,6 @@ package IconHK;
 import IconHK.rangeslider.RangeSlider;
 import IconHK.util.Image;
 import IconHK.util.SpringUtilities;
-//import Test.SimpleEditor;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,6 +20,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     private ArrayList<JSlider> radius;
     private ArrayList<JButton> colors;
     private ArrayList<RangeSlider> ranges;
+    private static JCheckBox cb;
 
     public IconHKSettingWindow(Vector<HKButton> iconHKButtons) {
         this.iconHKButtons = iconHKButtons;
@@ -122,9 +122,8 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             panel.add(range);
             panel.add(fin);
             panel.add(r);
-            //TODO commented in order not to show popup
-            //panel.add(c);
-            panel.add(new JLabel());
+
+            panel.add(c);
         }
 
         panel.add(new JLabel("All"),BorderLayout.WEST);
@@ -141,7 +140,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         panel.add(resetColor);
 
 
-        JCheckBox cb = new JCheckBox(HKButton.lockHotkey? "Hotkey locked" : "Hotkey unlocked");
+        cb = new JCheckBox(HKButton.lockHotkey? "Hotkey locked" : "Hotkey unlocked");
         cb.setSelected(HKButton.lockHotkey);
         cb.addItemListener(e -> {
             if (e.getStateChange() == 1){
@@ -163,11 +162,11 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             HKAction.rangeSup = (int) spinner2.getValue();
             click2.setText(HKAction.rangeSup > 1? "clicks to change upper bound":"click to change upper bound");
         });
-        /*JSpinner spinner3 = new JSpinner(new SpinnerNumberModel(SimpleEditor.getTimer(),50,200,50));
+        JSpinner spinner3 = new JSpinner(new SpinnerNumberModel(HKKeyListener.getTimer(),50,200,50));
         JLabel speed = new JLabel("Animation speed");
         spinner3.addChangeListener(e -> {
-            SimpleEditor.setTimer((int) spinner3.getValue());
-        });*/
+            HKKeyListener.setTimer((int) spinner3.getValue());
+        });
 
         panel.add(new JLabel("Other options"));
         panel.add(spinner1);
@@ -179,10 +178,8 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         panel.add(new JLabel());
         panel.add(spinner2);
         panel.add(click2);
-        //panel.add(spinner3);
-        //panel.add(speed);
-        panel.add(new JLabel());
-        panel.add(new JLabel());
+        panel.add(spinner3);
+        panel.add(speed);
         panel.add(new JLabel());
 
 
@@ -224,5 +221,9 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                     b.setBackground(button.getPressedColor());
             }
         }
+    }
+
+    public static void deactiveCb (){
+        cb.setSelected(false);
     }
 }

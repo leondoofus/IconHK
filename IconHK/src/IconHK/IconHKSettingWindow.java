@@ -3,7 +3,7 @@ package IconHK;
 import IconHK.rangeslider.RangeSlider;
 import IconHK.util.Image;
 import IconHK.util.SpringUtilities;
-import Test.SimpleEditor;
+import javafx.scene.control.ColorPicker;
 
 import javax.swing.*;
 import java.awt.*;
