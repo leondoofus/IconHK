@@ -10,37 +10,26 @@ import java.awt.event.*;
 import java.util.Iterator;
 import java.util.Vector;
 
-public class SimpleEditor extends JFrame implements ActionListener, KeyEventDispatcher {
+public class SimpleEditor extends JFrame{
 
     private static Dimension dim = new Dimension(50,50);
 
     // Tool bar
     private JToolBar toolbar;
 
-    private static Timer timer;
-
     //Actions
     private Action cutAction, pasteAction, copyAction, saveAction, newAction, expandAction, rgbAction;
     private Action findAction, moveAction, pencilAction, increaseAction, mushroomAction, marioAction;
 
-    // Boolean testing if buttons pressed
-    private static boolean metaPressed = false;
-    private static boolean altPressed = false;
-    private static boolean ctrlPressed = false;
-    private static boolean shftPressed = false;
-
     private JButton aa;
 
-    private Vector<IconAnimation> animations;
     private Vector<HKButton> iconHKButtons;
+
+    private HKKeyListener keyListener;
 
     public SimpleEditor (){
         super("Swing Editor");
-
-        animations = new Vector<>();
         iconHKButtons = new Vector<>();
-        timer = new Timer(50, this);
-        timer.start();
 
         JTextArea textComp = new JTextArea();
         textComp.setLineWrap(true);
@@ -60,12 +49,13 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        keyListener = new HKKeyListener(iconHKButtons,toolbar);
         // Add mouse and keyboard events
         KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
-        kfm.addKeyEventDispatcher(this);
+        kfm.addKeyEventDispatcher(keyListener);
 
         //animateall();
-        animateToolbar();
+        keyListener.animateToolbar();
     }
 
     private void addAllButtonsToToolBar (){
@@ -104,8 +94,8 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                 }
             }
             if (!HKButton.lockHotkey){
-                animateall();
-                animateToolbar();
+                keyListener.animateall();
+                keyListener.animateToolbar();
             }
         });
         JButton settings = new JButton("Settings");
@@ -119,7 +109,7 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
     }
 
     private void addButtonToToolBar(JButton button) {
-        button.addActionListener(this);
+        button.addActionListener(keyListener);
         toolbar.add(Box.createRigidArea(new Dimension(2,0)));
         toolbar.add(button);
         toolbar.add(Box.createRigidArea(new Dimension(2,0)));
@@ -138,66 +128,66 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
         menubar.add(other);
 
         JMenuItem newfile = new JMenuItem(newAction);
-        newfile.addActionListener(this);
+        newfile.addActionListener(keyListener);
         //	newfile.setAccelerator(KeyStroke.getKeyStroke(
         //  KeyEvent.VK_N, ActionEvent.CTRL_MASK));
         file.add(newfile);
 
         JMenuItem save = new JMenuItem(saveAction);
-        save.addActionListener(this);
+        save.addActionListener(keyListener);
         //save.setAccelerator(KeyStroke.getKeyStroke(
         //KeyEvent.VK_S, ActionEvent.CTRL_MASK|ActionEvent.ALT_MASK));
         file.add(save);
 
         JMenuItem copy = new JMenuItem(copyAction);
-        copy.addActionListener(this);
+        copy.addActionListener(keyListener);
         //	copy.setAccelerator(KeyStroke.getKeyStroke(
         //   KeyEvent.VK_C, ActionEvent.CTRL_MASK));
         edit.add(copy);
 
         JMenuItem cut = new JMenuItem(cutAction);
-        cut.addActionListener(this);
+        cut.addActionListener(keyListener);
         //	cut.setAccelerator(KeyStroke.getKeyStroke(
         //  KeyEvent.VK_X, ActionEvent.CTRL_MASK));
         edit.add(cut);
 
         JMenuItem paste = new JMenuItem(pasteAction);
-        paste.addActionListener(this);
+        paste.addActionListener(keyListener);
         //paste.setAccelerator(KeyStroke.getKeyStroke(
         //KeyEvent.VK_V, ActionEvent.CTRL_MASK));
         edit.add(paste);
 
         JMenuItem rgb = new JMenuItem(rgbAction);
-        rgb.addActionListener(this);
+        rgb.addActionListener(keyListener);
         other.add(rgb);
 
         JMenuItem expand = new JMenuItem(expandAction);
-        expand.addActionListener(this);
+        expand.addActionListener(keyListener);
         other.add(expand);
 
         JMenuItem find = new JMenuItem(findAction);
-        find.addActionListener(this);
+        find.addActionListener(keyListener);
         other.add(find);
 
         JMenuItem move = new JMenuItem(moveAction);
-        move.addActionListener(this);
+        move.addActionListener(keyListener);
         other.add(move);
 
 
         JMenuItem pencil = new JMenuItem(pencilAction);
-        pencil.addActionListener(this);
+        pencil.addActionListener(keyListener);
         other.add(pencil);
 
         JMenuItem increase = new JMenuItem(increaseAction);
-        increase.addActionListener(this);
+        increase.addActionListener(keyListener);
         other.add(increase);
 
         JMenuItem mushroom = new JMenuItem(mushroomAction);
-        mushroom.addActionListener(this);
+        mushroom.addActionListener(keyListener);
         other.add(mushroom);
 
         JMenuItem mario = new JMenuItem(marioAction);
-        mario.addActionListener(this);
+        mario.addActionListener(keyListener);
         other.add(mario);
 
 
@@ -258,260 +248,9 @@ public class SimpleEditor extends JFrame implements ActionListener, KeyEventDisp
                 KeyEvent.VK_M, ActionEvent.ALT_MASK));
     }
 
-    private void animateToolbar() {
-        if (animations.size() < iconHKButtons.size()) return;
-        if (animations.size() > 0) {
-            Iterator<IconAnimation> i = animations.iterator();
-            while (i.hasNext()) {
-                IconAnimation animation = i.next();
-                int objective = animation.getCurrentObjective();
-                boolean over;
-                switch (objective) {
-                    case IconAnimation.HOTKEY_STEP:
-                        over = animation.getButton().animateToDestination(IconAnimation.HOTKEY_STEP);
-                        animation.getButton().repaint();
-                        if (over) {
-                            if(animation.hasToPersist()){
-                                animation.increaseCurrentPersistency();
-                            }
-                            else {
-                                animation.nextAnimationStep();
-                            }
-                        }
-                        break;
-                    case IconAnimation.ICON_STEP:
-                        over = animation.getButton().animateToDestination(IconAnimation.ICON_STEP);
-                        animation.getButton().repaint();
-                        if (over) {
-                            animation.nextAnimationStep();
-                        }
-                        break;
-                    case IconAnimation.DEFAULT_STEP:
-                        over = animation.getButton().animateToDestination(IconAnimation.DEFAULT_STEP);
-                        animation.getButton().repaint();
-                        if (over) {
-                            animation.nextAnimationStep();
-                        }
-                        break;
-                    case IconAnimation.OVER_STEP:
-                        i.remove();
-                        break;
-                }
-            }
-        }
-    }
 
-    private void animateall(){
-        animations.removeAllElements();
-        for (Component c : toolbar.getComponents()) {
-            if (c.getClass() == HKButton.class) {
-                HKButton button = (HKButton) c;
-                int[] sequence = { IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP };
-                animations.add(new IconAnimation(button, sequence, 40));
-            }
-        }
-    }
-
-    private void animateActivated(){
-        animations.removeAllElements();
-        for (Component c : toolbar.getComponents()) {
-            if (c.getClass() == HKButton.class) {
-                HKButton button = (HKButton) c;
-                if (((HKButton) c).isActived()) {
-                    int[] sequence = {IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP};
-                    animations.add(new IconAnimation(button, sequence, 40));
-                }
-            }
-        }
-    }
-
-    private void animateHotkeyPressed() {
-        if (HKButton.lockHotkey){
-            if (animations.size() > 0) {
-                for (IconAnimation animation : animations) {
-                    animation.getButton().increaseCurrentFrame();
-                    animation.getButton().repaint();
-                }
-            }
-        } else {
-            if (animations.size() > 0) {
-                for (IconAnimation animation : animations) {
-                    animation.getButton().changeCurrentFrame();
-                    animation.getButton().repaint();
-                }
-            }
-        }
-    }
-
-    private void desanimateAll(){
-        if (HKButton.lockHotkey){
-            animations.clear();
-            for (HKButton button : iconHKButtons)
-                animations.add(new IconAnimation(button,new int[]{IconAnimation.DEFAULT_STEP},40));
-            for (IconAnimation animation : animations) {
-                animation.getButton().decreaseCurrentFrame();
-                animation.getButton().repaint();
-            }
-        }
-    }
-
-    @Override
-    public boolean dispatchKeyEvent(KeyEvent e) {
-        if (e.getID() == KeyEvent.KEY_PRESSED) {
-            switch (e.getKeyCode()) {
-                case KeyEvent.VK_META:
-                    for (HKButton b : iconHKButtons) {
-                        metaPressed = true;
-                        updateModifiers(b);
-                        setAllModifiers(b);
-                    }
-                    break;
-                case KeyEvent.VK_CONTROL:
-                    for (HKButton b : iconHKButtons) {
-                        ctrlPressed = true;
-                        updateModifiers(b);
-                        setAllModifiers(b);
-                    }
-                    break;
-                case KeyEvent.VK_ALT:
-                    for (HKButton b : iconHKButtons) {
-                        altPressed = true;
-                        updateModifiers(b);
-                        setAllModifiers(b);
-                    }
-                    break;
-                case KeyEvent.VK_SHIFT:
-                    for (HKButton b : iconHKButtons) {
-                        shftPressed = true;
-                        updateModifiers(b);
-                        setAllModifiers(b);
-                    }
-                    break;
-            }
-            animateActivated();
-        } else if (e.getID() == KeyEvent.KEY_RELEASED) {
-            switch (e.getKeyCode()) {
-                case KeyEvent.VK_META:
-                    for (HKButton b : iconHKButtons) {
-                        metaPressed = false;
-                        updateModifiers(b);
-                        setAllModifiers(b);
-                    }
-                    break;
-                case KeyEvent.VK_CONTROL:
-                    for (HKButton b : iconHKButtons) {
-                        ctrlPressed = false;
-                        updateModifiers(b);
-                        setAllModifiers(b);
-                    }
-                    break;
-                case KeyEvent.VK_ALT:
-                    for (HKButton b : iconHKButtons) {
-                        altPressed = false;
-                        updateModifiers(b);
-                        setAllModifiers(b);
-                    }
-                    break;
-                case KeyEvent.VK_SHIFT:
-                    for (HKButton b : iconHKButtons) {
-                        shftPressed = false;
-                        updateModifiers(b);
-                        setAllModifiers(b);
-                    }
-                    break;
-            }
-        }
-        return false;
-    }
-
-    private void setAllModifiers (HKButton b){
-        if (ctrlPressed)
-            if (!b.isUseCtrl())
-                deactivateAllModifiers(b);
-        if (altPressed)
-            if (!b.isUseAlt())
-                deactivateAllModifiers(b);
-        if (shftPressed)
-            if (!b.isUseSft())
-                deactivateAllModifiers(b);
-        if (metaPressed)
-            if (!b.isUseMeta())
-                deactivateAllModifiers(b);
-    }
-
-    private void updateModifiers (HKButton b){
-        b.setHotkeyUsed(true);
-        b.setCtrlPressed(ctrlPressed);
-        b.setAltPressed(altPressed);
-        b.setShftPressed(shftPressed);
-        b.setMetaPressed(metaPressed);
-    }
-
-    private void deactivateAllModifiers(HKButton b){
-        b.setHotkeyUsed(false);
-        b.setCtrlPressed(false);
-        b.setAltPressed(false);
-        b.setShftPressed(false);
-        b.setMetaPressed(false);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == timer) {
-            if (ctrlPressed || altPressed || metaPressed || shftPressed)
-                animateHotkeyPressed();
-            else{
-                desanimateAll();
-                animateToolbar();
-            }
-            repaint();
-        }/* else {
-
-            String text = null;
-            int modality=0;
-            if (e.getSource().getClass() == HKButton.class) {
-                HKButton but = (HKButton) e.getSource();
-                text = but.getName();
-
-                int[] sequence = { IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP };
-                animations.add(new IconAnimation(but, sequence, persistence));
-                //modality = CommandSelection.TOOLBAR_BUTTON;
-            } else if (e.getSource().getClass() == JMenuItem.class) {
-                JMenuItem item = (JMenuItem) e.getSource();
-                text = item.getText();
-                //modality = CommandSelection.MENU_ITEM;
-                for (Component c : toolbar.getComponents()) {
-
-                    if (c.getClass() == HKButton.class) {
-                        HKButton but = (HKButton) c;
-                        if (but.getName().equals(text)) {
-                            int[] sequence = { IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP };
-                            animations.add(new IconAnimation(but, sequence, persistence));
-                        }
-                    }
-                }
-            }
-
-            if(e.getModifiers() == InputEvent.CTRL_MASK(e)){
-                modality = CommandSelection.HOTKEY;
-            }
-            if((text!=null)&&(modality!=0)){
-                history.addCommandSelection(new CommandSelection(text,modality));
-                updateWidgetForCommand(text,modality);
-            }
-        }*/
-    }
 
     public static void setDim (Dimension d){
         SimpleEditor.dim = d;
-    }
-
-    public static void setTimer(int val){
-        timer.setDelay(val);
-        timer.restart();
-    }
-
-    public static int getTimer (){
-        return timer.getDelay();
     }
 }

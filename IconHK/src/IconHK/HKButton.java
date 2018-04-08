@@ -38,7 +38,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     private boolean useMeta, useCtrl, useAlt, useSft;
     private char hotkey;
 
-    // Boolean testing if buttons pressed
+    // Boolean testing if iconHKButtons pressed
     private boolean metaPressed = false;
     private boolean altPressed = false;
     private boolean ctrlPressed = false;

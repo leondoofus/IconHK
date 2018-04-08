@@ -164,10 +164,10 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             HKAction.rangeSup = (int) spinner2.getValue();
             click2.setText(HKAction.rangeSup > 1? "clicks to change upper bound":"click to change upper bound");
         });
-        JSpinner spinner3 = new JSpinner(new SpinnerNumberModel(SimpleEditor.getTimer(),50,200,50));
+        JSpinner spinner3 = new JSpinner(new SpinnerNumberModel(HKKeyListener.getTimer(),50,200,50));
         JLabel speed = new JLabel("Animation speed");
         spinner3.addChangeListener(e -> {
-            SimpleEditor.setTimer((int) spinner3.getValue());
+            HKKeyListener.setTimer((int) spinner3.getValue());
         });
 
         panel.add(new JLabel("Other options"));
