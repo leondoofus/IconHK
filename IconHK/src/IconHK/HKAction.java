@@ -19,10 +19,9 @@ public class HKAction extends AbstractAction {
     public void actionPerformed(ActionEvent e) {
         //System.out.println(this.getValue(Action.NAME));
         if(e.getSource().getClass().equals(HKButton.class)) {
+            System.out.println("deb "+ button.getDefaultFrame() + " " + button.getVMax());
             //System.out.println("From button");
-            System.out.println(button.getVMax());
             button.setVMax(button.getVMax() + 1);
-            System.out.println(button.getVMax());
             clickInf++;
             if (clickInf >= rangeInf) {
                 clickInf = 0;
