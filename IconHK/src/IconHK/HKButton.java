@@ -461,6 +461,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     public void setVMax(int val){
         if (val < 0 || val >= this.iconsVector.size()) return;
+        System.out.println("ici "+ val+ " " + vmaxDef + " " +Math.min(val,vmaxDef));
         this.vmax = Math.min(val,vmaxDef);
         //this.vmax = val;
         this.currentFrame = Math.min(this.currentFrame,this.vmax);

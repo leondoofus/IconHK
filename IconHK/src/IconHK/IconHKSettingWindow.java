@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Vector;
@@ -22,6 +23,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     private ArrayList<JButton> colors;
     private ArrayList<RangeSlider> ranges;
     private static JCheckBox cb;
+    private Timer timer;
 
     public IconHKSettingWindow(Vector<HKButton> iconHKButtons) {
         this.iconHKButtons = iconHKButtons;
@@ -29,6 +31,19 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         colors = new ArrayList<>();
         ranges = new ArrayList<>();
         build();
+        ActionListener listener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == timer) {
+                    for (int i = 0; i < iconHKButtons.size(); i++){
+                        ranges.get(i).setValue(iconHKButtons.get(i).getDefaultFrame());
+                        ranges.get(i).setUpperValue(iconHKButtons.get(i).getVMax());
+                    }
+                }
+            }
+        };
+        timer = new Timer(50,listener);
+        timer.start();
     }
 
     private void build(){
@@ -145,7 +160,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         cb = new JCheckBox(HKButton.lockHotkey? "Hotkey locked" : "Hotkey unlocked");
         cb.setSelected(HKButton.lockHotkey);
         cb.addItemListener(e -> {
-            if (e.getStateChange() == 1){
+            if (e.getStateChange() == ItemEvent.SELECTED){
                 HKButton.lockHotkey = true;
                 cb.setText("Hotkey locked");
             } else {
@@ -159,10 +174,10 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             click1.setText(HKAction.rangeInf > 1? "clicks to change lower bound":"click to change lower bound");
         });
         JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(HKAction.rangeSup,1,5,1));
-        JLabel click2 = new JLabel("click to change upper bound");
+        JLabel click2 = new JLabel("press to change upper bound");
         spinner2.addChangeListener(e -> {
             HKAction.rangeSup = (int) spinner2.getValue();
-            click2.setText(HKAction.rangeSup > 1? "clicks to change upper bound":"click to change upper bound");
+            click2.setText(HKAction.rangeSup > 1? "presses to change upper bound":"click to change upper bound");
         });
         JSpinner spinner3 = new JSpinner(new SpinnerNumberModel(HKKeyListener.getTimer(),50,200,50));
         JLabel speed = new JLabel("Animation speed");
@@ -228,4 +243,5 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     public static void deactiveCb (){
         cb.setSelected(false);
     }
+
 }
