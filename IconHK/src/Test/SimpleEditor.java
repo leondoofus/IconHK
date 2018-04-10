@@ -55,8 +55,6 @@ public class SimpleEditor extends JFrame{
         KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         kfm.addKeyEventDispatcher(keyListener);
 
-        //animateall();
-        keyListener.animateToolbar();
     }
 
     private void addAllButtonsToToolBar (){
@@ -74,29 +72,20 @@ public class SimpleEditor extends JFrame{
         addButtonToToolBar(new HKButton(pencilAction,dim,Image.DEFAULT));
         addButtonToToolBar(new HKButton(increaseAction,dim,Image.DEFAULT));
         toolbar.addSeparator();
-        addButtonToToolBar(new HKButton(mushroomAction,dim,Image.QUADRATIC));
-        addButtonToToolBar(new HKButton(marioAction,dim,Image.CUBIC));
+        addButtonToToolBar(new HKButton(mushroomAction,dim,Image.LINEAR));
+        addButtonToToolBar(new HKButton(marioAction,dim,Image.LINEAR));
 
         JPanel panel = new JPanel(new SpringLayout());
         JButton aa = new JButton("Animate all");
         aa.addActionListener(e -> {
             if (HKButton.lockHotkey){
-                Object[] options = {"Yes", "No"};
-                int n = JOptionPane.showOptionDialog(this,
-                        "By clicking this button you will unlock all hotkeys.\n"
-                                + "Would you like to continue?",
-                        "Warning !",
-                        JOptionPane.YES_NO_OPTION,
-                        JOptionPane.QUESTION_MESSAGE,
-                        null, options, options[0]);
-                if (n == 0){
-                    HKButton.lockHotkey = false;
-                    IconHKSettingWindow.deactiveCb();
+                for (HKButton button: iconHKButtons){
+                    button.setMousePressed(true);
+                    button.increaseCurrentFrame();
                 }
             }
             if (!HKButton.lockHotkey){
                 keyListener.animateall();
-                keyListener.animateToolbar();
             }
         });
         JButton settings = new JButton("Settings");
@@ -253,5 +242,9 @@ public class SimpleEditor extends JFrame{
 
     public static void setDim (Dimension d){
         SimpleEditor.dim = d;
+    }
+
+    public HKKeyListener getKeyListener() {
+        return keyListener;
     }
 }

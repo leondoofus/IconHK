@@ -38,7 +38,7 @@ public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
     }
 
     public void animateToolbar() {
-        if (animations.size() < iconHKButtons.size()) return;
+        //if (animations.size() < iconHKButtons.size()) return;
         if (animations.size() > 0) {
             Iterator<IconAnimation> i = animations.iterator();
             while (i.hasNext()) {
@@ -126,7 +126,8 @@ public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
         if (HKButton.lockHotkey){
             animations.clear();
             for (HKButton button : iconHKButtons)
-                animations.add(new IconAnimation(button,new int[]{IconAnimation.DEFAULT_STEP},40));
+                if (!button.getMousePressed())
+                    animations.add(new IconAnimation(button,new int[]{IconAnimation.DEFAULT_STEP},40));
             for (IconAnimation animation : animations) {
                 animation.getButton().decreaseCurrentFrame();
                 animation.getButton().repaint();
@@ -241,8 +242,8 @@ public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
             if (ctrlPressed || altPressed || metaPressed || shftPressed)
                 animateHotkeyPressed();
             else{
-                desanimateAll();
-                animateToolbar();
+                if (HKButton.lockHotkey) desanimateAll();
+                else animateToolbar();
             }
             toolbar.getParent().repaint();
             //repaint();

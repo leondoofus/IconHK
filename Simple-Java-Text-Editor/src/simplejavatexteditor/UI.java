@@ -432,9 +432,6 @@ public class UI extends JFrame implements ActionListener {
         KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         kfm.addKeyEventDispatcher(keyListener);
 
-        //animateall();
-        keyListener.animateToolbar();
-
     }
 
     @Override

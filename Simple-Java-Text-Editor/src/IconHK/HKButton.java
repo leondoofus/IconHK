@@ -386,6 +386,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         if(currentFrame>=vmax) {
             currentFrame = vmax;
             spinner = false;
+            mousePressed = false;
         }
     }
 
@@ -423,7 +424,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     }
 
     public void mouseReleased(MouseEvent e) {
-        mousePressed = false;
+        //mousePressed = false;
     }
 
     public void mouseEntered(MouseEvent e) {
@@ -452,17 +453,14 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     }
 
     public void setDefaultFrame(int val){
-        if (val < 0 || val >= this.iconsVector.size()) return;
-        this.defaultFrame = Math.min (val,vmaxDef);
-        //this.defaultFrame = val;
+        if (val < 0 || val > vmaxDef) return;
+        this.defaultFrame = val;
         this.currentFrame = Math.max(this.currentFrame,this.defaultFrame);
-        //this.currentFrame = this.defaultFrame;
     }
 
     public void setVMax(int val){
-        if (val < 0 || val >= this.iconsVector.size()) return;
-        this.vmax = Math.min(val,vmaxDef);
-        //this.vmax = val;
+        if (val < 0 || val > vmaxDef) return;
+        this.vmax = val;
         this.currentFrame = Math.min(this.currentFrame,this.vmax);
     }
 
@@ -488,4 +486,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
                 }
         }
     }
+
+    public boolean getMousePressed (){ return mousePressed; }
+    public void setMousePressed (boolean mousePressed){ this.mousePressed = mousePressed; }
 }

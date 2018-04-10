@@ -7,8 +7,6 @@ public class HKAction extends AbstractAction {
     private int mask = 0;
     public static int rangeInf = 1;
     private int clickInf = 0;
-    public static int rangeSup = 1;
-    private int clickSup = 0;
     private HKButton button;
 
     public HKAction(String s){
@@ -19,24 +17,15 @@ public class HKAction extends AbstractAction {
     public void actionPerformed(ActionEvent e) {
         //System.out.println(this.getValue(Action.NAME));
         if(e.getSource().getClass().equals(HKButton.class)) {
-            System.out.println("deb "+ button.getDefaultFrame() + " " + button.getVMax());
-            //System.out.println("From button");
-            button.setVMax(button.getVMax() + 1);
             clickInf++;
             if (clickInf >= rangeInf) {
                 clickInf = 0;
                 button.setDefaultFrame(button.getDefaultFrame() + 1);
             }
-            System.out.println("fin "+ button.getDefaultFrame() + " " + button.getVMax());
         } else if(e.getSource().getClass().equals(JMenuItem.class)) {
             if(e.getModifiers() == this.mask) {
                 //System.out.println("Likely hotkey");
                 button.setDefaultFrame(button.getDefaultFrame() - 1);
-                clickSup++;
-                if (clickSup >= rangeSup) {
-                    clickSup = 0;
-                    button.setVMax(button.getVMax() - 1);
-                }
             }
             else {
                 //System.out.println("From menuItem");
@@ -45,6 +34,7 @@ public class HKAction extends AbstractAction {
                     clickInf = 0;
                     button.setDefaultFrame(button.getDefaultFrame() + 1);
                 }
+                button.setMousePressed(true);
                 button.increaseCurrentFrame();
             }
         }

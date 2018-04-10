@@ -386,6 +386,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         if(currentFrame>=vmax) {
             currentFrame = vmax;
             spinner = false;
+            mousePressed = false;
         }
     }
 
@@ -423,7 +424,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     }
 
     public void mouseReleased(MouseEvent e) {
-        mousePressed = false;
+        //mousePressed = false;
     }
 
     public void mouseEntered(MouseEvent e) {
@@ -485,4 +486,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
                 }
         }
     }
+
+    public boolean getMousePressed (){ return mousePressed; }
+    public void setMousePressed (boolean mousePressed){ this.mousePressed = mousePressed; }
 }

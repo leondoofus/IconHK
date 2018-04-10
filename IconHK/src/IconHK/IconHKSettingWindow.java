@@ -24,6 +24,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     private ArrayList<RangeSlider> ranges;
     private static JCheckBox cb;
     private Timer timer;
+    private static HKKeyListener keyListener;
 
     public IconHKSettingWindow(Vector<HKButton> iconHKButtons) {
         this.iconHKButtons = iconHKButtons;
@@ -31,14 +32,11 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         colors = new ArrayList<>();
         ranges = new ArrayList<>();
         build();
-        ActionListener listener = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == timer) {
-                    for (int i = 0; i < iconHKButtons.size(); i++){
-                        ranges.get(i).setValue(iconHKButtons.get(i).getDefaultFrame());
-                        ranges.get(i).setUpperValue(iconHKButtons.get(i).getVMax());
-                    }
+        ActionListener listener = e -> {
+            if (e.getSource() == timer) {
+                for (int i = 0; i < iconHKButtons.size(); i++){
+                    ranges.get(i).setValue(iconHKButtons.get(i).getDefaultFrame());
+                    ranges.get(i).setUpperValue(iconHKButtons.get(i).getVMax());
                 }
             }
         };
@@ -52,7 +50,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
         JPanel panel = new JPanel(new SpringLayout());
 
-        int rows = this.iconHKButtons.size() + 3;
+        int rows = this.iconHKButtons.size() + 2;
         int cols = 6;
 
         for(HKButton button : this.iconHKButtons){
@@ -173,31 +171,18 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             HKAction.rangeInf = (int) spinner1.getValue();
             click1.setText(HKAction.rangeInf > 1? "clicks to change lower bound":"click to change lower bound");
         });
-        JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(HKAction.rangeSup,1,5,1));
-        JLabel click2 = new JLabel("press to change upper bound");
-        spinner2.addChangeListener(e -> {
-            HKAction.rangeSup = (int) spinner2.getValue();
-            click2.setText(HKAction.rangeSup > 1? "presses to change upper bound":"click to change upper bound");
-        });
-        JSpinner spinner3 = new JSpinner(new SpinnerNumberModel(HKKeyListener.getTimer(),50,200,50));
+        JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(HKKeyListener.getTimer(),50,200,50));
         JLabel speed = new JLabel("Animation speed");
-        spinner3.addChangeListener(e -> {
-            HKKeyListener.setTimer((int) spinner3.getValue());
+        spinner2.addChangeListener(e -> {
+            HKKeyListener.setTimer((int) spinner2.getValue());
         });
 
         panel.add(new JLabel("Other options"));
         panel.add(spinner1);
         panel.add(click1);
-        panel.add(new JLabel());
-        panel.add(cb);
-        panel.add(new JLabel());
-
-        panel.add(new JLabel());
         panel.add(spinner2);
-        panel.add(click2);
-        panel.add(spinner3);
         panel.add(speed);
-        panel.add(new JLabel());
+        panel.add(cb);
 
 
         //Lay out the panel.
