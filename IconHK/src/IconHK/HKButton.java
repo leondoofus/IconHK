@@ -70,6 +70,9 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     // and updated if needed
     private float modifierRadiusRatio=0.35f;
 
+    public static int rangeInf = 1;
+    private int clickInf = 0;
+
     public HKButton(Action a, int mode){
         super(a);
         KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
@@ -101,14 +104,14 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         initForName(text);
     }
 
-    public HKButton(Action a, Icon icon, KeyStroke ks){
+    public HKButton(Action a, Dimension d, Icon icon, KeyStroke ks){
         super(a);
+        this.dimension = d;
         updateModifiersForKeystroke(ks);
         if (a instanceof HKAction) ((HKAction) a).setButton(this);
         timer = new Timer(50, this);
         timer.start();
         this.mode = Image.LINEAR;
-        this.dimension = new Dimension(icon.getIconWidth(),icon.getIconHeight());
         iconsVector = new Vector<>();
         this.setText("");
         Border border = BorderFactory.createLineBorder(Color.DARK_GRAY);
@@ -116,9 +119,49 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
         iconFiles = null;
         this.icon = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_RGB);
-        Graphics g = this.icon.createGraphics();
+        Graphics2D g = this.icon.createGraphics();
         icon.paintIcon(null, g, 0,0);
         g.dispose();
+
+        fixAllImages();
+
+        vmaxDef = iconsVector.size() - 1;
+        vmax = iconsVector.size() - 1;
+        this.setOpaque(true);
+        this.setBackground(Color.WHITE);
+        this.setContentAreaFilled(false);
+        this.setBorderPainted(true);
+        this.addMouseListener(this);
+        this.setOpaque(true);
+        fixCurrentFrame();
+        this.currentFrame=defaultFrame;
+    }
+
+    public HKButton(Action a, Dimension d, File iconFile, KeyStroke ks){
+        super(a);
+        this.dimension = d;
+        updateModifiersForKeystroke(ks);
+        if (a instanceof HKAction) ((HKAction) a).setButton(this);
+        timer = new Timer(50, this);
+        timer.start();
+        this.mode = Image.LINEAR;
+        iconsVector = new Vector<>();
+        this.setText("");
+        Border border = BorderFactory.createLineBorder(Color.DARK_GRAY);
+        this.setBorder(border);
+
+        iconFiles = null;
+        try {
+            BufferedImage img = ImageIO.read(iconFile);
+            // Resize all images in order to fit dimension
+            float w = (float)dimension.getWidth();
+            float h = (float)dimension.getHeight();
+            this.icon = Image.resize(img,(int)(((w * Math.sqrt(2)) - (2 * w * modifierRadiusRatio)) * 0.8),
+                    (int)(((h * Math.sqrt(2)) - (2 * h * modifierRadiusRatio)) * 0.8));
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("image IOException for file " + iconFile.getAbsolutePath());
+        }
 
         fixAllImages();
 
@@ -397,8 +440,6 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
             decreaseCurrentFrame();
     }
 
-
-
     // Redimension button
     @Override
     public Dimension getPreferredSize() {
@@ -424,7 +465,8 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     }
 
     public void mouseReleased(MouseEvent e) {
-        //mousePressed = false;
+        if (!(getAction() instanceof HKAction))
+            increaseClick();
     }
 
     public void mouseEntered(MouseEvent e) {
@@ -489,4 +531,12 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     public boolean getMousePressed (){ return mousePressed; }
     public void setMousePressed (boolean mousePressed){ this.mousePressed = mousePressed; }
+
+    public void increaseClick (){
+        clickInf++;
+        if (clickInf >= rangeInf) {
+            clickInf = 0;
+            setDefaultFrame(getDefaultFrame() + 1);
+        }
+    }
 }

@@ -5,35 +5,31 @@ import java.awt.event.ActionEvent;
 
 public class HKAction extends AbstractAction {
     private int mask = 0;
-    public static int rangeInf = 1;
-    private int clickInf = 0;
     private HKButton button;
+    private Runnable runnable = null;
 
     public HKAction(String s){
         this.putValue(Action.NAME,s);
     }
 
+    public HKAction(String s, Runnable r){
+        this.putValue(Action.NAME,s);
+        this.runnable = r;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (runnable != null) runnable.run();
         //System.out.println(this.getValue(Action.NAME));
         if(e.getSource().getClass().equals(HKButton.class)) {
-            clickInf++;
-            if (clickInf >= rangeInf) {
-                clickInf = 0;
-                button.setDefaultFrame(button.getDefaultFrame() + 1);
-            }
+            button.increaseClick();
         } else if(e.getSource().getClass().equals(JMenuItem.class)) {
             if(e.getModifiers() == this.mask) {
                 //System.out.println("Likely hotkey");
                 button.setDefaultFrame(button.getDefaultFrame() - 1);
-            }
-            else {
+            } else {
                 //System.out.println("From menuItem");
-                clickInf++;
-                if (clickInf >= rangeInf) {
-                    clickInf = 0;
-                    button.setDefaultFrame(button.getDefaultFrame() + 1);
-                }
+                button.increaseClick();
                 button.setMousePressed(true);
                 button.increaseCurrentFrame();
             }

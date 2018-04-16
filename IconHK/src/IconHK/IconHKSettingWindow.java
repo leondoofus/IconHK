@@ -136,9 +136,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             panel.add(range);
             panel.add(fin);
             panel.add(r);
-            //TODO commented in order not to show popup
-            //panel.add(c);
-            panel.add(new JLabel());
+            panel.add(c);
         }
 
         panel.add(new JLabel("All"),BorderLayout.WEST);
@@ -165,11 +163,11 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                 HKButton.lockHotkey = false;
                 cb.setText("Hotkey unlocked");
             }});
-        JSpinner spinner1 = new JSpinner(new SpinnerNumberModel(HKAction.rangeInf,1,5,1));
+        JSpinner spinner1 = new JSpinner(new SpinnerNumberModel(HKButton.rangeInf,1,5,1));
         JLabel click1 = new JLabel("click to change lower bound");
         spinner1.addChangeListener(e -> {
-            HKAction.rangeInf = (int) spinner1.getValue();
-            click1.setText(HKAction.rangeInf > 1? "clicks to change lower bound":"click to change lower bound");
+            HKButton.rangeInf = (int) spinner1.getValue();
+            click1.setText(HKButton.rangeInf > 1? "clicks to change lower bound":"click to change lower bound");
         });
         JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(HKKeyListener.getTimer(),50,200,50));
         JLabel speed = new JLabel("Animation speed");

@@ -37,6 +37,7 @@
  */
 package simplejavatexteditor;
 
+import IconHK.HKAction;
 import IconHK.HKButton;
 import IconHK.HKKeyListener;
 import IconHK.IconHKSettingWindow;
@@ -52,6 +53,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Vector;
+import javax.swing.filechooser.FileSystemView;
 import javax.swing.text.DefaultEditorKit;
 
 public class UI extends JFrame implements ActionListener {
@@ -60,7 +62,7 @@ public class UI extends JFrame implements ActionListener {
     private final JTextArea textArea;
     private final JMenuBar menuBar;
     private final JComboBox fontSize, fontType;
-    private final JMenu menuFile, menuEdit, menuFind, menuAbout;
+    private final JMenu menuFile, menuEdit, menuFind, menuOthers, menuAbout;
     private final JMenuItem newFile, openFile, saveFile, close, cut, copy, paste, clearFile, selectAll, quickFind,
             aboutMe, aboutSoftware, wordWrap;
     private final JToolBar mainToolbar;
@@ -99,6 +101,8 @@ public class UI extends JFrame implements ActionListener {
     private boolean hasListener = false;
     private boolean edit = false;
 
+    private HKKeyListener keyListener;
+
     public UI() {
         // Set the initial size of the window
         setSize(800, 500);
@@ -135,15 +139,35 @@ public class UI extends JFrame implements ActionListener {
         getContentPane().setLayout(new BorderLayout()); // the BorderLayout bit makes it fill it automatically
         getContentPane().add(textArea);
 
+        Runnable newthread = () -> {
+            if (edit) {
+                Object[] options = {"Save", "No Save", "Return"};
+                int n = JOptionPane.showOptionDialog(getParent(), "Do you want to save the file at first ?", "Question",
+                        JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[2]);
+                if (n == 0) {// save
+                    saveFile();
+                    edit = false;
+                } else if (n == 1) {
+                    edit = false;
+                    FEdit.clear(textArea);
+                }
+            } else {
+                FEdit.clear(textArea);
+            }
+        };
+        HKAction newaction = new HKAction("New",newthread);
+
         // Set the Menus
         menuFile = new JMenu("File");
         menuEdit = new JMenu("Edit");
         menuFind = new JMenu("Search");
+        menuOthers = new JMenu("Others");
         menuAbout = new JMenu("About");
         //Font Settings menu
 
         // Set the Items Menu
-        newFile = new JMenuItem("New", newIcon);
+        newFile = new JMenuItem(newaction);
+        //newFile = new JMenuItem("New", newIcon);
         openFile = new JMenuItem("Open", openIcon);
         saveFile = new JMenuItem("Save", saveIcon);
         close = new JMenuItem("Quit", closeIcon);
@@ -156,7 +180,7 @@ public class UI extends JFrame implements ActionListener {
         menuBar.add(menuFile);
         menuBar.add(menuEdit);
         menuBar.add(menuFind);
-
+        menuBar.add(menuOthers);
         menuBar.add(menuAbout);
 
         this.setJMenuBar(menuBar);
@@ -168,7 +192,8 @@ public class UI extends JFrame implements ActionListener {
         this.setJMenuBar(menuBar);
 
         // New File
-        newFile.addActionListener(this);  // Adding an action listener (so we know when it's been clicked).
+        newFile.addActionListener(keyListener);
+        //newFile.addActionListener(this);  // Adding an action listener (so we know when it's been clicked).
         newFile.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK)); // Set a keyboard shortcut
         menuFile.add(newFile); // Adding the file menu
 
@@ -264,6 +289,23 @@ public class UI extends JFrame implements ActionListener {
         quickFind.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F, InputEvent.CTRL_MASK));
         menuFind.add(quickFind);
 
+        JMenuItem aa = new JMenuItem("Animate all");
+        aa.addActionListener(e -> {
+            if (HKButton.lockHotkey){
+                for (HKButton button: iconHKButtons){
+                    button.setMousePressed(true);
+                    button.increaseCurrentFrame();
+                }
+            }
+            if (!HKButton.lockHotkey){
+                keyListener.animateall();
+            }
+        });
+        JMenuItem settings = new JMenuItem("Settings");
+        settings.addActionListener(e -> new IconHKSettingWindow(this.iconHKButtons));
+        menuOthers.add(aa);
+        menuOthers.add(settings);
+
         // About Me
         aboutMe.addActionListener(this);
         aboutMe.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0));
@@ -278,7 +320,8 @@ public class UI extends JFrame implements ActionListener {
         this.add(mainToolbar, BorderLayout.NORTH);
         // used to create space between button groups
         //newButton = new JButton(newIcon);
-        newButton = new HKButton(newFile.getAction(),newIcon,KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
+        newButton = new HKButton(newaction,new Dimension(37,37),new File("icons/new.png"),KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
+        //newButton = new HKButton(newFile.getAction(),new Dimension(37,37),newIcon,KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
         iconHKButtons.add((HKButton) newButton);
         newButton.setToolTipText("New");
         newButton.addActionListener(this);
@@ -286,7 +329,8 @@ public class UI extends JFrame implements ActionListener {
         mainToolbar.addSeparator();
 
         //openButton = new JButton(openIcon);
-        openButton = new HKButton(openFile.getAction(),openIcon,KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
+        openButton = new HKButton(openFile.getAction(),new Dimension(37,37),new File("icons/open.png"),KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
+        //openButton = new HKButton(openFile.getAction(),new Dimension(37,37),openIcon,KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
         iconHKButtons.add((HKButton) openButton);
         openButton.setToolTipText("Open");
         openButton.addActionListener(this);
@@ -395,38 +439,7 @@ public class UI extends JFrame implements ActionListener {
 
         //From HK package
 
-        HKKeyListener keyListener = new HKKeyListener(iconHKButtons,mainToolbar);
-
-        JPanel panel = new JPanel(new SpringLayout());
-        JButton aa = new JButton("Animate all");
-        aa.addActionListener(e -> {
-            if (HKButton.lockHotkey){
-                Object[] options = {"Yes", "No"};
-                int n = JOptionPane.showOptionDialog(this,
-                        "By clicking this button you will unlock all hotkeys.\n"
-                                + "Would you like to continue?",
-                        "Warning !",
-                        JOptionPane.YES_NO_OPTION,
-                        JOptionPane.QUESTION_MESSAGE,
-                        null, options, options[0]);
-                if (n == 0){
-                    HKButton.lockHotkey = false;
-                    IconHKSettingWindow.deactiveCb();
-                }
-            }
-            if (!HKButton.lockHotkey){
-                keyListener.animateall();
-                keyListener.animateToolbar();
-            }
-        });
-        JButton settings = new JButton("Settings");
-        settings.addActionListener(e -> new IconHKSettingWindow(this.iconHKButtons));
-        panel.add(aa);
-        panel.add(settings);
-        SpringUtilities.makeCompactGrid(panel, 2, 1, 3, 3, 0, 5);
-        //toolbar.add(aa);
-        //toolbar.add(settings);
-        mainToolbar.add(panel);
+        keyListener = new HKKeyListener(iconHKButtons,mainToolbar);
 
         // Add mouse and keyboard events
         KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
