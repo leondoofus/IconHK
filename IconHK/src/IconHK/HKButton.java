@@ -477,7 +477,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     }
 
-    public boolean isActived (){
+    public boolean isActivated(){
         return metaPressed || shftPressed || altPressed || ctrlPressed;
     }
 
@@ -517,6 +517,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        timer.setDelay(spinner? IconHKSettingWindow.speedUp : IconHKSettingWindow.speedDown);
         if (e.getSource() == timer) {
             if (!hotkeyUsed)
                 if (mousePressed) {
@@ -529,7 +530,12 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         }
     }
 
+    public void setSpinner(boolean spinner) {
+        this.spinner = spinner;
+    }
+
     public boolean getMousePressed (){ return mousePressed; }
+
     public void setMousePressed (boolean mousePressed){ this.mousePressed = mousePressed; }
 
     public void increaseClick (){

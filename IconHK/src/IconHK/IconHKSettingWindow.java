@@ -18,13 +18,14 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
     private Vector<HKButton> iconHKButtons;
 
+    public static int speedUp = 50;
+    public static int speedDown = 50;
+
     private JButton resetRadius, resetColor, resetRange;
     private ArrayList<JSlider> radius;
     private ArrayList<JButton> colors;
     private ArrayList<RangeSlider> ranges;
-    private static JCheckBox cb;
     private Timer timer;
-    private static HKKeyListener keyListener;
 
     public IconHKSettingWindow(Vector<HKButton> iconHKButtons) {
         this.iconHKButtons = iconHKButtons;
@@ -50,7 +51,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
         JPanel panel = new JPanel(new SpringLayout());
 
-        int rows = this.iconHKButtons.size() + 2;
+        int rows = this.iconHKButtons.size() + 3;
         int cols = 6;
 
         for(HKButton button : this.iconHKButtons){
@@ -153,7 +154,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         panel.add(resetColor);
 
 
-        cb = new JCheckBox(HKButton.lockHotkey? "Hotkey locked" : "Hotkey unlocked");
+        JCheckBox cb = new JCheckBox(HKButton.lockHotkey? "Hotkey locked" : "Hotkey unlocked");
         cb.setSelected(HKButton.lockHotkey);
         cb.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED){
@@ -169,18 +170,29 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             HKButton.rangeInf = (int) spinner1.getValue();
             click1.setText(HKButton.rangeInf > 1? "clicks to change lower bound":"click to change lower bound");
         });
-        JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(HKKeyListener.getTimer(),50,200,50));
-        JLabel speed = new JLabel("Animation speed");
+        JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(speedUp,50,200,25));
         spinner2.addChangeListener(e -> {
-            HKKeyListener.setTimer((int) spinner2.getValue());
+            speedUp = ((int) spinner2.getValue());
+        });
+
+        JSpinner spinner3 = new JSpinner(new SpinnerNumberModel(speedDown,50,200,25));
+        spinner3.addChangeListener(e -> {
+            speedDown = ((int) spinner3.getValue());
         });
 
         panel.add(new JLabel("Other options"));
         panel.add(spinner1);
         panel.add(click1);
         panel.add(spinner2);
-        panel.add(speed);
+        panel.add(new JLabel("ms/increasing frame"));
         panel.add(cb);
+
+        panel.add(new JLabel());
+        panel.add(new JLabel());
+        panel.add(new JLabel());
+        panel.add(spinner3);
+        panel.add(new JLabel("ms/decreasing frame"));
+        panel.add(new JLabel());
 
 
         //Lay out the panel.
@@ -221,10 +233,6 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                     b.setBackground(button.getPressedColor());
             }
         }
-    }
-
-    public static void deactiveCb (){
-        cb.setSelected(false);
     }
 
 }

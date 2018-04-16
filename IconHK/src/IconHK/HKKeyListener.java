@@ -11,7 +11,7 @@ import java.util.Vector;
 public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
     JToolBar toolbar;
     Vector<HKButton> iconHKButtons;
-    private static Timer timer;
+    private Timer timer;
     private Vector<IconAnimation> animations;
 
     // Boolean testing if iconHKButtons pressed
@@ -26,15 +26,6 @@ public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
         this.iconHKButtons = iconHKButtons;
         this.toolbar = toolbar;
         animations = new Vector<>();
-    }
-
-    public static void setTimer(int val){
-        timer.setDelay(val);
-        timer.restart();
-    }
-
-    public static int getTimer (){
-        return timer.getDelay();
     }
 
     public void animateToolbar() {
@@ -96,7 +87,7 @@ public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
         for (Component c : toolbar.getComponents()) {
             if (c.getClass() == HKButton.class) {
                 HKButton button = (HKButton) c;
-                if (((HKButton) c).isActived()) {
+                if (((HKButton) c).isActivated()) {
                     int[] sequence = {IconAnimation.HOTKEY_STEP, IconAnimation.DEFAULT_STEP};
                     animations.add(new IconAnimation(button, sequence, 40));
                 }
@@ -149,6 +140,7 @@ public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
         if (metaPressed)
             if (!b.isUseMeta())
                 deactivateAllModifiers(b);
+        if (b.isActivated()) b.setSpinner(true);
     }
 
     private void updateModifiers (HKButton b){
@@ -165,6 +157,7 @@ public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
         b.setAltPressed(false);
         b.setShftPressed(false);
         b.setMetaPressed(false);
+        b.setSpinner(false);
     }
 
     @Override
@@ -233,11 +226,20 @@ public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
                     break;
             }
         }
+        animateActivated();
         return false;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        //TODO change delay here
+        timer.setDelay(IconHKSettingWindow.speedUp);
+        for (IconAnimation a : animations){
+            if (a.getAnimationStep() == IconAnimation.HOTKEY_STEP){
+                timer.setDelay(IconHKSettingWindow.speedDown);
+                break;
+            }
+        }
         if (e.getSource() == timer) {
             if (ctrlPressed || altPressed || metaPressed || shftPressed)
                 animateHotkeyPressed();
@@ -246,7 +248,6 @@ public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
                 else animateToolbar();
             }
             toolbar.getParent().repaint();
-            //repaint();
         }/* else {
 
             String text = null;
