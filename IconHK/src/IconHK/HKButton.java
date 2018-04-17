@@ -78,7 +78,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         KeyStroke ks = (KeyStroke)a.getValue(AbstractAction.ACCELERATOR_KEY);
         updateModifiersForKeystroke(ks);
         if (a instanceof HKAction) ((HKAction) a).setButton(this);
-        timer = new Timer(50, this);
+        timer = new Timer(IconHKSettingWindow.speedUp, this);
         timer.start();
         this.mode = mode;
         initForName((String) a.getValue(Action.NAME));

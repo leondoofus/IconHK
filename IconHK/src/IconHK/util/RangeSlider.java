@@ -1,4 +1,4 @@
-package IconHK.rangeslider;
+package IconHK.util;
 
 import javax.swing.*;
 

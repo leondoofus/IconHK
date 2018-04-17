@@ -7,9 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afac57bb-ce5b-4b3c-9ded-416c92446340" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../IconHK.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../IconHK.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/IconHK/HKButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IconHK/HKButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/IconHK/HKKeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IconHK/HKKeyListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IconHK/rangeslider/RangeSlider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IconHKSettingWindow.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IconHKSettingWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
+            <state relative-caret-position="462">
+              <caret line="311" column="31" selection-start-line="311" selection-start-column="31" selection-end-line="311" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -50,7 +55,7 @@
       <file leaf-file-name="SimpleEditor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1161">
+            <state relative-caret-position="12">
               <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -59,20 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HKAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IconHK/HKAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HKKeyListener.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HKKeyListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IconHK/HKKeyListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="234" column="32" selection-start-line="234" selection-start-column="32" selection-end-line="234" selection-end-column="32" />
+            <state relative-caret-position="276">
+              <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,12 +79,8 @@
       <file leaf-file-name="HKButton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1370">
-              <caret line="479" column="29" selection-start-line="479" selection-start-column="29" selection-end-line="479" selection-end-column="29" />
-              <folding>
-                <element signature="e#17128#17129#0" expanded="true" />
-                <element signature="e#17166#17167#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-4750">
+              <caret line="75" column="40" lean-forward="true" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -113,7 +105,7 @@
       <find>Clic</find>
       <find>Timer</find>
       <find>getK</find>
-      <find />
+      <find>while (c</find>
       <find>increa</find>
       <find>setDe</find>
       <find>draw</find>
@@ -161,9 +153,10 @@
         <option value="$PROJECT_DIR$/src/IconHK/util/ColorChooserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
         <option value="$PROJECT_DIR$/src/IconHK/HKAction.java" />
-        <option value="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
         <option value="$PROJECT_DIR$/src/IconHK/HKButton.java" />
         <option value="$PROJECT_DIR$/src/IconHK/HKKeyListener.java" />
+        <option value="$PROJECT_DIR$/src/IconHK/util/RangeSliderUI.java" />
+        <option value="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
       </list>
     </option>
   </component>
@@ -181,9 +174,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
-    <option name="y" value="-4" />
+    <option name="y" value="-14" />
     <option name="width" value="1368" />
-    <option name="height" value="773" />
+    <option name="height" value="783" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -191,6 +184,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -215,13 +209,6 @@
               <item name="IconHK" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="IconHK" type="462c0819:PsiDirectoryNode" />
-              <item name="rangeslider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IconHK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IconHK" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="IconHK" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -240,14 +227,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StocksMonitorDownload" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Simple-Java-Text-Editor" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -412,7 +398,8 @@
       <workItem from="1523884272819" duration="1351000" />
       <workItem from="1523885773193" duration="5995000" />
       <workItem from="1523892310847" duration="5459000" />
-      <workItem from="1523905645565" duration="3783000" />
+      <workItem from="1523905645565" duration="3871000" />
+      <workItem from="1523968930268" duration="5478000" />
     </task>
     <task id="LOCAL-00001" summary="Added some options">
       <created>1521462521428</created>
@@ -425,7 +412,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41546000" />
+    <option name="totallyTimeSpent" value="47112000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -450,7 +437,7 @@
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4892704" weight="0.32967034" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32942328" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49375" visible="true" weight="0.18702866" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49375" weight="0.18702866" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32901296" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -505,10 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
           <caret line="81" column="22" lean-forward="true" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
-          <folding>
-            <element signature="e#17128#17129#0" expanded="true" />
-            <element signature="e#17166#17167#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -660,21 +643,7 @@
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/awt/event/ActionListener.java" />
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/awt/Container.java" />
     <entry file="jar://$USER_HOME$/Scripts/jdk1.8.0_121/src.zip!/java/awt/event/ActionListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/IconHK/rangeslider/RangeSliderUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3906">
-          <caret line="293" column="5" lean-forward="true" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Scripts/jdk1.8.0_121/src.zip!/javax/swing/event/ChangeListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/IconHK/rangeslider/RangeSlider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="72" column="38" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/TestSuperposition.java" />
     <entry file="file://$PROJECT_DIR$/src/Test/Bezier.java" />
     <entry file="file://$PROJECT_DIR$/src/Test/CourbeApplet.java" />
@@ -704,6 +673,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/HKFrame.java" />
+    <entry file="file://$PROJECT_DIR$/src/Test/MyAction.java" />
+    <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/util/RangeSliderUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/util/RangeSlider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-501">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/HKAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -711,12 +703,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/HKFrame.java" />
-    <entry file="file://$PROJECT_DIR$/src/Test/MyAction.java" />
     <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1161">
+        <state relative-caret-position="12">
           <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4750">
+          <caret line="75" column="40" lean-forward="true" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/HKKeyListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -725,36 +732,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1370">
-          <caret line="479" column="29" selection-start-line="479" selection-start-column="29" selection-end-line="479" selection-end-column="29" />
-          <folding>
-            <element signature="e#17128#17129#0" expanded="true" />
-            <element signature="e#17166#17167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/HKKeyListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="234" column="32" selection-start-line="234" selection-start-column="32" selection-end-line="234" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="462">
+          <caret line="311" column="31" selection-start-line="311" selection-start-column="31" selection-end-line="311" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -781,7 +760,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -21,7 +21,7 @@ public class HKKeyListener  implements ActionListener, KeyEventDispatcher {
     private static boolean shftPressed = false;
 
     public HKKeyListener(Vector<HKButton> iconHKButtons, JToolBar toolbar) {
-        timer = new Timer(50, this);
+        timer = new Timer(IconHKSettingWindow.speedUp, this);
         timer.start();
         this.iconHKButtons = iconHKButtons;
         this.toolbar = toolbar;

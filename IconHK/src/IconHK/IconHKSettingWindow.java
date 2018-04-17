@@ -1,9 +1,8 @@
 package IconHK;
 
-import IconHK.rangeslider.RangeSlider;
+import IconHK.util.RangeSlider;
 import IconHK.util.Image;
 import IconHK.util.SpringUtilities;
-import javafx.scene.control.ColorPicker;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,6 +25,10 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     private ArrayList<JButton> colors;
     private ArrayList<RangeSlider> ranges;
     private Timer timer;
+
+    private RangeSlider rangeAll;
+    private JSlider radiusAll;
+    private JButton colorAll;
 
     public IconHKSettingWindow(Vector<HKButton> iconHKButtons) {
         this.iconHKButtons = iconHKButtons;
@@ -51,7 +54,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
 
         JPanel panel = new JPanel(new SpringLayout());
 
-        int rows = this.iconHKButtons.size() + 3;
+        int rows = this.iconHKButtons.size() + 4;
         int cols = 6;
 
         for(HKButton button : this.iconHKButtons){
@@ -126,6 +129,21 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
                 if(newColor != null) {
                     c.setBackground(newColor);
                     button.setPressedColor(newColor);
+                    Color all = iconHKButtons.get(0).getPressedColor();
+                    boolean sameColor = true;
+                    for (HKButton b : iconHKButtons) {
+                        if (!b.getPressedColor().equals(all)) {
+                            sameColor = false;
+                            break;
+                        }
+                    }
+                    if (sameColor) {
+                        colorAll.setBackground(all);
+                        colorAll.setText("");
+                    } else{
+                        colorAll.setBackground(null);
+                        colorAll.setText("Change modifiers' color");
+                    }
                 }
             });
 
@@ -141,6 +159,64 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         }
 
         panel.add(new JLabel("All"),BorderLayout.WEST);
+        rangeAll = new RangeSlider();
+        rangeAll.setPreferredSize(new Dimension(240, rangeAll.getPreferredSize().height));
+        rangeAll.setMinimum(0);
+        rangeAll.setMaximum(10);
+        rangeAll.setValue(0);
+        rangeAll.setUpperValue(10);
+        rangeAll.addChangeListener(e -> {
+            for (int i = 0; i < iconHKButtons.size(); i++){
+                iconHKButtons.get(i).setDefaultFrame((int)((double)rangeAll.getValue()*iconHKButtons.get(i).getVmaxDef()/10));
+                iconHKButtons.get(i).setVMax((int)((double)rangeAll.getUpperValue()*iconHKButtons.get(i).getVmaxDef()/10));
+                ranges.get(i).setValue((int)((double)rangeAll.getValue()*iconHKButtons.get(i).getVmaxDef()/10));
+                ranges.get(i).setUpperValue((int)((double)rangeAll.getUpperValue()*iconHKButtons.get(i).getVmaxDef()/10));
+            }
+        });
+        float r = iconHKButtons.get(0).getModifierRadiusRatio();
+        boolean sameRadius = true;
+        for (HKButton button : iconHKButtons){
+            if (button.getModifierRadiusRatio() != r){
+                sameRadius = false;
+                break;
+            }
+        }
+        radiusAll = new JSlider(JSlider.HORIZONTAL, 0, 50, sameRadius? (int)(r*100) : 35);
+        radiusAll.addChangeListener(e -> {
+            for(JSlider s : radius)
+                s.setValue(radiusAll.getValue());
+        });
+        colorAll = new JButton();
+        Color all = iconHKButtons.get(0).getPressedColor();
+        boolean sameColor = true;
+        for (HKButton button : iconHKButtons) {
+            if (!button.getPressedColor().equals(all)) {
+                sameColor = false;
+                break;
+            }
+        }
+        if (sameColor)
+            colorAll.setBackground(all);
+        else
+            colorAll.setText("Change modifiers' color");
+        colorAll.addChangeListener(e -> {
+            Color newColor = JColorChooser.showDialog(colorAll, "Choose Modifier Color", colorAll.getBackground());
+            if(newColor != null) {
+                colorAll.setBackground(newColor);
+                colorAll.setText("");
+                for (JButton b : colors)
+                    b.setBackground(newColor);
+                for (HKButton button : iconHKButtons)
+                    button.setPressedColor(newColor);
+            }
+        });
+        panel.add(new JLabel());
+        panel.add(rangeAll);
+        panel.add(new JLabel());
+        panel.add(radiusAll);
+        panel.add(colorAll);
+
+        panel.add(new JLabel());
         resetRadius = new JButton("Reset Radius");
         resetRadius.addActionListener(this);
         resetColor = new JButton("Reset Colors");
@@ -212,26 +288,28 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == resetRange){
-            for(HKButton button : this.iconHKButtons) {
-                button.setDefaultFrame(0);
-                button.setVMax(button.getVmaxDef());
-                for (RangeSlider s : ranges) {
-                    s.setValue(0);
-                    s.setUpperValue(button.getVmaxDef());
-                }
+            for (int i = 0; i < iconHKButtons.size(); i++){
+                iconHKButtons.get(i).setDefaultFrame(0);
+                iconHKButtons.get(i).setVMax(iconHKButtons.get(i).getVmaxDef());
+                ranges.get(i).setValue(0);
+                ranges.get(i).setUpperValue(iconHKButtons.get(i).getVmaxDef());
             }
+
+            rangeAll.setValue(0);
+            rangeAll.setUpperValue(10);
         } else if(e.getSource() == resetRadius){
-            for(HKButton button : this.iconHKButtons) {
+            for(HKButton button : this.iconHKButtons)
                 button.setModifierRadiusRatio((float)0.35);
-                for (JSlider s : radius)
-                    s.setValue((int) (button.getModifierRadiusRatio() * 100));
-            }
+            for (JSlider s : radius)
+                s.setValue(35);
+            radiusAll.setValue(35);
         } else if(e.getSource() == resetColor){
-            for(HKButton button : this.iconHKButtons) {
+            for(HKButton button : this.iconHKButtons)
                 button.setPressedColor(new Color(29,174,222));
-                for (JButton b : colors)
-                    b.setBackground(button.getPressedColor());
-            }
+            for (JButton b : colors)
+                b.setBackground(new Color(29,174,222));
+            colorAll.setBackground(new Color(29,174,222));
+            colorAll.setText("");
         }
     }
 
