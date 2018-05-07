@@ -30,8 +30,8 @@ public class HKAction extends AbstractAction {
             } else {
                 //System.out.println("From menuItem");
                 button.increaseClick();
-                button.setMousePressed(true);
                 button.increaseCurrentFrame();
+                button.setMousePressed(true);
             }
         }
     }
