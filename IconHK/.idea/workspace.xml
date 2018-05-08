@@ -6,17 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afac57bb-ce5b-4b3c-9ded-416c92446340" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../IconHK.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../IconHK.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKKeyListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKKeyListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/IconHKSettingWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/IconHKSettingWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/util/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/util/Image.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/util/SpringUtilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/util/SpringUtilities.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IconHK/Test/TestApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IconHK/Test/TestApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="afac57bb-ce5b-4b3c-9ded-416c92446340" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -175,7 +165,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1365" />
-    <option name="y" value="-772" />
+    <option name="y" value="-4" />
     <option name="width" value="1368" />
     <option name="height" value="773" />
   </component>
@@ -426,7 +416,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1365" y="-772" width="1368" height="773" extended-state="6" />
+    <frame x="1365" y="-4" width="1368" height="773" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901296" />
@@ -761,7 +751,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
