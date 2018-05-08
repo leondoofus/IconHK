@@ -6,7 +6,94 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afac57bb-ce5b-4b3c-9ded-416c92446340" name="Default" comment="" />
+    <list default="true" id="afac57bb-ce5b-4b3c-9ded-416c92446340" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../IconHK.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../IconHK.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Simple-Java-Text-Editor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/.idea/sweethome3d.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/.idea/sweethome3d.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/applet/HomeAppletController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/applet/HomeAppletController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$15$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$15$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$16$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$16$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$1MouseAndFocusListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$1MouseAndFocusListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$1MouseAndFocusListener$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$1MouseAndFocusListener$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$1MouseAndFocusListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$1MouseAndFocusListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$27.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$28$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$28$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$28.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$29.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$30.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$31.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$32.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$33$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$33$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$33.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$34.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$34.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$35.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$36.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$37.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$38.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$39.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$39.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$40.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$40.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$41.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$41.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$42.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$42.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$43.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$43.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$44.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$44.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$45.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$45.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$46.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$46.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$47.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$47.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$48.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$48.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$49.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$49.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$50.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$50.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$51.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$51.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$52.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$52.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$53.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$53.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$54.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$54.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$ActionAdapter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$ActionAdapter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$ActionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$ActionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$FocusCycleRootChangeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$FocusCycleRootChangeListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$FocusOwnerChangeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$FocusOwnerChangeListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$FurnitureCatalogViewChangeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$FurnitureCatalogViewChangeListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$LanguageChangeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$LanguageChangeListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$MenuActionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$MenuActionType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$OBJExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$OBJExporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$RulersVisibilityChangeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$RulersVisibilityChangeListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/src/com/eteks/sweethome3d/swing/HomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/src/com/eteks/sweethome3d/swing/HomePane.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,10 +121,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HKAction.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HKAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IconHK/HKAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="332">
               <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
             </state>
           </provider>
@@ -46,10 +133,11 @@
       <file leaf-file-name="SimpleEditor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1545">
-              <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+            <state relative-caret-position="-315">
+              <caret line="60" column="68" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#createMenuBar#0;class#SimpleEditor#0" />
               </folding>
             </state>
           </provider>
@@ -67,11 +155,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HKButton.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HKButton.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+            <state relative-caret-position="15">
+              <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -87,19 +175,15 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fixa</find>
-      <find>fix</find>
-      <find>Syste</find>
       <find>Syst</find>
       <find>Sys</find>
       <find>incr</find>
       <find>Clic</find>
       <find>Timer</find>
       <find>getK</find>
-      <find>while (c</find>
+      <find />
       <find>increa</find>
       <find>setDe</find>
-      <find>draw</find>
       <find>println</find>
       <find>lockH</find>
       <find>lockHo</find>
@@ -117,6 +201,10 @@
       <find>Icon</find>
       <find>fixAll</find>
       <find>isAc</find>
+      <find>key</find>
+      <find>pain</find>
+      <find>paint</find>
+      <find>draw</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,11 +231,11 @@
         <option value="$PROJECT_DIR$/src/IconHK/melissa/projet.java" />
         <option value="$PROJECT_DIR$/src/IconHK/util/ColorChooserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/Test/SimpleEditor.java" />
-        <option value="$PROJECT_DIR$/src/IconHK/HKButton.java" />
         <option value="$PROJECT_DIR$/src/IconHK/HKKeyListener.java" />
         <option value="$PROJECT_DIR$/src/IconHK/util/RangeSliderUI.java" />
         <option value="$PROJECT_DIR$/src/IconHK/IconHKSettingWindow.java" />
         <option value="$PROJECT_DIR$/src/IconHK/HKAction.java" />
+        <option value="$PROJECT_DIR$/src/IconHK/HKButton.java" />
       </list>
     </option>
   </component>
@@ -164,7 +252,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1365" />
+    <option name="x" value="-1" />
     <option name="y" value="-772" />
     <option name="width" value="1368" />
     <option name="height" value="773" />
@@ -175,8 +263,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,7 +306,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,7 +479,8 @@
       <workItem from="1523892310847" duration="5459000" />
       <workItem from="1523905645565" duration="3871000" />
       <workItem from="1523968930268" duration="5478000" />
-      <workItem from="1525713811046" duration="6999000" />
+      <workItem from="1525713811046" duration="7667000" />
+      <workItem from="1525787922280" duration="10475000" />
     </task>
     <task id="LOCAL-00001" summary="Added some options">
       <created>1521462521428</created>
@@ -404,7 +493,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54111000" />
+    <option name="totallyTimeSpent" value="65254000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,7 +505,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1365" y="-4" width="1368" height="773" extended-state="6" />
+    <frame x="-1" y="-772" width="1368" height="773" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901296" />
@@ -427,8 +517,8 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50625" side_tool="true" weight="0.26099706" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4892704" weight="0.32967034" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49375" visible="true" weight="0.18466353" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32942328" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49375" weight="0.18604651" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32901296" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -438,8 +528,8 @@
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.4892704" weight="0.24945055" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.17888562" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" id="Coverage" order="8" sideWeight="0.5107296" side_tool="true" weight="0.32967034" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -479,13 +569,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="81" column="22" lean-forward="true" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -680,33 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IconHK/HKKeyListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -721,10 +777,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315">
+          <caret line="60" column="68" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createMenuBar#0;class#SimpleEditor#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/HKAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="332">
           <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/HKKeyListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Scripts/jdk1.8.0_121/src.zip!/javax/swing/JButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-961">
+          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -751,7 +842,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

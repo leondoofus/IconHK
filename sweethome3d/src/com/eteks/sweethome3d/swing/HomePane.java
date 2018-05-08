@@ -42,20 +42,7 @@ import java.awt.Window;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.dnd.DragSource;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.print.PageFormat;
 import java.awt.print.PrinterException;
@@ -77,16 +64,7 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.AccessControlException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -151,6 +129,10 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumnModel;
 import javax.swing.text.JTextComponent;
 
+import IconHK.HKButton;
+import IconHK.HKKeyListener;
+import IconHK.IconHKSettingWindow;
+import IconHK.util.Image;
 import com.eteks.sweethome3d.j3d.Ground3D;
 import com.eteks.sweethome3d.j3d.HomePieceOfFurniture3D;
 import com.eteks.sweethome3d.j3d.OBJWriter;
@@ -204,7 +186,7 @@ public class HomePane extends JRootPane implements HomeView {
   private enum MenuActionType {FILE_MENU, EDIT_MENU, FURNITURE_MENU, PLAN_MENU, VIEW_3D_MENU, HELP_MENU, 
       OPEN_RECENT_HOME_MENU, ALIGN_OR_DISTRIBUTE_MENU, SORT_HOME_FURNITURE_MENU, DISPLAY_HOME_FURNITURE_PROPERTY_MENU, 
       MODIFY_TEXT_STYLE, GO_TO_POINT_OF_VIEW, SELECT_OBJECT_MENU}
-  
+
   private static final String MAIN_PANE_DIVIDER_LOCATION_VISUAL_PROPERTY     = "com.eteks.sweethome3d.SweetHome3D.MainPaneDividerLocation";
   private static final String CATALOG_PANE_DIVIDER_LOCATION_VISUAL_PROPERTY  = "com.eteks.sweethome3d.SweetHome3D.CatalogPaneDividerLocation";
   private static final String PLAN_PANE_DIVIDER_LOCATION_VISUAL_PROPERTY     = "com.eteks.sweethome3d.SweetHome3D.PlanPaneDividerLocation";
@@ -234,6 +216,9 @@ public class HomePane extends JRootPane implements HomeView {
   private boolean               exportAllToOBJ = true;
   private ActionMap             menuActionMap;
   private List<Action>          pluginActions;
+
+    private final Vector<HKButton> iconHKButtons = new Vector<>();
+    private HKKeyListener keyListener;
   
   /**
    * Creates home view associated with its controller.
@@ -260,9 +245,42 @@ public class HomePane extends JRootPane implements HomeView {
     addFocusListener();
     updateFocusTraversalPolicy();
     JMenuBar homeMenuBar = createMenuBar(home, preferences, controller);
+
+    //HK menuItem
+      JMenu menuOthers = new JMenu("HKOptions");
+      JMenuItem aa = new JMenuItem("Animate all");
+      aa.addActionListener(e -> {
+          if (HKButton.lockHotkey){
+              for (HKButton button: iconHKButtons){
+                  button.setMousePressed(true);
+                  button.increaseCurrentFrame();
+              }
+          }
+          if (!HKButton.lockHotkey){
+              keyListener.animateall();
+          }
+      });
+      JMenuItem settings = new JMenuItem("Settings");
+      settings.addActionListener(e -> new IconHKSettingWindow(this.iconHKButtons));
+      menuOthers.add(aa);
+      menuOthers.add(settings);
+      homeMenuBar.add(menuOthers);
+
+
     setJMenuBar(homeMenuBar);
     Container contentPane = getContentPane();
-    contentPane.add(createToolBar(home), BorderLayout.NORTH);
+    //contentPane.add(createToolBar(home), BorderLayout.NORTH);
+
+      JToolBar mainToolbar = createToolBar(home);
+      contentPane.add(mainToolbar, BorderLayout.NORTH);
+      //From HK package
+
+      keyListener = new HKKeyListener(iconHKButtons,mainToolbar);
+
+      // Add mouse and keyboard events
+      KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
+      kfm.addKeyEventDispatcher(keyListener);
+
     contentPane.add(createMainPane(home, preferences, controller));
     if (OperatingSystem.isMacOSXLeopardOrSuperior()) {
       // Under Mac OS X 10.5, add some dummy labels at left and right borders
@@ -1957,10 +1975,35 @@ public class HomePane extends JRootPane implements HomeView {
   private void addActionToToolBar(ActionType actionType,
                                   JToolBar toolBar) {
     Action action = getActionMap().get(actionType);
+      /*if (action.getValue(AbstractAction.ACCELERATOR_KEY) != null) {
+          String shortcut = action.getValue(AbstractAction.ACCELERATOR_KEY).toString();
+          if (shortcut != null && shortcut.contains("pressed")) {
+              System.out.println(shortcut);
+              System.out.println(action.getValue(Action.NAME));
+          }
+      }*/
+      switch (action.getValue(Action.NAME).toString()){
+          case "Nouveau":
+              addHKActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar, new File("src/com/eteks/sweethome3d/swing/resources/icons/tango/document-new.png"), KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
+              return;
+          case "Ouvrir...":
+              addHKActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar, new File("src/com/eteks/sweethome3d/swing/resources/icons/tango/document-open.png"),KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
+              return;
+      }
     if (action!= null && action.getValue(Action.NAME) != null) {
+        System.out.println(action.getValue(Action.NAME));
       addActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar);
     }
   }
+
+    private void addHKActionToToolBar(Action action,
+                                    JToolBar toolBar,
+                                      File file,
+                                      KeyStroke ks) {
+      HKButton button = new HKButton(action, new Dimension(20,20),file,ks);
+      toolBar.add(button);
+      iconHKButtons.add(button);
+    }
     
   /**
    * Adds to tool bar the button matching the given <code>action</code>. 
@@ -1979,6 +2022,7 @@ public class HomePane extends JRootPane implements HomeView {
           }
         });
     } else {
+        System.out.println(action.getValue(Action.NAME));
       toolBar.add(new JButton(new ResourceAction.ToolBarAction(action)));
     }
   }

@@ -15,20 +15,8 @@
       <file leaf-file-name="UI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/simplejavatexteditor/UI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="293" column="31" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleJavaTextEditor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/simplejavatexteditor/SimpleJavaTextEditor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="e#1078#1079#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="64" column="61" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -42,8 +30,11 @@
       <find>HK</find>
       <find>Icon</find>
       <find>newFil</find>
-      <find>HKB</find>
       <find>menu</find>
+      <find>HKB</find>
+      <find>JB</find>
+      <find>HKBu</find>
+      <find>menuOth</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -64,7 +55,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1" />
+    <option name="x" value="-1367" />
     <option name="y" value="-4" />
     <option name="width" value="1368" />
     <option name="height" value="773" />
@@ -74,8 +65,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,6 +92,8 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,14 +214,15 @@
       <workItem from="1523885724026" duration="1116000" />
       <workItem from="1523974492217" duration="75000" />
       <workItem from="1525722750603" duration="1173000" />
+      <workItem from="1525790174040" duration="6975000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11274000" />
+    <option name="totallyTimeSpent" value="18249000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
+    <frame x="-1367" y="-4" width="1368" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -242,7 +234,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22464898" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22464898" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -270,6 +262,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/simplejavatexteditor/UI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3600">
+          <caret line="293" column="31" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/simplejavatexteditor/SimpleJavaTextEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#1078#1079#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/simplejavatexteditor/UI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3600">
@@ -435,8 +444,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/simplejavatexteditor/UI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="293" column="31" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="64" column="61" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="61" />
         </state>
       </provider>
     </entry>

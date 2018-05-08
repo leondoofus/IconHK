@@ -10,26 +10,187 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SweetHome3D.java" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SweetHome3D.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1161">
-              <caret line="123" column="1" selection-start-line="123" selection-start-column="1" selection-end-line="123" selection-end-column="1" />
+            <state relative-caret-position="260">
+              <caret line="594" column="27" selection-start-line="594" selection-start-column="27" selection-end-line="594" selection-end-column="27" />
+              <folding>
+                <element signature="e#10466#10475#0" expanded="true" />
+                <element signature="e#10913#10922#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SweetHome3DSWT.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3DSWT.java">
+      <file leaf-file-name="HomePane.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="330" selection-start-line="330" selection-end-line="330" />
+            <state relative-caret-position="108">
+              <caret line="2002" column="75" selection-start-line="2002" selection-start-column="75" selection-end-line="2002" selection-end-column="75" />
+              <folding>
+                <element signature="e#11944#30103#0" />
+                <element signature="e#30943#31928#0" />
+                <element signature="class#32447:32813" />
+                <element signature="e#32823#33968#0" />
+                <element signature="e#33974#34298#0" />
+                <element signature="e#34302#34800#0" />
+                <element signature="e#34804#35423#0" />
+                <element signature="e#35427#36052#0" />
+                <element signature="e#36056#36377#0" />
+                <element signature="e#36383#37100#0" />
+                <element signature="e#37104#37425#0" />
+                <element signature="e#37429#38300#0" />
+                <element signature="e#38306#39456#0" />
+                <element signature="e#39462#39749#0" />
+                <element signature="e#40242#41261#0" />
+                <element signature="e#41696#44247#0" />
+                <element signature="e#47074#47896#0" />
+                <element signature="e#47900#48621#0" />
+                <element signature="e#48625#58222#0" />
+                <element signature="e#58879#59215#0" />
+                <element signature="e#59219#59732#0" />
+                <element signature="e#59736#60505#0" />
+                <element signature="e#60841#61373#0" />
+                <element signature="e#61377#62448#0" />
+                <element signature="e#62452#63857#0" />
+                <element signature="e#63861#68968#0" />
+                <element signature="e#69099#69275#0" expanded="true" />
+                <element signature="e#69274#69275#0" expanded="true" />
+                <element signature="e#68974#69440#0" />
+                <element signature="e#69446#74050#0" />
+                <element signature="e#74056#75287#0" />
+                <element signature="e#75293#75759#0" />
+                <element signature="e#75763#77261#0" />
+                <element signature="e#77267#78011#0" />
+                <element signature="e#78015#80180#0" />
+                <element signature="e#79014#79015#0" expanded="true" />
+                <element signature="e#79058#79059#0" expanded="true" />
+                <element signature="e#80184#82397#0" />
+                <element signature="e#81188#81189#0" expanded="true" />
+                <element signature="e#81232#81233#0" expanded="true" />
+                <element signature="e#82403#83713#0" />
+                <element signature="e#83719#84941#0" />
+                <element signature="e#84947#85667#0" />
+                <element signature="e#85673#86935#0" />
+                <element signature="e#86939#87685#0" />
+                <element signature="e#87691#88608#0" />
+                <element signature="e#88614#89552#0" />
+                <element signature="e#89556#91014#0" />
+                <element signature="e#91020#91674#0" />
+                <element signature="e#91680#92520#0" />
+                <element signature="e#98364#98760#0" />
+                <element signature="e#99347#102585#0" />
+                <element signature="class#102829:109467" />
+                <element signature="e#109476#110406#0" />
+                <element signature="e#110410#112646#0" />
+                <element signature="e#112652#118010#0" />
+                <element signature="e#118572#118761#0" expanded="true" />
+                <element signature="e#118760#118761#0" expanded="true" />
+                <element signature="e#118014#120223#0" />
+                <element signature="e#118639#120219#0" />
+                <element signature="e#120229#132784#0" />
+                <element signature="e#132788#138291#0" />
+                <element signature="e#138297#139795#0" />
+                <element signature="e#139799#140416#0" />
+                <element signature="e#140420#142571#0" />
+                <element signature="class#140731:142359" />
+                <element signature="class#142752:142973" />
+                <element signature="method#setMenuItemsEnabled#0;class#140731:142359" />
+                <element signature="e#142578#144628#0" />
+                <element signature="e#144634#149405#0" />
+                <element signature="e#148397#148398#0" expanded="true" />
+                <element signature="e#148468#148469#0" expanded="true" />
+                <element signature="e#149411#150823#0" />
+                <element signature="e#150829#151380#0" />
+                <element signature="e#151386#151714#0" />
+                <element signature="e#151718#152079#0" />
+                <element signature="e#152083#153094#0" />
+                <element signature="e#153100#153465#0" />
+                <element signature="e#153469#154488#0" />
+                <element signature="e#154494#154855#0" />
+                <element signature="e#154859#155870#0" />
+                <element signature="e#155876#156815#0" />
+                <element signature="e#156821#157173#0" />
+                <element signature="e#157179#157474#0" />
+                <element signature="e#157478#157776#0" />
+                <element signature="e#157780#159477#0" />
+                <element signature="e#159483#161322#0" />
+                <element signature="e#161326#162358#0" />
+                <element signature="e#162364#163163#0" />
+                <element signature="e#163169#164745#0" />
+                <element signature="e#164749#165425#0" />
+                <element signature="e#165429#167708#0" />
+                <element signature="e#167712#173818#0" />
+                <element signature="e#173822#176624#0" />
+                <element signature="e#176628#178220#0" />
+                <element signature="e#178224#178572#0" />
+                <element signature="e#178578#179701#0" />
+                <element signature="e#179707#180066#0" />
+                <element signature="e#180070#181418#0" />
+                <element signature="e#181422#181778#0" />
+                <element signature="e#181782#183190#0" />
+                <element signature="e#183194#184790#0" />
+                <element signature="e#184796#185412#0" />
+                <element signature="e#185416#186199#0" />
+                <element signature="e#187812#187813#0" expanded="true" />
+                <element signature="e#187870#187871#0" expanded="true" />
+                <element signature="e#186347#189607#0" />
+                <element signature="e#189617#190283#0" />
+                <element signature="e#190289#190958#0" />
+                <element signature="e#190964#191741#0" />
+                <element signature="e#191751#192718#0" />
+                <element signature="e#192724#194879#0" />
+                <element signature="e#194883#198467#0" />
+                <element signature="e#198956#199117#0" expanded="true" />
+                <element signature="e#199116#199117#0" expanded="true" />
+                <element signature="e#198471#199059#0" />
+                <element signature="e#199266#204672#0" />
+                <element signature="e#204676#204851#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/viewcontroller/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="1459" column="35" selection-start-line="1459" selection-start-column="35" selection-end-line="1459" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>JBU</find>
+      <find>JPan</find>
+      <find>JBu</find>
+      <find>.add</find>
+      <find>panel.ad</find>
+      <find>JBut</find>
+      <find>panel.</find>
+      <find>add(</find>
+      <find>toolB</find>
+      <find>addAc</find>
+      <find>addB</find>
+      <find>add</find>
+      <find>addAct</find>
+      <find>createAc</find>
+      <find>newH</find>
+      <find>action</find>
+      <find>actionPer</find>
+      <find>JB</find>
+      <find>newHo</find>
+      <find>createMenuActions</find>
+      <find>createToo</find>
+      <find>Help</find>
+      <find>JMenu</find>
+      <find>main</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -40,6 +201,16 @@
         <entry key="$PROJECT_DIR$/../beanfabrics" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../freeplane" value="PREVIEW" />
       </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/eteks/sweethome3d/applet/SweetHome3DApplet.java" />
+        <option value="$PROJECT_DIR$/src/com/eteks/sweethome3d/applet/HomeAppletController.java" />
+        <option value="$PROJECT_DIR$/src/com/eteks/sweethome3d/viewcontroller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -59,6 +230,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -97,21 +271,35 @@
               <item name="sweethome3d" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sweethome3d" type="462c0819:PsiDirectoryNode" />
+              <item name="swing" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweethome3d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweethome3d" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sweethome3d" type="462c0819:PsiDirectoryNode" />
+              <item name="viewcontroller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweethome3d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweethome3d" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="plaf" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Bureau/lib/ext/vecmath.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IconHK.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -236,6 +424,7 @@
       <option name="presentableId" value="Default" />
       <updated>1525779361369</updated>
       <workItem from="1525779363308" duration="5983000" />
+      <workItem from="1525785933648" duration="15194000" />
     </task>
     <servers />
   </component>
@@ -245,37 +434,38 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5983000" />
+    <option name="totallyTimeSpent" value="21177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.38184664" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21439749" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20497803" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49707174" weight="0.38184664" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.18448023" side_tool="true" visible="true" weight="0.3004695" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.81551975" visible="true" weight="0.3004695" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25988287" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286385" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
@@ -286,7 +476,84 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>2055</line>
+          <properties class="com.eteks.sweethome3d.swing.HomePane" method="setNameAndShortDescription">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>1998</line>
+          <properties class="com.eteks.sweethome3d.swing.HomePane" method="addHKActionToToolBar">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>1977</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>1983</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>275</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>274</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>273</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>280</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="17" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="123" column="1" selection-start-line="123" selection-start-column="1" selection-end-line="123" selection-end-column="1" />
+          <folding>
+            <element signature="e#10466#10475#0" expanded="true" />
+            <element signature="e#10913#10922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3DSWT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3780">
+          <caret line="330" selection-start-line="330" selection-end-line="330" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomeComponent3D.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="55">
@@ -294,13 +561,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/ThreadedTaskControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/ThreadedTaskControllerTest.java" />
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/PlanComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-52">
@@ -350,13 +611,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/PrintTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/PrintTest.java" />
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/j3d/ModelManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -364,41 +619,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/RoomTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/IconManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/PackageDependenciesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/PlanComponentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/PhotoCreationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/RoomTest.java" />
+    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/IconManagerTest.java" />
+    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/PackageDependenciesTest.java" />
+    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/PlanComponentTest.java" />
+    <entry file="file://$PROJECT_DIR$/test/com/eteks/sweethome3d/junit/PhotoCreationTest.java" />
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swt/HomeFrameSWT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -408,7 +633,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3DSWT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="3780">
           <caret line="330" selection-start-line="330" selection-end-line="330" />
         </state>
       </provider>
@@ -423,10 +648,201 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/applet/SweetHome3DApplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="186" column="3" lean-forward="true" selection-start-line="175" selection-start-column="40" selection-end-line="186" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/SwingTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="85" column="33" lean-forward="true" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/applet/AppletApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="551" lean-forward="true" selection-start-line="551" selection-end-line="559" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/viewcontroller/HomeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/applet/HomeAppletController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+          <folding>
+            <element signature="e#3719#3720#0" expanded="true" />
+            <element signature="e#3777#3778#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/model/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="270" column="32" selection-start-line="270" selection-start-column="28" selection-end-line="270" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/viewcontroller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="1459" column="35" selection-start-line="1459" selection-start-column="35" selection-end-line="1459" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../IconHK.jar!/IconHK/HKKeyListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4890">
+          <caret line="337" selection-start-line="337" selection-end-line="337" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1161">
-          <caret line="123" column="1" selection-start-line="123" selection-start-column="1" selection-end-line="123" selection-end-column="1" />
+        <state relative-caret-position="260">
+          <caret line="594" column="27" selection-start-line="594" selection-start-column="27" selection-end-line="594" selection-end-column="27" />
+          <folding>
+            <element signature="e#10466#10475#0" expanded="true" />
+            <element signature="e#10913#10922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="2002" column="75" selection-start-line="2002" selection-start-column="75" selection-end-line="2002" selection-end-column="75" />
+          <folding>
+            <element signature="e#11944#30103#0" />
+            <element signature="e#30943#31928#0" />
+            <element signature="class#32447:32813" />
+            <element signature="e#32823#33968#0" />
+            <element signature="e#33974#34298#0" />
+            <element signature="e#34302#34800#0" />
+            <element signature="e#34804#35423#0" />
+            <element signature="e#35427#36052#0" />
+            <element signature="e#36056#36377#0" />
+            <element signature="e#36383#37100#0" />
+            <element signature="e#37104#37425#0" />
+            <element signature="e#37429#38300#0" />
+            <element signature="e#38306#39456#0" />
+            <element signature="e#39462#39749#0" />
+            <element signature="e#40242#41261#0" />
+            <element signature="e#41696#44247#0" />
+            <element signature="e#47074#47896#0" />
+            <element signature="e#47900#48621#0" />
+            <element signature="e#48625#58222#0" />
+            <element signature="e#58879#59215#0" />
+            <element signature="e#59219#59732#0" />
+            <element signature="e#59736#60505#0" />
+            <element signature="e#60841#61373#0" />
+            <element signature="e#61377#62448#0" />
+            <element signature="e#62452#63857#0" />
+            <element signature="e#63861#68968#0" />
+            <element signature="e#69099#69275#0" expanded="true" />
+            <element signature="e#69274#69275#0" expanded="true" />
+            <element signature="e#68974#69440#0" />
+            <element signature="e#69446#74050#0" />
+            <element signature="e#74056#75287#0" />
+            <element signature="e#75293#75759#0" />
+            <element signature="e#75763#77261#0" />
+            <element signature="e#77267#78011#0" />
+            <element signature="e#78015#80180#0" />
+            <element signature="e#79014#79015#0" expanded="true" />
+            <element signature="e#79058#79059#0" expanded="true" />
+            <element signature="e#80184#82397#0" />
+            <element signature="e#81188#81189#0" expanded="true" />
+            <element signature="e#81232#81233#0" expanded="true" />
+            <element signature="e#82403#83713#0" />
+            <element signature="e#83719#84941#0" />
+            <element signature="e#84947#85667#0" />
+            <element signature="e#85673#86935#0" />
+            <element signature="e#86939#87685#0" />
+            <element signature="e#87691#88608#0" />
+            <element signature="e#88614#89552#0" />
+            <element signature="e#89556#91014#0" />
+            <element signature="e#91020#91674#0" />
+            <element signature="e#91680#92520#0" />
+            <element signature="e#98364#98760#0" />
+            <element signature="e#99347#102585#0" />
+            <element signature="class#102829:109467" />
+            <element signature="e#109476#110406#0" />
+            <element signature="e#110410#112646#0" />
+            <element signature="e#112652#118010#0" />
+            <element signature="e#118572#118761#0" expanded="true" />
+            <element signature="e#118760#118761#0" expanded="true" />
+            <element signature="e#118014#120223#0" />
+            <element signature="e#118639#120219#0" />
+            <element signature="e#120229#132784#0" />
+            <element signature="e#132788#138291#0" />
+            <element signature="e#138297#139795#0" />
+            <element signature="e#139799#140416#0" />
+            <element signature="e#140420#142571#0" />
+            <element signature="class#140731:142359" />
+            <element signature="class#142752:142973" />
+            <element signature="method#setMenuItemsEnabled#0;class#140731:142359" />
+            <element signature="e#142578#144628#0" />
+            <element signature="e#144634#149405#0" />
+            <element signature="e#148397#148398#0" expanded="true" />
+            <element signature="e#148468#148469#0" expanded="true" />
+            <element signature="e#149411#150823#0" />
+            <element signature="e#150829#151380#0" />
+            <element signature="e#151386#151714#0" />
+            <element signature="e#151718#152079#0" />
+            <element signature="e#152083#153094#0" />
+            <element signature="e#153100#153465#0" />
+            <element signature="e#153469#154488#0" />
+            <element signature="e#154494#154855#0" />
+            <element signature="e#154859#155870#0" />
+            <element signature="e#155876#156815#0" />
+            <element signature="e#156821#157173#0" />
+            <element signature="e#157179#157474#0" />
+            <element signature="e#157478#157776#0" />
+            <element signature="e#157780#159477#0" />
+            <element signature="e#159483#161322#0" />
+            <element signature="e#161326#162358#0" />
+            <element signature="e#162364#163163#0" />
+            <element signature="e#163169#164745#0" />
+            <element signature="e#164749#165425#0" />
+            <element signature="e#165429#167708#0" />
+            <element signature="e#167712#173818#0" />
+            <element signature="e#173822#176624#0" />
+            <element signature="e#176628#178220#0" />
+            <element signature="e#178224#178572#0" />
+            <element signature="e#178578#179701#0" />
+            <element signature="e#179707#180066#0" />
+            <element signature="e#180070#181418#0" />
+            <element signature="e#181422#181778#0" />
+            <element signature="e#181782#183190#0" />
+            <element signature="e#183194#184790#0" />
+            <element signature="e#184796#185412#0" />
+            <element signature="e#185416#186199#0" />
+            <element signature="e#187812#187813#0" expanded="true" />
+            <element signature="e#187870#187871#0" expanded="true" />
+            <element signature="e#186347#189607#0" />
+            <element signature="e#189617#190283#0" />
+            <element signature="e#190289#190958#0" />
+            <element signature="e#190964#191741#0" />
+            <element signature="e#191751#192718#0" />
+            <element signature="e#192724#194879#0" />
+            <element signature="e#194883#198467#0" />
+            <element signature="e#198956#199117#0" expanded="true" />
+            <element signature="e#199116#199117#0" expanded="true" />
+            <element signature="e#198471#199059#0" />
+            <element signature="e#199266#204672#0" />
+            <element signature="e#204676#204851#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -447,7 +863,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
