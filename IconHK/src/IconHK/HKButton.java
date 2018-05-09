@@ -270,6 +270,9 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         super.paintComponent(g);
 
         Graphics2D g2 = (Graphics2D) g.create();
+        //g2.setColor(Color.WHITE);
+        //g2.drawRect(0,0,getWidth(),getHeight());
+        g2.clearRect(0,0,getWidth(),getHeight());
         if (this.iconsVector != null) {
             BufferedImage icon = iconsVector.get(currentFrame);
             int x = (getWidth() - icon.getWidth()) / 2;

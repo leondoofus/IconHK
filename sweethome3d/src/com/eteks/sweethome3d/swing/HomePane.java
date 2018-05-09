@@ -1982,16 +1982,15 @@ public class HomePane extends JRootPane implements HomeView {
               System.out.println(action.getValue(Action.NAME));
           }
       }*/
-      switch (action.getValue(Action.NAME).toString()){
-          case "Nouveau":
+      switch (actionType.toString()){
+          case "NEW_HOME":
               addHKActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar, new File("src/com/eteks/sweethome3d/swing/resources/icons/tango/document-new.png"), KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
               return;
-          case "Ouvrir...":
+          case "OPEN":
               addHKActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar, new File("src/com/eteks/sweethome3d/swing/resources/icons/tango/document-open.png"),KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
               return;
       }
     if (action!= null && action.getValue(Action.NAME) != null) {
-        System.out.println(action.getValue(Action.NAME));
       addActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar);
     }
   }
@@ -2000,7 +1999,7 @@ public class HomePane extends JRootPane implements HomeView {
                                     JToolBar toolBar,
                                       File file,
                                       KeyStroke ks) {
-      HKButton button = new HKButton(action, new Dimension(20,20),file,ks);
+      HKButton button = new HKButton(action, new Dimension(100,100),file,ks);
       toolBar.add(button);
       iconHKButtons.add(button);
     }
@@ -2022,7 +2021,6 @@ public class HomePane extends JRootPane implements HomeView {
           }
         });
     } else {
-        System.out.println(action.getValue(Action.NAME));
       toolBar.add(new JButton(new ResourceAction.ToolBarAction(action)));
     }
   }
