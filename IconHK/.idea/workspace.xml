@@ -7,13 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afac57bb-ce5b-4b3c-9ded-416c92446340" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../abbot-0.13.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../j3d-core-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../j3d-core-utils-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sweethome3d/.idea/sweethome3d.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/.idea/sweethome3d.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IconHK.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../IconHK.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IconHK/IconHK/HKButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IconHK/HKButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IconHK/HKButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sweethome3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$45.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane$45.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/out/production/sweethome3d/com/eteks/sweethome3d/swing/HomePane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vecmath-1.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sweethome3d/src/com/eteks/sweethome3d/swing/HomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sweethome3d/src/com/eteks/sweethome3d/swing/HomePane.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,8 +85,8 @@
       <file leaf-file-name="HKButton.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="273" column="10" selection-start-line="273" selection-start-column="10" selection-end-line="273" selection-end-column="10" />
+            <state relative-caret-position="165">
+              <caret line="274" column="10" selection-start-line="274" selection-start-column="10" selection-end-line="274" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -173,7 +179,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1" />
+    <option name="x" value="1365" />
     <option name="y" value="-772" />
     <option name="width" value="1368" />
     <option name="height" value="773" />
@@ -403,7 +409,7 @@
       <workItem from="1525713811046" duration="7667000" />
       <workItem from="1525787922280" duration="10784000" />
       <workItem from="1525805284279" duration="1977000" />
-      <workItem from="1525862991706" duration="953000" />
+      <workItem from="1525862991706" duration="1901000" />
     </task>
     <task id="LOCAL-00001" summary="Added some options">
       <created>1521462521428</created>
@@ -416,7 +422,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68493000" />
+    <option name="totallyTimeSpent" value="69441000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,7 +434,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-772" width="1368" height="773" extended-state="6" />
+    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -492,13 +498,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/IconHK/IconAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/SimpleEditor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3024">
@@ -735,10 +734,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/Scripts/jdk1.8.0_121/src.zip!/javax/swing/JComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="775" column="19" selection-start-line="775" selection-start-column="19" selection-end-line="775" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/IconHK/HKButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="273" column="10" selection-start-line="273" selection-start-column="10" selection-end-line="273" selection-end-column="10" />
+        <state relative-caret-position="165">
+          <caret line="274" column="10" selection-start-line="274" selection-start-column="10" selection-end-line="274" selection-end-column="10" />
         </state>
       </provider>
     </entry>

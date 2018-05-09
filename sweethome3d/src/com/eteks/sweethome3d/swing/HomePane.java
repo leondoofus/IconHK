@@ -1999,7 +1999,7 @@ public class HomePane extends JRootPane implements HomeView {
                                     JToolBar toolBar,
                                       File file,
                                       KeyStroke ks) {
-      HKButton button = new HKButton(action, new Dimension(100,100),file,ks);
+      HKButton button = new HKButton(action, new Dimension(50,50),file,ks);
       toolBar.add(button);
       iconHKButtons.add(button);
     }
