@@ -548,4 +548,8 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
             setDefaultFrame(getDefaultFrame() + 1);
         }
     }
+
+    public void setDimension(Dimension d){
+        dimension = d;
+    }
 }

@@ -1,5 +1,7 @@
 package Test;
 
+import IconHK.IconHKSettingWindow;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
@@ -41,7 +43,7 @@ public class TestApplication {
         validate.addActionListener(e -> {
             if (rangeslider.getValue() != 0) {
                 dialog.setVisible(false);
-                SimpleEditor.setDim(new Dimension(rangeslider.getValue(), rangeslider.getValue()));
+                IconHKSettingWindow.setDim(new Dimension(rangeslider.getValue(), rangeslider.getValue()));
                 SimpleEditor editor = new SimpleEditor();
             }
         });

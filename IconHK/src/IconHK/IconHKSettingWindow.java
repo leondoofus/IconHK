@@ -17,6 +17,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
     private Vector<HKButton> iconHKButtons;
 
+    public static Dimension dim = new Dimension(50,50);
     public static int speedUp = 50;
     public static int speedDown = 50;
 
@@ -256,6 +257,25 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             speedDown = ((int) spinner3.getValue());
         });
 
+        JSlider s = new JSlider(0,100);
+        s.setValue((int) IconHKSettingWindow.dim.getWidth());
+        s.setMajorTickSpacing(20);
+        s.setMinorTickSpacing(10);
+        s.setPaintTicks(true);
+        s.setPaintLabels(true);
+        s.addChangeListener(e -> {
+            setDim(new Dimension(s.getValue(),s.getValue()));
+            for (HKButton b : iconHKButtons) {
+                b.setDimension(dim);
+                b.setSize(dim);
+            }
+            if (!iconHKButtons.isEmpty()){
+                iconHKButtons.get(0).getParent().getParent().validate();
+                //TODO minor bug here
+                iconHKButtons.get(0).getParent().getParent().getParent().getParent().getParent().setSize(iconHKButtons.get(0).getParent().getParent().getParent().getWidth(), (int) (dim.getHeight()*4));
+            }
+        });
+
         panel.add(new JLabel("Other options"));
         panel.add(spinner1);
         panel.add(click1);
@@ -263,9 +283,9 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         panel.add(new JLabel("ms/increasing frame"));
         panel.add(cb);
 
+        panel.add(new JLabel("All buttons' size"));
         panel.add(new JLabel());
-        panel.add(new JLabel());
-        panel.add(new JLabel());
+        panel.add(s);
         panel.add(spinner3);
         panel.add(new JLabel("ms/decreasing frame"));
         panel.add(new JLabel());
@@ -313,4 +333,7 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
         }
     }
 
+    public static void setDim (Dimension d){
+        IconHKSettingWindow.dim = d;
+    }
 }

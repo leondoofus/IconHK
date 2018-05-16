@@ -13,9 +13,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.util.Vector;
 
-public class SimpleEditor extends JFrame{
+import static IconHK.IconHKSettingWindow.dim;
 
-    private static Dimension dim = new Dimension(50,50);
+public class SimpleEditor extends JFrame{
 
     // Tool bar
     private JToolBar toolbar;
@@ -58,7 +58,7 @@ public class SimpleEditor extends JFrame{
     }
 
     private void addAllButtonsToToolBar (){
-        addButtonToToolBar(new HKButton(newAction,dim,Image.DEFAULT));
+        addButtonToToolBar(new HKButton(newAction, dim,Image.DEFAULT));
         addButtonToToolBar(new HKButton(saveAction,dim,Image.DEFAULT));
         toolbar.addSeparator();
         addButtonToToolBar(new HKButton(copyAction,dim,Image.DEFAULT));
@@ -236,12 +236,6 @@ public class SimpleEditor extends JFrame{
         marioAction = new HKAction("Mario");
         marioAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
                 KeyEvent.VK_M, ActionEvent.ALT_MASK));
-    }
-
-
-
-    public static void setDim (Dimension d){
-        SimpleEditor.dim = d;
     }
 
     public HKKeyListener getKeyListener() {
