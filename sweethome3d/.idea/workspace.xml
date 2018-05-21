@@ -23,50 +23,8 @@
       <file leaf-file-name="HomePane.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="1978" column="15" lean-forward="true" selection-start-line="1978" selection-start-column="14" selection-end-line="1978" selection-end-column="15" />
-              <folding>
-                <element signature="e#47806#48414#0" expanded="true" />
-                <element signature="e#48413#48414#0" expanded="true" />
-                <element signature="e#64842#64889#0" expanded="true" />
-                <element signature="e#68292#68488#0" expanded="true" />
-                <element signature="e#68487#68488#0" expanded="true" />
-                <element signature="e#69184#69360#0" expanded="true" />
-                <element signature="e#69359#69360#0" expanded="true" />
-                <element signature="e#70527#70574#0" expanded="true" />
-                <element signature="e#74147#74353#0" expanded="true" />
-                <element signature="e#74352#74353#0" expanded="true" />
-                <element signature="e#118624#118813#0" expanded="true" />
-                <element signature="e#118812#118813#0" expanded="true" />
-                <element signature="e#135447#135491#0" expanded="true" />
-                <element signature="e#136071#136118#0" expanded="true" />
-                <element signature="e#139951#140121#0" expanded="true" />
-                <element signature="e#140120#140121#0" expanded="true" />
-                <element signature="e#140160#140304#0" expanded="true" />
-                <element signature="e#140303#140304#0" expanded="true" />
-                <element signature="e#149577#149725#0" expanded="true" />
-                <element signature="e#149724#149725#0" expanded="true" />
-                <element signature="e#167730#167746#0" expanded="true" />
-                <element signature="e#168584#168593#0" expanded="true" />
-                <element signature="e#174630#175798#0" expanded="true" />
-                <element signature="e#175797#175798#0" expanded="true" />
-                <element signature="e#187774#187780#0" expanded="true" />
-                <element signature="e#192568#192590#0" expanded="true" />
-                <element signature="e#197248#197256#0" expanded="true" />
-                <element signature="e#198414#198895#0" expanded="true" />
-                <element signature="e#198894#198895#0" expanded="true" />
-                <element signature="e#199008#199169#0" expanded="true" />
-                <element signature="e#199168#199169#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeFrameSWT.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swt/HomeFrameSWT.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-645">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="526">
+              <caret line="578" column="48" selection-start-line="578" selection-start-column="48" selection-end-line="578" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -74,8 +32,8 @@
       <file leaf-file-name="HomeView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/viewcontroller/HomeView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-495">
-              <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+            <state relative-caret-position="270">
+              <caret line="41" column="35" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -109,6 +67,7 @@
       <find>main</find>
       <find>JMenu</find>
       <find>print</find>
+      <find>100</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,7 +98,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1365" />
+    <option name="x" value="-1" />
     <option name="y" value="-4" />
     <option name="width" value="1368" />
     <option name="height" value="773" />
@@ -150,8 +109,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,6 +288,8 @@
       <workItem from="1525785933648" duration="15495000" />
       <workItem from="1525805324650" duration="1642000" />
       <workItem from="1525852821350" duration="4186000" />
+      <workItem from="1526921004278" duration="3091000" />
+      <workItem from="1526924151870" duration="62000" />
     </task>
     <servers />
   </component>
@@ -338,29 +299,28 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27306000" />
+    <option name="totallyTimeSpent" value="30459000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="764" width="1368" height="773" extended-state="6" />
+    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4941435" weight="0.38184664" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49341142" weight="0.38184664" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.18740849" side_tool="true" visible="true" weight="0.3004695" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.18887262" side_tool="true" visible="true" weight="0.0485133" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8125915" visible="true" weight="0.3004695" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.81112736" weight="0.0485133" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25988287" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.5490483" weight="0.3286385" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -372,6 +332,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.5490483" weight="0.3286385" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,15 +346,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>2053</line>
-          <properties class="com.eteks.sweethome3d.swing.HomePane" method="setNameAndShortDescription">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1997</line>
+          <line>1993</line>
           <properties class="com.eteks.sweethome3d.swing.HomePane" method="addHKActionToToolBar">
             <option name="EMULATED" value="true" />
           </properties>
@@ -401,135 +354,312 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1977</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1983</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>275</line>
+          <line>274</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>274</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>273</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>280</line>
+          <line>277</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1998</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>2000</line>
+          <line>1996</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1999</line>
+          <line>1995</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>2001</line>
+          <line>1997</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>2002</line>
+          <line>1998</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>2004</line>
+          <line>2000</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>2003</line>
+          <line>1999</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1985</line>
+          <line>1975</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1984</line>
+          <line>1974</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1986</line>
+          <line>1976</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1987</line>
+          <line>1978</line>
           <properties />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1988</line>
+          <line>1979</line>
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1989</line>
+          <line>1980</line>
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1991</line>
+          <line>1987</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
-          <line>1990</line>
+          <line>1982</line>
           <properties />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>1981</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>1977</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>275</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>276</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>278</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>261</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>263</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>262</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>264</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>265</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>249</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>251</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>250</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>252</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>254</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>253</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>255</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>256</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>257</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>259</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>258</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>260</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>1983</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>1985</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>1984</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
+          <line>1986</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="33" />
+      <option name="time" value="61" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7515">
+          <caret line="594" column="27" selection-start-line="594" selection-start-column="27" selection-end-line="594" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/viewcontroller/HomeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8670">
+          <caret line="578" column="48" selection-start-line="578" selection-start-column="48" selection-end-line="578" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7515">
+          <caret line="594" column="27" selection-start-line="594" selection-start-column="27" selection-end-line="594" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swt/HomeFrameSWT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/viewcontroller/HomeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29670">
+          <caret line="1978" column="15" lean-forward="true" selection-start-line="1978" selection-start-column="14" selection-end-line="1978" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3D.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8910">
@@ -541,39 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30105">
           <caret line="2007" column="5" lean-forward="true" selection-start-line="2007" selection-start-column="5" selection-end-line="2007" selection-end-column="5" />
-          <folding>
-            <element signature="e#47806#48414#0" expanded="true" />
-            <element signature="e#48413#48414#0" expanded="true" />
-            <element signature="e#64842#64889#0" expanded="true" />
-            <element signature="e#68292#68488#0" expanded="true" />
-            <element signature="e#68487#68488#0" expanded="true" />
-            <element signature="e#69184#69360#0" expanded="true" />
-            <element signature="e#69359#69360#0" expanded="true" />
-            <element signature="e#70527#70574#0" expanded="true" />
-            <element signature="e#74147#74353#0" expanded="true" />
-            <element signature="e#74352#74353#0" expanded="true" />
-            <element signature="e#118624#118813#0" expanded="true" />
-            <element signature="e#118812#118813#0" expanded="true" />
-            <element signature="e#135447#135491#0" expanded="true" />
-            <element signature="e#136071#136118#0" expanded="true" />
-            <element signature="e#139951#140121#0" expanded="true" />
-            <element signature="e#140120#140121#0" expanded="true" />
-            <element signature="e#140160#140304#0" expanded="true" />
-            <element signature="e#140303#140304#0" expanded="true" />
-            <element signature="e#149577#149725#0" expanded="true" />
-            <element signature="e#149724#149725#0" expanded="true" />
-            <element signature="e#167730#167746#0" expanded="true" />
-            <element signature="e#168584#168593#0" expanded="true" />
-            <element signature="e#174630#175798#0" expanded="true" />
-            <element signature="e#175797#175798#0" expanded="true" />
-            <element signature="e#187774#187780#0" expanded="true" />
-            <element signature="e#192568#192590#0" expanded="true" />
-            <element signature="e#197248#197256#0" expanded="true" />
-            <element signature="e#198414#198895#0" expanded="true" />
-            <element signature="e#198894#198895#0" expanded="true" />
-            <element signature="e#199008#199169#0" expanded="true" />
-            <element signature="e#199168#199169#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,13 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/MacOSXConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -738,24 +828,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7515">
-          <caret line="594" column="27" selection-start-line="594" selection-start-column="27" selection-end-line="594" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/viewcontroller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15908">
           <caret line="1459" column="35" selection-start-line="1459" selection-start-column="35" selection-end-line="1459" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/viewcontroller/HomeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-495">
-          <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -766,50 +842,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/Scripts/jdk1.8.0_121/src.zip!/java/awt/event/ActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/MacOSXConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1799">
+          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swt/HomeFrameSWT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-645">
+        <state relative-caret-position="-880">
           <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/SweetHome3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7515">
+          <caret line="594" column="27" selection-start-line="594" selection-start-column="27" selection-end-line="594" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/viewcontroller/HomeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="1978" column="15" lean-forward="true" selection-start-line="1978" selection-start-column="14" selection-end-line="1978" selection-end-column="15" />
-          <folding>
-            <element signature="e#47806#48414#0" expanded="true" />
-            <element signature="e#48413#48414#0" expanded="true" />
-            <element signature="e#64842#64889#0" expanded="true" />
-            <element signature="e#68292#68488#0" expanded="true" />
-            <element signature="e#68487#68488#0" expanded="true" />
-            <element signature="e#69184#69360#0" expanded="true" />
-            <element signature="e#69359#69360#0" expanded="true" />
-            <element signature="e#70527#70574#0" expanded="true" />
-            <element signature="e#74147#74353#0" expanded="true" />
-            <element signature="e#74352#74353#0" expanded="true" />
-            <element signature="e#118624#118813#0" expanded="true" />
-            <element signature="e#118812#118813#0" expanded="true" />
-            <element signature="e#135447#135491#0" expanded="true" />
-            <element signature="e#136071#136118#0" expanded="true" />
-            <element signature="e#139951#140121#0" expanded="true" />
-            <element signature="e#140120#140121#0" expanded="true" />
-            <element signature="e#140160#140304#0" expanded="true" />
-            <element signature="e#140303#140304#0" expanded="true" />
-            <element signature="e#149577#149725#0" expanded="true" />
-            <element signature="e#149724#149725#0" expanded="true" />
-            <element signature="e#167730#167746#0" expanded="true" />
-            <element signature="e#168584#168593#0" expanded="true" />
-            <element signature="e#174630#175798#0" expanded="true" />
-            <element signature="e#175797#175798#0" expanded="true" />
-            <element signature="e#187774#187780#0" expanded="true" />
-            <element signature="e#192568#192590#0" expanded="true" />
-            <element signature="e#197248#197256#0" expanded="true" />
-            <element signature="e#198414#198895#0" expanded="true" />
-            <element signature="e#198894#198895#0" expanded="true" />
-            <element signature="e#199008#199169#0" expanded="true" />
-            <element signature="e#199168#199169#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="526">
+          <caret line="578" column="48" selection-start-line="578" selection-start-column="48" selection-end-line="578" selection-end-column="48" />
         </state>
       </provider>
     </entry>

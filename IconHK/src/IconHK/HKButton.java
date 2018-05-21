@@ -57,7 +57,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
     private boolean spinner = true;
 
     //Animation lock
-    public static boolean lockHotkey = false;
+    public static boolean lockHotkey = true;
 
     // Mode d'animation
     private int mode;
@@ -221,7 +221,7 @@ public class HKButton extends JButton implements MouseListener,ActionListener {
         this.currentFrame=defaultFrame;
     }
 
-    private void fixAllImages (){
+    public void fixAllImages (){
         iconsVector.removeAllElements();
         if (mode == Image.DEFAULT){
             for (File f : iconFiles) {

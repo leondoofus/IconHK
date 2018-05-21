@@ -15,11 +15,12 @@ import java.util.Vector;
 
 public class IconHKSettingWindow extends JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
+    //private final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     private Vector<HKButton> iconHKButtons;
 
     public static Dimension dim = new Dimension(50,50);
-    public static int speedUp = 50;
-    public static int speedDown = 50;
+    public static int speedUp = 25;
+    public static int speedDown = 25;
 
     private JButton resetRadius, resetColor, resetRange;
     private ArrayList<JSlider> radius;
@@ -247,33 +248,32 @@ public class IconHKSettingWindow extends JFrame implements ActionListener {
             HKButton.rangeInf = (int) spinner1.getValue();
             click1.setText(HKButton.rangeInf > 1? "clicks to change lower bound":"click to change lower bound");
         });
-        JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(speedUp,50,200,25));
+        JSpinner spinner2 = new JSpinner(new SpinnerNumberModel(speedUp,10,200,5));
         spinner2.addChangeListener(e -> {
             speedUp = ((int) spinner2.getValue());
         });
 
-        JSpinner spinner3 = new JSpinner(new SpinnerNumberModel(speedDown,50,200,25));
+        JSpinner spinner3 = new JSpinner(new SpinnerNumberModel(speedDown,10,200,5));
         spinner3.addChangeListener(e -> {
             speedDown = ((int) spinner3.getValue());
         });
 
-        JSlider s = new JSlider(0,100);
+        JSlider s = new JSlider(10,100);
         s.setValue((int) IconHKSettingWindow.dim.getWidth());
         s.setMajorTickSpacing(20);
         s.setMinorTickSpacing(10);
         s.setPaintTicks(true);
         s.setPaintLabels(true);
         s.addChangeListener(e -> {
-            setDim(new Dimension(s.getValue(),s.getValue()));
+            setDim(new Dimension(s.getValue(), s.getValue()));
             for (HKButton b : iconHKButtons) {
                 b.setDimension(dim);
                 b.setSize(dim);
             }
-            if (!iconHKButtons.isEmpty()){
+            if (!iconHKButtons.isEmpty())
                 iconHKButtons.get(0).getParent().getParent().validate();
-                //TODO minor bug here
-                iconHKButtons.get(0).getParent().getParent().getParent().getParent().getParent().setSize(iconHKButtons.get(0).getParent().getParent().getParent().getWidth(), (int) (dim.getHeight()*4));
-            }
+            for (HKButton b : iconHKButtons)
+                b.fixAllImages();
         });
 
         panel.add(new JLabel("Other options"));

@@ -255,8 +255,7 @@ public class HomePane extends JRootPane implements HomeView {
                   button.setMousePressed(true);
                   button.increaseCurrentFrame();
               }
-          }
-          if (!HKButton.lockHotkey){
+          } else {
               keyListener.animateall();
           }
       });
@@ -274,9 +273,7 @@ public class HomePane extends JRootPane implements HomeView {
       JToolBar mainToolbar = createToolBar(home);
       contentPane.add(mainToolbar, BorderLayout.NORTH);
       //From HK package
-
       keyListener = new HKKeyListener(iconHKButtons,mainToolbar);
-
       // Add mouse and keyboard events
       KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
       kfm.addKeyEventDispatcher(keyListener);
@@ -1975,19 +1972,18 @@ public class HomePane extends JRootPane implements HomeView {
   private void addActionToToolBar(ActionType actionType,
                                   JToolBar toolBar) {
     Action action = getActionMap().get(actionType);
-      /*if (action.getValue(AbstractAction.ACCELERATOR_KEY) != null) {
-          String shortcut = action.getValue(AbstractAction.ACCELERATOR_KEY).toString();
-          if (shortcut != null && shortcut.contains("pressed")) {
-              System.out.println(shortcut);
-              System.out.println(action.getValue(Action.NAME));
-          }
-      }*/
       switch (actionType.toString()){
           case "NEW_HOME":
-              addHKActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar, new File("src/com/eteks/sweethome3d/swing/resources/icons/tango/document-new.png"), KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
+              addHKActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar, new File("src/com/eteks/sweethome3d/swing/resources/icons/tango/document-new.png"),
+                      KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
               return;
           case "OPEN":
-              addHKActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar, new File("src/com/eteks/sweethome3d/swing/resources/icons/tango/document-open.png"),KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
+              addHKActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar, new File("src/com/eteks/sweethome3d/swing/resources/icons/tango/document-open.png"),
+                      KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
+              return;
+          case "SAVE":
+              addHKActionToToolBar(new ResourceAction.ToolBarAction(action), toolBar, new File("src/com/eteks/sweethome3d/swing/resources/icons/tango/document-save.png"),
+                      KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
               return;
       }
     if (action!= null && action.getValue(Action.NAME) != null) {
@@ -1996,10 +1992,10 @@ public class HomePane extends JRootPane implements HomeView {
   }
 
     private void addHKActionToToolBar(Action action,
-                                    JToolBar toolBar,
+                                      JToolBar toolBar,
                                       File file,
                                       KeyStroke ks) {
-      HKButton button = new HKButton(action, new Dimension(50,50),file,ks);
+      HKButton button = new HKButton(action, new Dimension(25,25),file,ks);
       toolBar.add(button);
       iconHKButtons.add(button);
     }

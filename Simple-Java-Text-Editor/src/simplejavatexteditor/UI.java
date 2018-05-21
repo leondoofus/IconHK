@@ -161,7 +161,7 @@ public class UI extends JFrame implements ActionListener {
         menuFile = new JMenu("File");
         menuEdit = new JMenu("Edit");
         menuFind = new JMenu("Search");
-        menuOthers = new JMenu("Others");
+        menuOthers = new JMenu("HKOptions");
         menuAbout = new JMenu("About");
         //Font Settings menu
 
@@ -198,7 +198,8 @@ public class UI extends JFrame implements ActionListener {
         menuFile.add(newFile); // Adding the file menu
 
         // Open File
-        openFile.addActionListener(this);
+        openFile.addActionListener(keyListener);
+        //openFile.addActionListener(this);
         openFile.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
         menuFile.add(openFile);
 
@@ -296,8 +297,7 @@ public class UI extends JFrame implements ActionListener {
                     button.setMousePressed(true);
                     button.increaseCurrentFrame();
                 }
-            }
-            if (!HKButton.lockHotkey){
+            } else {
                 keyListener.animateall();
             }
         });
@@ -320,7 +320,8 @@ public class UI extends JFrame implements ActionListener {
         this.add(mainToolbar, BorderLayout.NORTH);
         // used to create space between button groups
         //newButton = new JButton(newIcon);
-        newButton = new HKButton(newaction,new Dimension(37,37),new File("icons/new.png"),KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
+        newButton = new HKButton(newaction,new Dimension(37,37),new File("icons/new.png"),
+                KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
         //newButton = new HKButton(newFile.getAction(),new Dimension(37,37),newIcon,KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
         iconHKButtons.add((HKButton) newButton);
         newButton.setToolTipText("New");
@@ -329,7 +330,8 @@ public class UI extends JFrame implements ActionListener {
         mainToolbar.addSeparator();
 
         //openButton = new JButton(openIcon);
-        openButton = new HKButton(openFile.getAction(),new Dimension(37,37),new File("icons/open.png"),KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
+        openButton = new HKButton(openFile.getAction(),new Dimension(37,37),new File("icons/open.png"),
+                KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
         //openButton = new HKButton(openFile.getAction(),new Dimension(37,37),openIcon,KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
         iconHKButtons.add((HKButton) openButton);
         openButton.setToolTipText("Open");
@@ -438,9 +440,7 @@ public class UI extends JFrame implements ActionListener {
         //FONT SIZE SETTINGS SECTION END
 
         //From HK package
-
         keyListener = new HKKeyListener(iconHKButtons,mainToolbar);
-
         // Add mouse and keyboard events
         KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         kfm.addKeyEventDispatcher(keyListener);
