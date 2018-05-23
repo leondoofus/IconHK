@@ -61,8 +61,7 @@ menus, pour sélectionner des commandes dans les GUIs et donc permet de gagner c
 \tab IconHK consiste à redesigner les icônes de la barre d'outils pour qu'elles communiquent non seulement la signification de la commande (e.g. une disquette pour la commande "Sauvegarder"), mais aussi le raccourci clavier (e.g Ctrl+S).\\
 \tab Une telle approche allie des repères visuels transportant des raccourcis clavier dans les boutons de la barre d’outils pour permettre la reconnaissance visuelle du raccourci sans altérer la représentation
 picturale de la commande existante. Elle vise également à relever des défis de conception que nous allons aborder plus bas.\\
-\tab L’icône du bouton de la barre d’outils suggère la signification de la commande associée et son aspect permet de l'activer en cliquant dessus. Cependant, ce qu'un bouton de barre d'outils ne permet pas, c’est la méthode alternative pour exécuter la commande, à savoir le raccourci clavier -
-une combinaison de touches, typiquement une touche de modificateur (par exemple ctrl, alt) et une touche de raccourci (habituellement une lettre). Avec IconHK, nous visons à augmenter les boutons de la barre d'outils avec la capacité de suggérer cette façon de procéder à travers une meilleure exposition des raccourcis clavier. Cinq défis de conception liés à cet objectif ont été identifiés \cite{3}.
+\tab L’icône du bouton de la barre d’outils suggère la signification de la commande associée et son aspect permet de l'activer en cliquant dessus. Cependant, ce qu'un bouton de barre d'outils ne permet pas, c’est la méthode alternative pour exécuter la commande, à savoir le raccourci clavier - une combinaison de touches, typiquement une touche de modificateur (par exemple ctrl, alt) et une touche de raccourci (habituellement une lettre). Avec IconHK, nous visons à augmenter les boutons de la barre d'outils avec la capacité de suggérer cette façon de procéder à travers une meilleure exposition des raccourcis clavier. Cinq défis de conception liés à cet objectif ont été identifiés \cite{3}.
 \subsection{Défis de conception d'IconHK}
 \begin{enumerate}
 \item {\large \textbf{Transmission des raccourcis clavier}}\\
@@ -113,8 +112,8 @@ modificateurs tout en préservant l'esthétique et la lisibilité du pictogramme
 Inspiré par les design de logo [18], trois stratégies ont été proposées pour intégrer un symbole dans l'icône d'un bouton \cite{3} :
 \begin{enumerate}
 \item {\large \textbf{L’espace vide}}\\
-Consiste à tirer parti de l'espace vide dans ou autour du pictogramme pour afficher le symbole. Par exemple, seulement 23\% des pixels de l’icône () sont consacrés au pictogramme, ce qui laisse suffisamment de place en haut à gauche du bouton pour intégrer la lettre (P). L'icône () a un grand
-espace vide dans son pictogramme qui est suffisant pour insérer le symbole (C). La stratégie est limitée aux icônes avec peu de pixels peints ou contenant de grandes zones uniformes. Plusieurs icônes telles que () ou () n’offrent pas suffisamment d'espace pour incorporer un symbole tel quel.
+Consiste à tirer parti de l'espace vide dans ou autour du pictogramme pour afficher le symbole. Par exemple, seulement 23\% des pixels de l’icône \includegraphics[width=0.02\textwidth]{i1.png} sont consacrés au pictogramme, ce qui laisse suffisamment de place en haut à gauche du bouton pour intégrer la lettre \includegraphics[width=0.02\textwidth]{i2.png}. L'icône \includegraphics[width=0.02\textwidth]{i3.png} a un grand
+espace vide dans son pictogramme qui est suffisant pour insérer le symbole \includegraphics[width=0.02\textwidth]{i4.png}. La stratégie est limitée aux icônes avec peu de pixels peints ou contenant de grandes zones uniformes. Plusieurs icônes telles que \includegraphics[width=0.02\textwidth]{i5.png} ou \includegraphics[width=0.02\textwidth]{i6.png} n’offrent pas suffisamment d'espace pour incorporer un symbole tel quel.
 (figure 1)
 \begin{center}
 	\includegraphics[width=0.5\textwidth]{T1.png}\\
@@ -162,10 +161,10 @@ de la commande Ctrl sur la figure 4, à droite).
 	Figure 4: Exemple d'icônes augmentées avec IconHK qui incorpore des modificateurs à l'aide de la
 	fonction d'insertion de clé par clavier.
 \end{center}
-\section{Travail réalisé}
+\section{Travail à réaliser}
 Notre groupe est constitué de deux étudiants. Pour mener à bien notre projet, nous avons proposé un planning prévisionnel des tâches à accomplir par chaque membre de l’équipe.\\
 \tab Avant tout, nous avons commencé par nous documenter, ce qui nous a permis de cerner le sujet comme il se doit. Puis chaque membre a étudié une partie plus en détail (création des boutons de la barre d’outils, l’activation de l’animation, etc.), qu’il s’est chargé d’expliquer au second membre durant nos séances de travail.\\
-\tab En outre, le projet a été divisé en deux parties distinctes, la première partie étant dédiée à la complétion d'un démonstrateur d'IconHK et au développement de la stratégie de l'espace vide ainsi que paramétrage des propriétés des boutons, et la seconde, à la l'intégration notre API dans des applications open source. Nous assistions à une réunion toutes les semaines avec notre encadrant. Cette réunion a pour but de faire le point sur l’état d’avancement du projet et d’éclaircir d’éventuelles ambiguïtés.\\
+\tab En outre, le projet a été divisé en deux parties distinctes, la première partie étant dédiée à la programmation dont la complétion d'un démonstrateur d'IconHK et au développement de la stratégie de l'espace vide ainsi que l'intégration notre API dans des applications open source, et la seconde, à la recherche bibliographique et la rédaction de ce rapport. Nous assistions à une réunion toutes les semaines avec notre encadrant. Cette réunion a pour but de faire le point sur l’état d’avancement du projet et d’éclaircir d’éventuelles ambiguïtés.\\
 \subsection{Dévéloppement de l'API}
 \begin{enumerate}
 \item {\large \textbf{L'espace vide}}\\
@@ -176,7 +175,7 @@ Dans un premier temps, nous fournissons un répertoire contenant toutes les lett
 	\includegraphics[width=0.4\textwidth]{cubic.png}
 \end{center}
 Pour une taille de 50 pixels, le ratio est calculé sachant les point supplémentaires puis fixé pour que l'image soit rentable.
-Les courbes ne sont pas lisses parce que l'arrondi et le convertissement les nombres réels en nombres entiers ne le permettent pas. Les courbes vertes obtenues par calcul et les rouges sont fixées pour que l'image soit visible dans le bouton. Par exemple, avec la fonction linéaire, au cinquième cadre la lettre occupe $\frac{5}{25}$ soit 20\% l'espace du bouton et 80 \% pour l'icône, etc.. Les courbes des fonctions quadratique et cubique sont obtenues grâce à la méthode de Cramer. Nous introduisons des points intermédiaires afin de calculer ces courbes. Pour la fonction quadratique nous mettons p=(20,0.3) comme point de contrôle et p$_1$=(8,0.9), p$_2$=(14,0.7) pour la cubique.
+Les courbes ne sont pas lisses parce que l'arrondi et le convertissement des nombres réels en nombres entiers ne le permettent pas. Les courbes vertes obtenues par calcul et les rouges sont fixées pour que l'image soit visible dans le bouton. Par exemple, avec la fonction linéaire, au cinquième cadre la lettre occupe $\frac{5}{25}$ soit 20\% l'espace du bouton et 80 \% pour l'icône, etc.. Les courbes des fonctions quadratique et cubique sont obtenues grâce à la méthode de Cramer. Nous introduisons des points intermédiaires afin de calculer ces courbes. Pour la fonction quadratique nous mettons p=(20,0.3) comme point de contrôle et p$_1$=(8,0.9), p$_2$=(14,0.7) pour la cubique.
 Nous avons pensé à introduire des fonctions plus complexes (comme la Courbe de Bézier) mais elles complexifieront le comportement des utilisateurs.\\
 Nous pouvons constater que la fonction quadratique est assez inutile car pendant 17 premier cadres, il n'y aucune animation. Cependant, la fonction cubique crée un effet rebond très intéressant.
 \item {\large \textbf{Aspect IHM}}\\
@@ -193,7 +192,7 @@ Un clic est généralement rapide, donc l'animation va aller jusqu'à l'état fi
 Si l'action associée au bouton est encapsulée par HKAction fournie dans notre API, quand on clique sur un MenuItem, l'animation du bouton reliée à l'action est activée pour rappeler l'utilisateur du raccourci.
 \end{enumerate}
 \item {\large \textbf{"Apprentissage"}}\\
-Nous rassembler toutes les accessibilités d'une fonctionnalité dans notre HKAction qui à la fois lance la fonctionnalité et faire l'animation. Nous testons à chaque fois si la fonctionnalité est activée par un raccourci, un clic ou un MenuItem. Si c'est un clic ou un MenuItem, l'état initial du bouton est incrémenté de 1 pour faire apparaître la lettre au fur et à mesure. Il est décrémenté de 1 si c'est un raccourci. 
+Nous rassemblons toutes les accessibilités d'une fonctionnalité dans notre HKAction qui à la fois lance la fonctionnalité et fait l'animation. Nous testons à chaque fois si la fonctionnalité est activée par un raccourci, un clic ou un MenuItem. Si c'est un clic ou un MenuItem, l'état initial du bouton est incrémenté de 1 pour faire apparaître la lettre au fur et à mesure. Il est décrémenté de 1 si c'est un raccourci. 
 \item {\large \textbf{Paramétrage de l'icône}}\\
 \begin{center}
 	\includegraphics[width=0.8\textwidth]{11.png}
