@@ -1,9 +1,0 @@
-connect
-group
-navigation
-new window
-pencil
-snap
-square
-transfer
-zoom

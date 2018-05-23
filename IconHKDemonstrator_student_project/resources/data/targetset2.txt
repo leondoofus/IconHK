@@ -1,9 +1,0 @@
-comment
-connect edges
-help
-like
-pacman
-refresh
-select mouse
-split
-video
