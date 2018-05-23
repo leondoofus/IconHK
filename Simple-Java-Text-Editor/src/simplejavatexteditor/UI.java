@@ -322,7 +322,6 @@ public class UI extends JFrame implements ActionListener {
         //newButton = new JButton(newIcon);
         newButton = new HKButton(newaction,new Dimension(37,37),new File("icons/new.png"),
                 KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
-        //newButton = new HKButton(newFile.getAction(),new Dimension(37,37),newIcon,KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_MASK));
         iconHKButtons.add((HKButton) newButton);
         newButton.setToolTipText("New");
         newButton.addActionListener(this);
@@ -332,7 +331,6 @@ public class UI extends JFrame implements ActionListener {
         //openButton = new JButton(openIcon);
         openButton = new HKButton(openFile.getAction(),new Dimension(37,37),new File("icons/open.png"),
                 KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
-        //openButton = new HKButton(openFile.getAction(),new Dimension(37,37),openIcon,KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
         iconHKButtons.add((HKButton) openButton);
         openButton.setToolTipText("Open");
         openButton.addActionListener(this);

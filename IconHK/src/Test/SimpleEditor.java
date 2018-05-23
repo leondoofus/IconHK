@@ -22,7 +22,7 @@ public class SimpleEditor extends JFrame{
 
     //Actions
     private Action cutAction, pasteAction, copyAction, saveAction, newAction, expandAction, rgbAction;
-    private Action findAction, moveAction, pencilAction, increaseAction, mushroomAction, marioAction;
+    private Action findAction, moveAction, pencilAction, increaseAction, mushroomAction, marioAction, princesseAction;
 
     private Vector<HKButton> iconHKButtons;
 
@@ -73,7 +73,8 @@ public class SimpleEditor extends JFrame{
         addButtonToToolBar(new HKButton(increaseAction,dim,Image.DEFAULT));
         toolbar.addSeparator();
         addButtonToToolBar(new HKButton(mushroomAction,dim,Image.LINEAR));
-        addButtonToToolBar(new HKButton(marioAction,dim,Image.LINEAR));
+        addButtonToToolBar(new HKButton(marioAction,dim,Image.QUADRATIC));
+        addButtonToToolBar(new HKButton(princesseAction,dim,Image.CUBIC));
 
         JPanel panel = new JPanel(new SpringLayout());
         JButton aa = new JButton("Animate all");
@@ -180,6 +181,9 @@ public class SimpleEditor extends JFrame{
         mario.addActionListener(keyListener);
         other.add(mario);
 
+        JMenuItem princesse = new JMenuItem(princesseAction);
+        princesse.addActionListener(keyListener);
+        other.add(princesse);
 
         return menubar;
     }
@@ -236,9 +240,9 @@ public class SimpleEditor extends JFrame{
         marioAction = new HKAction("Mario");
         marioAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
                 KeyEvent.VK_M, ActionEvent.ALT_MASK));
-    }
 
-    public HKKeyListener getKeyListener() {
-        return keyListener;
+        princesseAction = new HKAction("Princesse");
+        princesseAction.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
+                KeyEvent.VK_P, ActionEvent.SHIFT_MASK));
     }
 }
