@@ -54,7 +54,6 @@ public class SimpleEditor extends JFrame{
         // Add mouse and keyboard events
         KeyboardFocusManager kfm = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         kfm.addKeyEventDispatcher(keyListener);
-
     }
 
     private void addAllButtonsToToolBar (){
@@ -94,8 +93,6 @@ public class SimpleEditor extends JFrame{
         panel.add(aa);
         panel.add(settings);
         SpringUtilities.makeCompactGrid(panel, 2, 1, 3, 3, 0, 5);
-        //toolbar.add(aa);
-        //toolbar.add(settings);
         toolbar.add(panel);
     }
 

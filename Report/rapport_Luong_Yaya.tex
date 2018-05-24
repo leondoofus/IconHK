@@ -165,9 +165,10 @@ Notre groupe est constitué de deux étudiants. Pour mener à bien notre projet,
 \tab Avant tout, nous avons commencé par nous documenter, ce qui nous a permis de cerner le sujet comme il se doit. Puis chaque membre a étudié une partie plus en détail (création des boutons de la barre d’outils, l’activation de l’animation, etc.), qu’il s’est chargé d’expliquer au second membre durant nos séances de travail.\\
 \tab En outre, le projet a été divisé en deux parties distinctes, la première partie étant dédiée à la programmation dont la complétion d'un démonstrateur d'IconHK et au développement de la stratégie de l'espace vide ainsi que l'intégration notre API dans des applications open source, et la seconde, à la recherche bibliographique et la rédaction de ce rapport. Nous assistions à une réunion toutes les semaines avec notre encadrant. Cette réunion a pour but de faire le point sur l’état d’avancement du projet et d’éclaircir d’éventuelles ambiguïtés.\\
 \subsection{Dévéloppement de l'API}
+Partant de l'héritage de la classe \texttt{JButton}, le projet a pour but de redessiner le composant graphique et de ne pas changer la fonction principale du bouton. La surcharge des méthodes graphiques ne complexifie pas l'ensemble de l'application car ces méthodes sont appelées automatiquement quand nous utilisons l'interface graphique (i.e boucle infinie). Une deuxième alternative est d'encapsuler le bouton dans une classe puis nous pouvons changer ses propriétés avec des méthodes personnalisées. Cette deuxième solution est réalisable mais elle n'est pas pratique. Nous voulons que notre API soit le plus simple possible, c'est-à-dire l'utilisateur n'a qu'à changer quelques lignes de code en passant de \texttt{JButton} à \texttt{HKButton} et cela ne détruira pas toute la structure du code.
 \begin{enumerate}
 \item {\large \textbf{L'espace vide}}\\
-Dans un premier temps, nous fournissons un répertoire contenant toutes les lettres représentant les raccourcis (\texttt{IconHK/resources/icons}) qui nous permet de générer une séquence d'images pour l'animation d'un bouton. Nous proposons 3 types de génération de la séquence : linéaire, quadratique et cubique. L'espace occupé d'un bouton est divisé en 2 parties : une pour l'icône principal et l'autre pour la lettre représentant le raccourci. Le ratio de la lettre par rapport à la zone entière varie en fonction du temps (dans notre cas c'est la position du cadre courant). Nous générons une séquence de 25 images pour chaque bouton. À l'état initial (1) le bouton est complètement peint avec l'icône principal et contrairement, à l'état final (25) il contient uniquement la lettre. À n'importe quel état intermédiaire entre ces deux, il est peint avec un ratio calculé en fonction de l'état et du style choisi.
+Dans un premier temps, nous fournissons un répertoire contenant toutes les lettres représentant les raccourcis (\texttt{IconHK/resources/icons}) qui nous permet de générer une séquence d'images pour l'animation d'un bouton. Nous proposons 3 types de génération de la séquence : linéaire, quadratique et cubique. L'espace occupé d'un bouton est divisé en 2 parties : une pour l'icône principal et l'autre pour la lettre représentant le raccourci. Le ratio de la lettre par rapport à la zone entière varie en fonction du temps (dans notre cas c'est la position du cadre courant). Nous générons une séquence de 25 images pour chaque bouton. À l'état initial (0) le bouton est complètement peint avec l'icône principal et contrairement, à l'état final (25) il contient uniquement la lettre. À n'importe quel état intermédiaire entre ces deux, il est peint avec un ratio calculé en fonction de l'état et du style choisi.
 \begin{center}
 	\includegraphics[width=0.4\textwidth]{linear.png}
 	\includegraphics[width=0.4\textwidth]{quadratic.png}
@@ -188,18 +189,18 @@ Nous proposons 2 types de visualisation l'animation :
 \item {\large \textbf{Clic}}\\
 Un clic est généralement rapide, donc l'animation va aller jusqu'à l'état final puis revenir à l'état initial. Si la souris est maintenue sur le bouton, l'animation marche comme le cas Lock Hotkey.
 \item {\large \textbf{MenuItem}}\\
-Si l'action associée au bouton est encapsulée par HKAction fournie dans notre API, quand on clique sur un MenuItem, l'animation du bouton reliée à l'action est activée pour rappeler l'utilisateur du raccourci.
+Si l'action associée au bouton est encapsulée par \texttt{HKAction} fournie dans notre API, quand on clique sur un MenuItem, l'animation du bouton reliée à l'action est activée pour rappeler l'utilisateur du raccourci.
 \end{enumerate}
 \item {\large \textbf{"Apprentissage"}}\\
-Nous rassemblons toutes les accessibilités d'une fonctionnalité dans notre HKAction qui à la fois lance la fonctionnalité et fait l'animation. Nous testons à chaque fois si la fonctionnalité est activée par un raccourci, un clic ou un MenuItem. Si c'est un clic ou un MenuItem, l'état initial du bouton est incrémenté de 1 pour faire apparaître la lettre au fur et à mesure. Il est décrémenté de 1 si c'est un raccourci. 
+Nous rassemblons toutes les accessibilités d'une fonctionnalité dans notre \texttt{HKAction} qui à la fois lance la fonctionnalité et fait l'animation. Nous testons à chaque fois si la fonctionnalité est activée par un raccourci, un clic ou un MenuItem. Si c'est un clic ou un MenuItem, l'état initial du bouton est incrémenté de 1 pour faire apparaître la lettre au fur et à mesure. Il est décrémenté de 1 si c'est un raccourci. 
 \item {\large \textbf{Paramétrage de l'icône}}\\
 \begin{center}
 	\includegraphics[width=0.8\textwidth]{11.png}
 \end{center}
-Nous proposons quelques paramètres pour que l'utilisateur puisse "jouer" avec notre projet. L'état initial, l'état final, la taille et la couleur du modificateur sont modifiables. La ligne "All" permet de régler tous les HKButtons utilisés. Dans ce panneau de configuration, nous pouvons définir le nombre de clics présenté dans la section "Apprentissage" et la vitesse de transition ainsi que la taille des boutons.
+Nous proposons quelques paramètres pour que l'utilisateur puisse "jouer" avec notre projet. Nous pouvons paramétrer l'état initial, l'état final, la taille et la couleur du modificateur. La ligne "All" permet de paramétrer l'ensemble de tous les HKButtons utilisés. Dans ce panneau de configuration, nous pouvons définir le nombre de clics présenté dans la section "Apprentissage" et la vitesse de transition ainsi que la taille des boutons.
 \end{enumerate}
 \subsection{Intégration dans des applications open source}
-Partant d'un démonstrateur, nous espérons d'intégrer notre API dans des applications open source. Nous avons choisi une première application simple qui ressemble à notre démonstrateur mais avec des fonctionnalités implémentées. Une deuxième application est beaucoup plus complexe mais elle est dans le marché depuis 11 ans.
+Partant d'un démonstrateur, nous espérons d'intégrer notre API dans des applications open source. Nous avons choisi une première application simple qui ressemble à notre démonstrateur mais avec des fonctionnalités implémentées. Une deuxième application est beaucoup plus complexe mais elle est dans le marché depuis 11 ans. Les lignes en commentaire sont le code source et celles en rouges sont ajoutées pour utiliser notre API.
 \begin{enumerate}
 \item {\large \textbf{\href{https://github.com/pH-7/Simple-Java-Text-Editor}{Simple Java Text Editor}}}\\
 \begin{center}
@@ -217,7 +218,8 @@ En changeant quelques lignes de code, nous avons pu intégrer notre API dans cet
 	\includegraphics[width=0.9\textwidth]{07.png}\\
 	Passe tous les HKButtons au listener
 \end{center}
-Jusqu'ici la création des boutons est faite. Nous rajoutons un MenuItem pour paramétrer les propriétés :
+Jusqu'ici la création des boutons est faite. Nous constatons que quelques changements peuvent transformer un \texttt{JButton} simple à un \texttt{HKButton} animé.\\
+Nous pouvons rajouter un MenuItem pour paramétrer les propriétés (ce qui est facultatif):
 \begin{center}
 	\includegraphics[width=0.5\textwidth]{03.png}\\
 	\includegraphics[width=0.9\textwidth]{05.png}\\
@@ -230,6 +232,11 @@ Même si cette application est plus complexe mais l'utilisation d'IconHK reste t
 	\includegraphics[width=0.9\textwidth]{08.png}\\
 	\includegraphics[width=0.9\textwidth]{10.png}\\
 	Création des boutons\\
+\end{center}
+Le fait que \texttt{HKAction} encapsule seulement une \texttt{Action} simple qui est une limite de notre API.
+Dans cette application, les actions associées au MenuItem sont très complexes. L'auteur a utilisé une \texttt{ActionMap} qui n'est pas compatible avec notre \texttt{HKAction} donc nous n'avons pas réussi à intégrer un aspect de notre modèle d'IHM.\\
+L'ajout du panneau de configuration est comme dans l'application précédente :
+\begin{center}
 	\includegraphics[width=0.9\textwidth]{09.png}\\
 	Ajout le panneau de configuration\\
 	\includegraphics[width=0.4\textwidth]{13.png}
