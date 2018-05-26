@@ -23,7 +23,7 @@
       <file leaf-file-name="HomePane.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5079">
+            <state relative-caret-position="-20458">
               <caret line="579" column="35" selection-start-line="579" selection-start-column="29" selection-end-line="579" selection-end-column="38" />
             </state>
           </provider>
@@ -108,6 +108,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,8 +155,6 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,7 +166,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -293,6 +293,7 @@
       <workItem from="1527009328349" duration="2490000" />
       <workItem from="1527155278884" duration="749000" />
       <workItem from="1527156571615" duration="40000" />
+      <workItem from="1527156927781" duration="350000" />
     </task>
     <servers />
   </component>
@@ -302,10 +303,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33738000" />
+    <option name="totallyTimeSpent" value="34088000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
+    <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -316,8 +317,8 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50732064" side_tool="true" weight="0.38184664" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.81112736" weight="0.0485133" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.81112736" weight="0.0485133" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -327,8 +328,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49267936" weight="0.38184664" />
@@ -350,7 +351,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java</url>
           <line>1993</line>
-          <properties class="com.eteks.sweethome3d.swing.HomePane" method="addHKActionToToolBar">
+          <properties class="com.eteks.sweethome3d.swing.HomePane">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="12" />
@@ -924,7 +925,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5079">
+        <state relative-caret-position="-20458">
           <caret line="579" column="35" selection-start-line="579" selection-start-column="29" selection-end-line="579" selection-end-column="38" />
         </state>
       </provider>
