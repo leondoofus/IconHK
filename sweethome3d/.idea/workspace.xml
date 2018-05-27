@@ -23,8 +23,8 @@
       <file leaf-file-name="HomePane.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20458">
-              <caret line="579" column="35" selection-start-line="579" selection-start-column="29" selection-end-line="579" selection-end-column="38" />
+            <state relative-caret-position="315">
+              <caret line="599" column="41" lean-forward="true" selection-start-line="599" selection-start-column="41" selection-end-line="599" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -108,7 +108,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -155,12 +154,13 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/linux/x64/swt-4.2.2-gtk-linux-x86_64.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -294,6 +294,7 @@
       <workItem from="1527155278884" duration="749000" />
       <workItem from="1527156571615" duration="40000" />
       <workItem from="1527156927781" duration="350000" />
+      <workItem from="1527405798979" duration="217000" />
     </task>
     <servers />
   </component>
@@ -303,14 +304,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34088000" />
+    <option name="totallyTimeSpent" value="34305000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
+    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49267936" weight="0.38184664" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -332,7 +334,6 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49267936" weight="0.38184664" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -925,8 +926,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eteks/sweethome3d/swing/HomePane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20458">
-          <caret line="579" column="35" selection-start-line="579" selection-start-column="29" selection-end-line="579" selection-end-column="38" />
+        <state relative-caret-position="315">
+          <caret line="599" column="41" lean-forward="true" selection-start-line="599" selection-start-column="41" selection-end-line="599" selection-end-column="41" />
         </state>
       </provider>
     </entry>

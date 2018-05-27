@@ -21,7 +21,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../swt-win64-3.6.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../AppleJavaExtensions.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -30,7 +30,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../AppleJavaExtensions.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/linux/x64/swt-4.2.2-gtk-linux-x86_64.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
